@@ -8,3 +8,5 @@ TODO:
 - Coded texture for the dusts, only have one grayish picture and add colour to it by code. (Martijn?)
 - Eventually mobs.
 - For inspiration look at : http://www.minecraftforum.net/topic/1675148- (the old post).
+
+ironhammer feel free to combine some stuff.
