@@ -1,0 +1,20 @@
+[
+{
+  "modid": "MP",
+  "name": "Magic Powders",
+  "description": "The Magic Powders mod.",
+  "version": "pre0.1",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "BlazeCoding-DevTeam"
+  ],
+  "credits": "By BlazeCoding, credits to Xetosphere for original mod.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
