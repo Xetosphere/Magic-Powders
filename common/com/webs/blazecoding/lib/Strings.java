@@ -14,8 +14,6 @@ package com.webs.blazecoding.lib;
 public class Strings {
 
 	// Items
-	public static final String SORONITE_NAME = "soroniteDust";
-	public static final String TARDITE_NAME = "tarditeDust";
-	public static final String KORONIN_NAME = "koroninDust";
+	public static final String MAGICDUST_NAME = "magicDust";
 	
 }

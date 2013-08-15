@@ -14,12 +14,8 @@ package com.webs.blazecoding.lib;
 public class ItemIDs {
 
 	// Default IDs, those the item will if the configuration file isn't edited.
-	public static final int SORONITE_ID_DEFAULT = 2500;
-	public static final int TARDITE_ID_DEFAULT = 2501;
-	public static final int KORONIN_ID_DEFAULT = 2502;
+	public static final int MAGICDUST_ID_DEFAULT = 2500;
 
-	public static int soroniteID;
-	public static int tarditeID;
-	public static int koroninID;
+	public static int magicDustID;
 
 }

@@ -34,9 +34,7 @@ public class ConfigurationHandler {
 			
 			config.load();
 			
-			ItemIDs.soroniteID = config.getItem(Configuration.CATEGORY_ITEM, Strings.SORONITE_NAME, ItemIDs.SORONITE_ID_DEFAULT).getInt(ItemIDs.SORONITE_ID_DEFAULT);
-			ItemIDs.tarditeID = config.getItem(Configuration.CATEGORY_ITEM, Strings.TARDITE_NAME, ItemIDs.TARDITE_ID_DEFAULT).getInt(ItemIDs.TARDITE_ID_DEFAULT);
-			ItemIDs.koroninID = config.getItem(Configuration.CATEGORY_ITEM, Strings.KORONIN_NAME, ItemIDs.KORONIN_ID_DEFAULT).getInt(ItemIDs.KORONIN_ID_DEFAULT);
+			ItemIDs.magicDustID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICDUST_NAME, ItemIDs.MAGICDUST_ID_DEFAULT).getInt(ItemIDs.MAGICDUST_ID_DEFAULT);
 			
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, References.MOD_ID + " had a problem loading its configuration file.");

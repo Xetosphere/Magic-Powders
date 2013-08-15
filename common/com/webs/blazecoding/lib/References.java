@@ -20,5 +20,6 @@ public class References {
 	public static final String DEPENDENCIES = "required-after:Forge@[9.10.0.804,)";
 	public static final String COMMON_PROXY = "com.webs.blazecoding.core.proxy.CommonProxy";
 	public static final String CLIENT_PROXY = "com.webs.blazecoding.core.proxy.ClientProxy";
+	public static final int SHIFTED_ID_RANGE_CORRECTION = 256;
 	
 }
