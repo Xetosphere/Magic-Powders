@@ -1,5 +1,9 @@
 package net.blazecoding.magicpowders.block;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.blazecoding.magicpowders.item.ItemBlockMagicPowderOres;
+import net.blazecoding.magicpowders.lib.BlockIDs;
+import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.block.Block;
 
 /**
@@ -21,6 +25,16 @@ public class ModBlocks {
 	 * Initializes the blocks that the mod contains. As well as block recipes and registering the blocks.
 	 */
 	public static void init() {
+
+		magicPowderOres = new BlockMagicPowderOres(BlockIDs.powderOresID);
+		
+		registerBlocks();
+		
+	}
+	
+	public static void registerBlocks() {
+
+		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);
 
 	}
 

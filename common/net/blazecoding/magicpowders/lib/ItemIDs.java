@@ -13,8 +13,8 @@ package net.blazecoding.magicpowders.lib;
 
 public class ItemIDs {
 
-	// Default IDs, those the item will if the configuration file isn't edited.
-	public static final int MAGICDUST_ID_DEFAULT = 2500;
+	// Default IDs, those the item will use if the configuration file isn't edited.
+	public static final int MAGICDUST_ID_DEFAULT = 9000;
 
 	public static int magicDustID;
 

@@ -6,6 +6,7 @@ import java.util.logging.Level;
 
 import cpw.mods.fml.common.FMLLog;
 
+import net.blazecoding.magicpowders.lib.BlockIDs;
 import net.blazecoding.magicpowders.lib.ItemIDs;
 import net.blazecoding.magicpowders.lib.References;
 import net.blazecoding.magicpowders.lib.Strings;
@@ -34,6 +35,10 @@ public class ConfigurationHandler {
 			
 			config.load();
 			
+			// Blocks
+			BlockIDs.powderOresID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.POWDERORES_NAME, BlockIDs.POWDERORES_ID_DEFAULT).getInt(BlockIDs.POWDERORES_ID_DEFAULT);
+			
+			// Items
 			ItemIDs.magicDustID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICDUST_NAME, ItemIDs.MAGICDUST_ID_DEFAULT).getInt(ItemIDs.MAGICDUST_ID_DEFAULT);
 			
 		} catch (Exception e) {

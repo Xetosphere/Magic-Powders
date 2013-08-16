@@ -37,6 +37,7 @@ public class ItemMagicDust extends ItemMP {
 		super(id);
 		setUnlocalizedName(Strings.MAGICDUST_NAME);
 		setCreativeTab(MagicPowders.tabMP);
+		setHasSubtypes(true);
 	}
 	
 	public String getUnlocalizedName(ItemStack itemStack) {

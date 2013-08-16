@@ -5,4 +5,7 @@
 	<entry key = "item.magicDustSoronite.name">Soronite Dust</entry>
 	<entry key = "item.magicDustTardite.name">Tardite Dust</entry>
 	<entry key = "item.magicDustKoronin.name">Koronin Dust</entry>
+	<entry key = "tile.powderOresSoroniteOre.name">Soronite Ore</entry>
+	<entry key = "tile.powderOresTarditeOre.name">Tardite Ore</entry>
+	<entry key = "tile.powderOresKoroninOre.name">Koronin Ore</entry>
 </properties>
