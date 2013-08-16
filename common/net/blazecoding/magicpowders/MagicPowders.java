@@ -55,6 +55,7 @@ public class MagicPowders {
 		// Adds the blocks that the mod contains. As well as block recipes and registering the blocks.
 		ModBlocks.init();
 
+		// Adds everything that has to do with generation.
 		WorldGen.init();
 
 	}

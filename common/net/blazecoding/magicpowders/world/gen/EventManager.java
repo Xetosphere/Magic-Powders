@@ -5,6 +5,7 @@ import java.util.Random;
 import net.blazecoding.magicpowders.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
@@ -32,9 +33,21 @@ public class EventManager implements IWorldGenerator {
 
 	private void genereateSurface(World world, Random random, int x, int z) {
 
-		addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 8, 20, 0, 60);
-		addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 8, 20, 0, 60);
-		addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 8, 20, 0, 60);
+		addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 4, 10, 0, 60);
+		addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 4, 10, 0, 60);
+		addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 4, 10, 0, 60);
+
+		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.forest) {
+			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+		}
+
+		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.desert) {
+			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+		}
+
+		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.swampland) {
+			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+		}
 
 	}
 
