@@ -9,9 +9,8 @@ import net.blazecoding.magicpowders.core.proxy.CommonProxy;
 import net.blazecoding.magicpowders.creativetab.TabMP;
 import net.blazecoding.magicpowders.item.ModItems;
 import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.world.gen.WorldGen;
 import net.minecraft.creativetab.CreativeTabs;
-
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -55,6 +54,8 @@ public class MagicPowders {
 
 		// Adds the blocks that the mod contains. As well as block recipes and registering the blocks.
 		ModBlocks.init();
+
+		WorldGen.init();
 
 	}
 
