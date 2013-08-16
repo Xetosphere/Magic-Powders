@@ -13,7 +13,7 @@ import net.minecraft.block.Block;
  * ModBlocks
  * 
  * @author BlazeCoding
- * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * 
  */
 
@@ -27,11 +27,11 @@ public class ModBlocks {
 	public static void init() {
 
 		magicPowderOres = new BlockMagicPowderOres(BlockIDs.powderOresID);
-		
+
 		registerBlocks();
-		
+
 	}
-	
+
 	public static void registerBlocks() {
 
 		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);

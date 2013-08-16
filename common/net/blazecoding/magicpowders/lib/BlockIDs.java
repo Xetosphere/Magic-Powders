@@ -7,14 +7,14 @@ package net.blazecoding.magicpowders.lib;
  * BlockIDs
  * 
  * @author BlazeCoding
- * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- *
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
  */
 
 public class BlockIDs {
-	
+
 	public static final int POWDERORES_ID_DEFAULT = 500;
-	
+
 	public static int powderOresID;
 
 }

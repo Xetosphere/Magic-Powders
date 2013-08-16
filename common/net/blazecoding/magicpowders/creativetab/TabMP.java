@@ -11,8 +11,8 @@ import net.minecraft.item.ItemStack;
  * TabMP
  * 
  * @author BlazeCoding
- * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- *
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
  */
 
 public class TabMP extends CreativeTabs {
@@ -20,7 +20,7 @@ public class TabMP extends CreativeTabs {
 	public TabMP(int id, String nameInCode) {
 		super(id, nameInCode);
 	}
-	
+
 	public ItemStack getIconItemStack() {
 		return new ItemStack(Item.diamond.itemID, 1, 0);
 	}

@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
  * BlockMagicPowderOres
  * 
  * @author BlazeCoding
- * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * 
  */
 

@@ -3,7 +3,6 @@ package net.blazecoding.magicpowders.core.handlers;
 import net.blazecoding.magicpowders.core.util.LocalizationUtil;
 import net.blazecoding.magicpowders.lib.Localizations;
 
-
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /**
@@ -13,7 +12,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  * LocalizationHandler
  * 
  * @author BlazeCoding
- * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * 
  */
 

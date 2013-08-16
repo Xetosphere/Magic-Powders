@@ -4,6 +4,17 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * ItemBlockMagicPowderOres
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class ItemBlockMagicPowderOres extends ItemBlock {
 
 	public static final String[] ORE_NAMES = { "SoroniteOre", "TarditeOre", "KoroninOre" };

@@ -7,8 +7,8 @@ package net.blazecoding.magicpowders.lib;
  * References
  * 
  * @author BlazeCoding
- * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- *
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
  */
 
 public class References {
@@ -21,5 +21,5 @@ public class References {
 	public static final String COMMON_PROXY = "net.blazecoding.magicpowders.core.proxy.CommonProxy";
 	public static final String CLIENT_PROXY = "net.blazecoding.magicpowders.core.proxy.ClientProxy";
 	public static final int SHIFTED_ID_RANGE_CORRECTION = 256;
-	
+
 }

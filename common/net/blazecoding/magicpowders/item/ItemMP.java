@@ -4,6 +4,16 @@ import net.blazecoding.magicpowders.lib.References;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * ItemMP
+ * 
+ * @author BlazeCoding
+ * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ *
+ */
 
 public class ItemMP extends Item {
 

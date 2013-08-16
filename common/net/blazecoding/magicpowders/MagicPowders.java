@@ -26,7 +26,7 @@ import cpw.mods.fml.common.network.NetworkMod;
  * MagicPowders
  * 
  * @author BlazeCoding
- * @license Lesser Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * 
  */
 
