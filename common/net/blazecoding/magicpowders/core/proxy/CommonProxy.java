@@ -1,4 +1,4 @@
-package com.webs.blazecoding.core.proxy;
+package net.blazecoding.magicpowders.core.proxy;
 
 /**
  * 

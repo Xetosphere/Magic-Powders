@@ -1,4 +1,4 @@
-package com.webs.blazecoding.creativetab;
+package net.blazecoding.magicpowders.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

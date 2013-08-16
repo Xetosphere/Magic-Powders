@@ -1,4 +1,4 @@
-package com.webs.blazecoding.lib;
+package net.blazecoding.magicpowders.lib;
 
 /**
  * 
@@ -12,5 +12,9 @@ package com.webs.blazecoding.lib;
  */
 
 public class BlockIDs {
+	
+	public static final int POWDERORES_ID_DEFAULT = 500;
+	
+	public static int powderOresID;
 
 }

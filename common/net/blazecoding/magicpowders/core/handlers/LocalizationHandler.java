@@ -1,7 +1,8 @@
-package com.webs.blazecoding.core.handlers;
+package net.blazecoding.magicpowders.core.handlers;
 
-import com.webs.blazecoding.core.util.LocalizationUtil;
-import com.webs.blazecoding.lib.Localizations;
+import net.blazecoding.magicpowders.core.util.LocalizationUtil;
+import net.blazecoding.magicpowders.lib.Localizations;
+
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

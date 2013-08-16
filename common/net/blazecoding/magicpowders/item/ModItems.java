@@ -1,8 +1,8 @@
-package com.webs.blazecoding.item;
+package net.blazecoding.magicpowders.item;
 
+import net.blazecoding.magicpowders.lib.ItemIDs;
 import net.minecraft.item.Item;
 
-import com.webs.blazecoding.lib.ItemIDs;
 
 /**
  * 

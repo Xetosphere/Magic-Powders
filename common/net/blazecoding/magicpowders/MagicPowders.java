@@ -1,16 +1,16 @@
-package com.webs.blazecoding;
+package net.blazecoding.magicpowders;
 
 import java.io.File;
 
+import net.blazecoding.magicpowders.block.ModBlocks;
+import net.blazecoding.magicpowders.configuration.ConfigurationHandler;
+import net.blazecoding.magicpowders.core.handlers.LocalizationHandler;
+import net.blazecoding.magicpowders.core.proxy.CommonProxy;
+import net.blazecoding.magicpowders.creativetab.TabMP;
+import net.blazecoding.magicpowders.item.ModItems;
+import net.blazecoding.magicpowders.lib.References;
 import net.minecraft.creativetab.CreativeTabs;
 
-import com.webs.blazecoding.block.ModBlocks;
-import com.webs.blazecoding.configuration.ConfigurationHandler;
-import com.webs.blazecoding.core.handlers.LocalizationHandler;
-import com.webs.blazecoding.core.proxy.CommonProxy;
-import com.webs.blazecoding.creativetab.TabMP;
-import com.webs.blazecoding.item.ModItems;
-import com.webs.blazecoding.lib.References;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;

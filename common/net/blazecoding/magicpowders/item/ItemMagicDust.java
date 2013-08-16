@@ -1,16 +1,16 @@
-package com.webs.blazecoding.item;
+package net.blazecoding.magicpowders.item;
 
 import java.util.List;
 
+import net.blazecoding.magicpowders.MagicPowders;
+import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 
-import com.webs.blazecoding.MagicPowders;
-import com.webs.blazecoding.lib.References;
-import com.webs.blazecoding.lib.Strings;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

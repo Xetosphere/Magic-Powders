@@ -1,4 +1,4 @@
-package com.webs.blazecoding.lib;
+package net.blazecoding.magicpowders.lib;
 
 public class Localizations {
 

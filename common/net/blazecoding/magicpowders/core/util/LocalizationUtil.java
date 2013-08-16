@@ -1,4 +1,4 @@
-package com.webs.blazecoding.core.util;
+package net.blazecoding.magicpowders.core.util;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

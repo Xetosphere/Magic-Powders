@@ -1,14 +1,14 @@
-package com.webs.blazecoding.configuration;
+package net.blazecoding.magicpowders.configuration;
 
 import java.io.File;
 import java.util.logging.Level;
 
-import com.webs.blazecoding.lib.ItemIDs;
-import com.webs.blazecoding.lib.References;
-import com.webs.blazecoding.lib.Strings;
 
 import cpw.mods.fml.common.FMLLog;
 
+import net.blazecoding.magicpowders.lib.ItemIDs;
+import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraftforge.common.Configuration;
 
 /**

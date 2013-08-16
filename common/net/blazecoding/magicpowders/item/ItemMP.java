@@ -1,9 +1,9 @@
-package com.webs.blazecoding.item;
+package net.blazecoding.magicpowders.item;
 
+import net.blazecoding.magicpowders.lib.References;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
-import com.webs.blazecoding.lib.References;
 
 public class ItemMP extends Item {
 
