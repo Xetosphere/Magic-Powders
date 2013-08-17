@@ -44,18 +44,26 @@ public class ModItems {
 		Item diamond = Item.diamond;
 		Item gold = Item.ingotGold;
 		Item iron = Item.ingotIron;
+		
+		Item coalCharcoal = Item.coal;
 
 		doubleItemOutput(diamond, 0, soronite);
 		doubleItemOutput(gold, 0, soronite);
 		doubleItemOutput(iron, 0, soronite);
+		doubleItemOutput(coalCharcoal, 0, soronite);
+		doubleItemOutput(coalCharcoal, 1, soronite);
 
 		quadItemOutput(diamond, 0, soronite);
 		quadItemOutput(gold, 0, soronite);
 		quadItemOutput(iron, 0, soronite);
+		quadItemOutput(coalCharcoal, 0, soronite);
+		quadItemOutput(coalCharcoal, 1, soronite);
 
 		octaItemOutput(diamond, 0, soronite);
 		octaItemOutput(gold, 0, soronite);
 		octaItemOutput(iron, 0, soronite);
+		octaItemOutput(coalCharcoal, 0, soronite);
+		octaItemOutput(coalCharcoal, 1, soronite);
 
 		for (int i = 1; i < EnumToolMaterial.WOOD.getMaxUses(); i++) {
 			repairTools(Item.swordWood, tardite, i);
@@ -140,15 +148,15 @@ public class ModItems {
 	}
 
 	public static void doubleItemOutput(Item itemCopied, int meta, ItemStack dustStack) {
-		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 2, meta), itemCopied, dustStack);
+		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 2, meta), new ItemStack(itemCopied, 1, meta), dustStack, dustStack);
 	}
 
 	public static void quadItemOutput(Item itemCopied, int meta, ItemStack dustStack) {
-		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 4, meta), itemCopied, dustStack, dustStack);
+		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 4, meta), new ItemStack(itemCopied, 1, meta), dustStack, dustStack, dustStack, dustStack);
 	}
 
 	public static void octaItemOutput(Item itemCopied, int meta, ItemStack dustStack) {
-		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 8, meta), itemCopied, dustStack, dustStack, dustStack);
+		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 8, meta), new ItemStack(itemCopied, 1, meta), dustStack, dustStack, dustStack, dustStack, dustStack, dustStack, dustStack, dustStack);
 	}
 
 	public static void repairTools(Item repaired, ItemStack dustStack, int state) {
