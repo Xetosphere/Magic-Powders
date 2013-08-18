@@ -44,7 +44,7 @@ public class ModItems {
 		Item diamond = Item.diamond;
 		Item gold = Item.ingotGold;
 		Item iron = Item.ingotIron;
-		
+
 		Item coalCharcoal = Item.coal;
 
 		doubleItemOutput(diamond, 0, soronite);

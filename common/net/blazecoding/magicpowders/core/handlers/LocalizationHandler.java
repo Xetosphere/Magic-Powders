@@ -2,7 +2,6 @@ package net.blazecoding.magicpowders.core.handlers;
 
 import net.blazecoding.magicpowders.core.util.LocalizationUtil;
 import net.blazecoding.magicpowders.lib.Localizations;
-
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /**
