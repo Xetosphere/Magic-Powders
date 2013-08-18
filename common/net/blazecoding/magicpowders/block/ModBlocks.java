@@ -20,6 +20,8 @@ import net.minecraft.block.Block;
 public class ModBlocks {
 
 	public static Block magicPowderOres;
+	public static Block alloyHeaterIdle;
+	public static Block alloyHeaterActive;
 
 	/**
 	 * Initializes the blocks that the mod contains. As well as block recipes and registering the blocks.
@@ -27,6 +29,8 @@ public class ModBlocks {
 	public static void init() {
 
 		magicPowderOres = new BlockMagicPowderOres(BlockIDs.powderOresID);
+		alloyHeaterIdle = new BlockAlloyHeater(BlockIDs.alloyHeaterIdleID, false);
+		alloyHeaterActive = new BlockAlloyHeater(BlockIDs.alloyHeaterActiveID, true);
 
 		registerBlocks();
 
@@ -35,6 +39,8 @@ public class ModBlocks {
 	public static void registerBlocks() {
 
 		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);
+		GameRegistry.registerBlock(alloyHeaterIdle, Strings.ALLOYHEATER_IDLE_NAME);
+		GameRegistry.registerBlock(alloyHeaterActive, Strings.ALLOYHEATER_ACTIVE_NAME);
 
 	}
 

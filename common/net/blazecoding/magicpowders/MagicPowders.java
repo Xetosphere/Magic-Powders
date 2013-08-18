@@ -13,11 +13,13 @@ import net.blazecoding.magicpowders.world.gen.WorldGen;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 /**
  * 
@@ -34,6 +36,9 @@ import cpw.mods.fml.common.network.NetworkMod;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class MagicPowders {
 
+	@Instance(References.CHANNEL_NAME)
+	public static MagicPowders instance;
+	
 	@SidedProxy(clientSide = References.CLIENT_PROXY, serverSide = References.COMMON_PROXY)
 	public static CommonProxy proxy;
 
@@ -63,6 +68,8 @@ public class MagicPowders {
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
 
+		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
+		
 	}
 
 	@EventHandler
