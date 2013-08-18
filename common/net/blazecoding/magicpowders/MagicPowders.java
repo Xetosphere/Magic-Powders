@@ -38,7 +38,7 @@ public class MagicPowders {
 
 	@Instance(References.CHANNEL_NAME)
 	public static MagicPowders instance;
-	
+
 	@SidedProxy(clientSide = References.CLIENT_PROXY, serverSide = References.COMMON_PROXY)
 	public static CommonProxy proxy;
 
@@ -68,8 +68,9 @@ public class MagicPowders {
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
 
+		// Register the GUI Handler
 		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
-		
+
 	}
 
 	@EventHandler

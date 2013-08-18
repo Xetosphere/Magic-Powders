@@ -54,6 +54,13 @@ public class BlockAlloyHeater extends BlockContainer {
 	public BlockAlloyHeater(int id, boolean active) {
 		super(id, Material.iron);
 		this.isActive = active;
+		setUnlocalizedName(Strings.ALLOYHEATER_ACTIVE_NAME);
+
+		if (!isActive) {
+			setCreativeTab(MagicPowders.tabMP);
+			setUnlocalizedName(Strings.ALLOYHEATER_IDLE_NAME);
+		}
+
 	}
 
 	public int getRenderType() {
@@ -186,8 +193,11 @@ public class BlockAlloyHeater extends BlockContainer {
 		keepHeaterInventory = true;
 
 		if (active) {
+
 			world.setBlock(x, y, z, ModBlocks.alloyHeaterActive.blockID);
+
 		} else {
+
 			world.setBlock(x, y, z, ModBlocks.alloyHeaterIdle.blockID);
 		}
 
@@ -272,6 +282,7 @@ public class BlockAlloyHeater extends BlockContainer {
 							entityItem.motionX = (double) ((float) alloyHeaterRandom.nextGaussian() * f3);
 							entityItem.motionY = (double) ((float) alloyHeaterRandom.nextGaussian() * f3 + 0.2F);
 							entityItem.motionZ = (double) ((float) alloyHeaterRandom.nextGaussian() * f3);
+
 							world.spawnEntityInWorld(entityItem);
 
 						}

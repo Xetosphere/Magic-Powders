@@ -37,6 +37,7 @@ public class ConfigurationHandler {
 			// Blocks
 			BlockIDs.powderOresID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.POWDERORES_NAME, BlockIDs.POWDERORES_ID_DEFAULT).getInt(BlockIDs.POWDERORES_ID_DEFAULT);
 			BlockIDs.alloyHeaterIdleID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.ALLOYHEATER_IDLE_NAME, BlockIDs.ALLOYHEATER_IDLE_ID_DEFAULT).getInt(BlockIDs.ALLOYHEATER_IDLE_ID_DEFAULT);
+			BlockIDs.alloyHeaterActiveID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.ALLOYHEATER_ACTIVE_NAME, BlockIDs.ALLOYHEATER_ACTIVE_ID_DEFAULT).getInt(BlockIDs.ALLOYHEATER_ACTIVE_ID_DEFAULT);
 
 			// Items
 			ItemIDs.magicDustID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICDUST_NAME, ItemIDs.MAGICDUST_ID_DEFAULT).getInt(ItemIDs.MAGICDUST_ID_DEFAULT);
