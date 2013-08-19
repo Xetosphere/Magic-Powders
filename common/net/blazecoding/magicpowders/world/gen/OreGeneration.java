@@ -14,14 +14,14 @@ import cpw.mods.fml.common.IWorldGenerator;
  * 
  * Magic Powders
  * 
- * EventManager
+ * OreGeneration
  * 
  * @author BlazeCoding
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * 
  */
 
-public class EventManager implements IWorldGenerator {
+public class OreGeneration implements IWorldGenerator {
 
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 

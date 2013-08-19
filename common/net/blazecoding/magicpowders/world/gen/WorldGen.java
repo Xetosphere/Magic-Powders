@@ -15,10 +15,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class WorldGen {
 
-	private static EventManager eventManager = new EventManager();
+	private static OreGeneration oreGenerator = new OreGeneration();
+	private static StructureGeneration structureGenerator = new StructureGeneration();
 
 	public static void init() {
-		GameRegistry.registerWorldGenerator(eventManager);
+		GameRegistry.registerWorldGenerator(oreGenerator);
+		GameRegistry.registerWorldGenerator(structureGenerator);
 	}
 
 }
