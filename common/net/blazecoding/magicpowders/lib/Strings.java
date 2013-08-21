@@ -15,6 +15,7 @@ public class Strings {
 
 	// Items
 	public static final String MAGICDUST_NAME = "magicDust";
+	public static final String MAGICINGOT_NAME = "magicIngot";
 
 	// Blocks
 	public static final String POWDERORES_NAME = "powderOres";

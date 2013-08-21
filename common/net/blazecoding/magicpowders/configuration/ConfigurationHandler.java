@@ -38,6 +38,7 @@ public class ConfigurationHandler {
 
 			// Items
 			ItemIDs.magicDustID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICDUST_NAME, ItemIDs.MAGICDUST_ID_DEFAULT).getInt(ItemIDs.MAGICDUST_ID_DEFAULT);
+			ItemIDs.magicIngotID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICINGOT_NAME, ItemIDs.MAGICINGOT_ID_DEFAULT).getInt(ItemIDs.MAGICINGOT_ID_DEFAULT);
 
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, References.MOD_ID + " had a problem loading its configuration file.");

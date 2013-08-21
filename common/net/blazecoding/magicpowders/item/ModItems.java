@@ -20,6 +20,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModItems {
 
 	public static Item magicDust;
+	public static Item magicIngot;
 
 	/**
 	 * Adds the items that the mod contains. As well as item recipes.
@@ -27,6 +28,7 @@ public class ModItems {
 	public static void init() {
 
 		magicDust = new ItemMagicDust(ItemIDs.magicDustID);
+		magicIngot = new ItemMagicIngot (ItemIDs.magicIngotID);
 
 		registerRecipes();
 

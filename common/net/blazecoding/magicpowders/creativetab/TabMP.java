@@ -1,7 +1,7 @@
 package net.blazecoding.magicpowders.creativetab;
 
+import net.blazecoding.magicpowders.item.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -22,7 +22,7 @@ public class TabMP extends CreativeTabs {
 	}
 
 	public ItemStack getIconItemStack() {
-		return new ItemStack(Item.diamond.itemID, 1, 0);
+		return new ItemStack(ModItems.magicDust, 1, 0);
 	}
 
 }
