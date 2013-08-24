@@ -8,6 +8,7 @@ import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -60,6 +61,24 @@ public class ItemMagicDust extends ItemMP {
 
 		for (int i = 0; i < MAGIC_DUST_NAMES.length; ++i) {
 			icons[i] = iconRegister.registerIcon(References.MOD_ID.toLowerCase() + ":" + Strings.MAGICDUST_NAME + MAGIC_DUST_NAMES[i]);
+		}
+
+	}
+
+	public String getItemDisplayName(ItemStack itemStack) {
+
+		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, MAGIC_DUST_NAMES.length);
+
+		switch (meta) {
+			case 0:
+				return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
+			case 1:
+				return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
+			case 2:
+				return EnumChatFormatting.AQUA + super.getItemDisplayName(itemStack);
+			default:
+				return EnumChatFormatting.WHITE + super.getItemDisplayName(itemStack);
+
 		}
 
 	}

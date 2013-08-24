@@ -14,7 +14,9 @@ package net.blazecoding.magicpowders.lib;
 public class BlockIDs {
 
 	public static final int POWDERORES_ID_DEFAULT = 500;
+	public static final int STORAGEBLOCKS_ID_DEFAULT = 501;
 
 	public static int powderOresID;
+	public static int storageBlocksID;
 
 }

@@ -1,5 +1,6 @@
 package net.blazecoding.magicpowders.world.gen;
 
+import net.blazecoding.magicpowders.lib.ModConfigurations;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
@@ -19,8 +20,12 @@ public class WorldGen {
 	private static StructureGeneration structureGenerator = new StructureGeneration();
 
 	public static void init() {
+
 		GameRegistry.registerWorldGenerator(oreGenerator);
-		GameRegistry.registerWorldGenerator(structureGenerator);
+
+		if (ModConfigurations.enableCustomGeneration) {
+			GameRegistry.registerWorldGenerator(structureGenerator);
+		}
 	}
 
 }

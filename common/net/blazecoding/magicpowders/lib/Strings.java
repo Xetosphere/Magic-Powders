@@ -19,5 +19,9 @@ public class Strings {
 
 	// Blocks
 	public static final String POWDERORES_NAME = "powderOres";
+	public static final String STORAGEBLOCKS_NAME = "ingotBlocks";
+	
+	// Misc
+	public static final String CUSTOMGEN = "Enable custom structures";
 
 }

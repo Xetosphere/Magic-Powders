@@ -17,7 +17,7 @@ import net.minecraft.util.MathHelper;
 
 public class ItemBlockStorageBlocks extends ItemBlock {
 
-	public static final String[] BLOCK_NAMES = { "SironBlock", "TarmiteBlock", "KormondBlock" };
+	public static final String[] BLOCK_NAMES = { "SoroniteBlock", "TarditeBlock", "KoroninBlock" };
 
 	public ItemBlockStorageBlocks(int id) {
 		super(id);

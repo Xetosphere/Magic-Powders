@@ -1,10 +1,8 @@
 package net.blazecoding.magicpowders.block;
 
 import java.util.List;
-import java.util.Random;
 
 import net.blazecoding.magicpowders.MagicPowders;
-import net.blazecoding.magicpowders.item.ModItems;
 import net.blazecoding.magicpowders.lib.References;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.block.Block;
@@ -16,39 +14,28 @@ import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-/**
- * 
- * Magic Powders
- * 
- * BlockMagicPowderOres
- * 
- * @author BlazeCoding
- * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- * 
- */
+public class BlockStorageBlocks extends Block {
 
-public class BlockMagicPowderOres extends Block {
-
-	public static final String[] POWDERORE_NAMES = { "SoroniteOre", "TarditeOre", "KoroninOre" };
+	public static final String[] BLOCK_NAMES = { "SoroniteBlock", "TarditeBlock", "KoroninBlock" };
 
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
 
-	public BlockMagicPowderOres(int id) {
+	public BlockStorageBlocks(int id) {
 		super(id, Material.rock);
-		setUnlocalizedName(Strings.POWDERORES_NAME);
+		setUnlocalizedName(Strings.STORAGEBLOCKS_NAME);
 		setCreativeTab(MagicPowders.tabMP);
 		setHardness(3.0F);
-		setResistance(8.0F);
+		setResistance(12.0F);
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 
-		icons = new Icon[POWDERORE_NAMES.length];
+		icons = new Icon[BLOCK_NAMES.length];
 
-		for (int i = 0; i < POWDERORE_NAMES.length; ++i) {
-			icons[i] = iconRegister.registerIcon(References.MOD_ID.toLowerCase() + ":" + Strings.POWDERORES_NAME + POWDERORE_NAMES[i]);
+		for (int i = 0; i < BLOCK_NAMES.length; ++i) {
+			icons[i] = iconRegister.registerIcon(References.MOD_ID.toLowerCase() + ":" + Strings.STORAGEBLOCKS_NAME + BLOCK_NAMES[i]);
 		}
 
 	}
@@ -66,10 +53,6 @@ public class BlockMagicPowderOres extends Block {
 			par3List.add(new ItemStack(par1, 1, var4));
 		}
 
-	}
-
-	public int idDropped(int id, Random random, int meta) {
-		return ModItems.magicDust.itemID;
 	}
 
 	public int damageDropped(int meta) {
