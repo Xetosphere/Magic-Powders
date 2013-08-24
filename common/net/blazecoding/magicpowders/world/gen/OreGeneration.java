@@ -44,20 +44,22 @@ public class OreGeneration implements IWorldGenerator {
 
 	private void genereateSurface(World world, Random random, int x, int z) {
 
-		addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 4, 10, 0, 60);
-		addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 4, 10, 0, 60);
-		addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 4, 10, 0, 60);
-
 		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.forest) {
 			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+		} else {
+			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 3, 10, 0, 60);
 		}
 
 		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.desert) {
-			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+		} else {
+			addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 3, 10, 0, 60);
 		}
 
 		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.swampland) {
-			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 8, 25, 0, 60);
+		} else {
+			addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 3, 10, 0, 60);
 		}
 
 	}

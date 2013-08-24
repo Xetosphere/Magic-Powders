@@ -28,7 +28,7 @@ public class ModItems {
 	public static void init() {
 
 		magicDust = new ItemMagicDust(ItemIDs.magicDustID);
-		magicIngot = new ItemMagicIngot (ItemIDs.magicIngotID);
+		magicIngot = new ItemMagicIngot(ItemIDs.magicIngotID);
 
 		registerRecipes();
 
@@ -146,6 +146,10 @@ public class ModItems {
 			repairAndDoubleTools(Item.shovelDiamond, koronin, i);
 			repairAndDoubleTools(Item.hoeDiamond, koronin, i);
 		}
+
+		GameRegistry.addRecipe(new ItemStack(magicIngot, 3, 0), new Object[] { "XXX", "YYY", "XXX", Character.valueOf('X'), new ItemStack(magicDust, 1, 0), Character.valueOf('Y'), Item.ingotIron });
+		GameRegistry.addRecipe(new ItemStack(magicIngot, 3, 1), new Object[] { "XXX", "YYY", "XXX", Character.valueOf('X'), new ItemStack(magicDust, 1, 1), Character.valueOf('Y'), Item.ingotIron });
+		GameRegistry.addRecipe(new ItemStack(magicIngot, 3, 2), new Object[] { "XXX", "YYY", "XXX", Character.valueOf('X'), new ItemStack(magicDust, 1, 2), Character.valueOf('Y'), Item.ingotIron });
 
 	}
 

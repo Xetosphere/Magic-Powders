@@ -2,6 +2,7 @@ package net.blazecoding.magicpowders.block;
 
 import net.blazecoding.magicpowders.item.ItemBlockMagicPowderOres;
 import net.blazecoding.magicpowders.item.ItemBlockStorageBlocks;
+import net.blazecoding.magicpowders.item.ModItems;
 import net.blazecoding.magicpowders.lib.BlockIDs;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.block.Block;
@@ -55,6 +56,10 @@ public class ModBlocks {
 	}
 
 	private static void addRecipe() {
+
+		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 0), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 1), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 2), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2) });
 
 	}
 
