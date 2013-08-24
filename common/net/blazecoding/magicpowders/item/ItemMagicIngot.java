@@ -2,8 +2,6 @@ package net.blazecoding.magicpowders.item;
 
 import java.util.List;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.blazecoding.magicpowders.MagicPowders;
 import net.blazecoding.magicpowders.lib.References;
 import net.blazecoding.magicpowders.lib.Strings;
@@ -13,6 +11,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * 

@@ -40,15 +40,15 @@ public class StructureGeneration implements IWorldGenerator {
 	}
 
 	public static void generateSurface(World world, Random random, int x, int z) {
-		
+
 		for (int i = 0; i < 7; ++i) {
-			
+
 			int xCoord = x + random.nextInt(16);
 			int yCoord = random.nextInt(80);
 			int zCoord = z + random.nextInt(16);
-			
+
 			(new WorldGenApprenticeHouse()).generate(world, random, xCoord, yCoord, zCoord);
-			
+
 		}
 
 	}

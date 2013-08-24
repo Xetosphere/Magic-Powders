@@ -41,7 +41,7 @@ public class ConfigurationHandler {
 			// Items
 			ItemIDs.magicDustID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICDUST_NAME, ItemIDs.MAGICDUST_ID_DEFAULT).getInt(ItemIDs.MAGICDUST_ID_DEFAULT);
 			ItemIDs.magicIngotID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICINGOT_NAME, ItemIDs.MAGICINGOT_ID_DEFAULT).getInt(ItemIDs.MAGICINGOT_ID_DEFAULT);
-			
+
 			// Misc
 			ModConfigurations.enableCustomGeneration = config.get(Configuration.CATEGORY_GENERAL, Strings.CUSTOMGEN, ModConfigurations.DEFAULT_GENERATION).getBoolean(ModConfigurations.DEFAULT_GENERATION);
 

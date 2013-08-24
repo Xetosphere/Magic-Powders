@@ -172,11 +172,11 @@ public class WorldGenApprenticeHouse extends WorldGenerator {
 
 				world.setBlock(x + 0, y + 3, z + 0, Block.planks.blockID, 1, 0);
 				world.setBlock(x + 0, y + 4, z + 0, Block.planks.blockID, 1, 0);
-				
+
 				// The window at front south
 				world.setBlock(x + 0, y + 2, z + 2, Block.glass.blockID);
 				world.setBlock(x + 0, y + 3, z + 2, Block.glass.blockID);
-				
+
 				// The window at front north
 				world.setBlock(x + 0, y + 2, z - 2, Block.glass.blockID);
 				world.setBlock(x + 0, y + 3, z - 2, Block.glass.blockID);
@@ -396,11 +396,11 @@ public class WorldGenApprenticeHouse extends WorldGenerator {
 
 				world.setBlock(x + 0, y + 3, z + 0, Block.planks.blockID, 1, 0);
 				world.setBlock(x + 0, y + 4, z + 0, Block.planks.blockID, 1, 0);
-				
+
 				// The window at front south
 				world.setBlock(x + 0, y + 2, z - 2, Block.glass.blockID);
 				world.setBlock(x + 0, y + 3, z - 2, Block.glass.blockID);
-				
+
 				// The window at front north
 				world.setBlock(x + 0, y + 2, z + 2, Block.glass.blockID);
 				world.setBlock(x + 0, y + 3, z + 2, Block.glass.blockID);

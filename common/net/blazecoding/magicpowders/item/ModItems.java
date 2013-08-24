@@ -55,17 +55,17 @@ public class ModItems {
 		doubleItemOutput(coalCharcoal, 0, soronite);
 		doubleItemOutput(coalCharcoal, 1, soronite);
 
-		quadItemOutput(diamond, 0, soronite);
-		quadItemOutput(gold, 0, soronite);
-		quadItemOutput(iron, 0, soronite);
-		quadItemOutput(coalCharcoal, 0, soronite);
-		quadItemOutput(coalCharcoal, 1, soronite);
+		quadrupleItemOutput(diamond, 0, soronite);
+		quadrupleItemOutput(gold, 0, soronite);
+		quadrupleItemOutput(iron, 0, soronite);
+		quadrupleItemOutput(coalCharcoal, 0, soronite);
+		quadrupleItemOutput(coalCharcoal, 1, soronite);
 
-		octaItemOutput(diamond, 0, soronite);
-		octaItemOutput(gold, 0, soronite);
-		octaItemOutput(iron, 0, soronite);
-		octaItemOutput(coalCharcoal, 0, soronite);
-		octaItemOutput(coalCharcoal, 1, soronite);
+		octupleItemOutput(diamond, 0, soronite);
+		octupleItemOutput(gold, 0, soronite);
+		octupleItemOutput(iron, 0, soronite);
+		octupleItemOutput(coalCharcoal, 0, soronite);
+		octupleItemOutput(coalCharcoal, 1, soronite);
 
 		for (int i = 1; i < EnumToolMaterial.WOOD.getMaxUses(); i++) {
 			repairTools(Item.swordWood, tardite, i);
@@ -157,11 +157,11 @@ public class ModItems {
 		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 2, meta), new ItemStack(itemCopied, 1, meta), dustStack, dustStack);
 	}
 
-	public static void quadItemOutput(Item itemCopied, int meta, ItemStack dustStack) {
+	public static void quadrupleItemOutput(Item itemCopied, int meta, ItemStack dustStack) {
 		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 4, meta), new ItemStack(itemCopied, 1, meta), dustStack, dustStack, dustStack, dustStack);
 	}
 
-	public static void octaItemOutput(Item itemCopied, int meta, ItemStack dustStack) {
+	public static void octupleItemOutput(Item itemCopied, int meta, ItemStack dustStack) {
 		GameRegistry.addShapelessRecipe(new ItemStack(itemCopied, 8, meta), new ItemStack(itemCopied, 1, meta), dustStack, dustStack, dustStack, dustStack, dustStack, dustStack, dustStack, dustStack);
 	}
 

@@ -7,6 +7,7 @@ import net.blazecoding.magicpowders.lib.BlockIDs;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -35,6 +36,7 @@ public class ModBlocks {
 		storageBlocks = new BlockStorageBlocks(BlockIDs.storageBlocksID);
 
 		registerBlocks();
+		addOreLevels();
 		initToOreDictionary();
 		addRecipe();
 
@@ -44,6 +46,18 @@ public class ModBlocks {
 
 		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);
 		GameRegistry.registerBlock(storageBlocks, ItemBlockStorageBlocks.class, Strings.STORAGEBLOCKS_NAME);
+
+	}
+
+	public static void addOreLevels() {
+
+		MinecraftForge.setBlockHarvestLevel(magicPowderOres, 0, "pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(magicPowderOres, 1, "pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(magicPowderOres, 2, "pickaxe", 2);
+
+		MinecraftForge.setBlockHarvestLevel(storageBlocks, 0, "pickaxe", 0);
+		MinecraftForge.setBlockHarvestLevel(storageBlocks, 1, "pickaxe", 0);
+		MinecraftForge.setBlockHarvestLevel(storageBlocks, 2, "pickaxe", 0);
 
 	}
 
@@ -60,6 +74,14 @@ public class ModBlocks {
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 0), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 1), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1) });
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 2), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2) });
+
+		ItemStack soroniteBlock = new ItemStack(storageBlocks, 1, 0);
+		ItemStack tarditeBlock = new ItemStack(storageBlocks, 1, 1);
+		ItemStack koroninBlock = new ItemStack(storageBlocks, 1, 2);
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.magicDust, 9, 0), soroniteBlock);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.magicDust, 9, 1), tarditeBlock);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.magicDust, 9, 2), koroninBlock);
 
 	}
 
