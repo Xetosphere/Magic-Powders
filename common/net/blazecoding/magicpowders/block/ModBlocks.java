@@ -26,6 +26,8 @@ public class ModBlocks {
 
 	public static Block magicPowderOres;
 	public static Block storageBlocks;
+	public static Block magicInfuserIdle;
+	public static Block magicInfuserActive;
 
 	/**
 	 * Initializes the blocks that the mod contains. As well as block recipes and registering the blocks.
@@ -34,6 +36,8 @@ public class ModBlocks {
 
 		magicPowderOres = new BlockMagicPowderOres(BlockIDs.powderOresID);
 		storageBlocks = new BlockStorageBlocks(BlockIDs.storageBlocksID);
+		magicInfuserIdle = new BlockMagicInfuser(BlockIDs.magicInfuserID, false);
+		magicInfuserActive = new BlockMagicInfuser(BlockIDs.magicInfuserActiveID, true);
 
 		registerBlocks();
 		addOreLevels();
@@ -46,6 +50,8 @@ public class ModBlocks {
 
 		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);
 		GameRegistry.registerBlock(storageBlocks, ItemBlockStorageBlocks.class, Strings.STORAGEBLOCKS_NAME);
+		GameRegistry.registerBlock(magicInfuserIdle, Strings.MAGICINFUSER_NAME);
+		GameRegistry.registerBlock(magicInfuserActive, Strings.MAGICINFUSERACTIVE_NAME);
 
 	}
 

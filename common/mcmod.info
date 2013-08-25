@@ -4,13 +4,13 @@
   "name": "Magic Powders",
   "description": "The Magic Powders mod.",
   "version": "pre0.0.1",
-  "url": "",
+  "url": "http://www.minecraftforum.net/topic/1954538-",
   "updateUrl": "",
   "authorList": [
     "BlazeCoding-DevTeam"
   ],
   "credits": "By BlazeCoding, credits to Xetosphere for original mod.",
-  "logoFile": "",
+  "logoFile": "/mods/mp/textures/logo/magicpowder.png",
   "screenshots": [
   ],
   "parent":"",

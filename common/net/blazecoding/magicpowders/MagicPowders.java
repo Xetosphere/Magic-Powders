@@ -9,6 +9,7 @@ import net.blazecoding.magicpowders.core.proxy.CommonProxy;
 import net.blazecoding.magicpowders.creativetab.TabMP;
 import net.blazecoding.magicpowders.item.ModItems;
 import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.network.PacketHandler;
 import net.blazecoding.magicpowders.world.gen.WorldGen;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
@@ -19,6 +20,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 /**
  * 
@@ -32,7 +34,7 @@ import cpw.mods.fml.common.network.NetworkMod;
  */
 
 @Mod(modid = References.MOD_ID, name = References.MOD_NAME, version = References.VERSION, dependencies = References.DEPENDENCIES)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@NetworkMod(channels = { References.CHANNEL_NAME }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
 public class MagicPowders {
 
 	@Instance(References.CHANNEL_NAME)
@@ -66,6 +68,8 @@ public class MagicPowders {
 
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
+		
+		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
 
 	}
 

@@ -20,6 +20,8 @@ public class Strings {
 	// Blocks
 	public static final String POWDERORES_NAME = "powderOres";
 	public static final String STORAGEBLOCKS_NAME = "ingotBlocks";
+	public static final String MAGICINFUSER_NAME = "magicInfuser";
+	public static final String MAGICINFUSERACTIVE_NAME = "magicInfuserActive";
 
 	// Misc
 	public static final String CUSTOMGEN = "Enable custom structures";
