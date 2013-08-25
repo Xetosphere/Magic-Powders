@@ -1,7 +1,7 @@
 #################
 ## Eclipse
 #################
-build_number.properties
+
 build.properties
 *.pydevproject
 .project
