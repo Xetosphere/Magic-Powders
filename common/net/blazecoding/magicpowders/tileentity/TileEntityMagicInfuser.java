@@ -1,6 +1,7 @@
 package net.blazecoding.magicpowders.tileentity;
 
 import net.blazecoding.magicpowders.item.ModItems;
+import net.blazecoding.magicpowders.lib.References;
 import net.blazecoding.magicpowders.recipe.MagicInfuserRecipes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -48,13 +49,13 @@ public class TileEntityMagicInfuser extends TileEntity implements IInventory {
 	public void readFromNBT(NBTTagCompound nbttagcompound) {
 
 		super.readFromNBT(nbttagcompound);
-		NBTTagList nbttaglist = nbttagcompound.getTagList("Items");
+		NBTTagList nbttaglist = nbttagcompound.getTagList(References.MOD_ID + " " + "Items");
 		infuserItemStacks = new ItemStack[getSizeInventory()];
 
 		for (int i = 0; i < nbttaglist.tagCount(); i++) {
 
 			NBTTagCompound nbttagcompound1 = (NBTTagCompound) nbttaglist.tagAt(i);
-			byte byte0 = nbttagcompound1.getByte("Slot");
+			byte byte0 = nbttagcompound1.getByte(References.MOD_ID + " " + "InfuserSlot");
 
 			if (byte0 >= 0 && byte0 < infuserItemStacks.length) {
 				infuserItemStacks[byte0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
@@ -62,16 +63,16 @@ public class TileEntityMagicInfuser extends TileEntity implements IInventory {
 
 		}
 
-		dualBurnTime = nbttagcompound.getShort("BurnTime");
-		dualCookTime = nbttagcompound.getShort("CookTime");
+		dualBurnTime = nbttagcompound.getShort(References.MOD_ID + " " + "BurnTime");
+		dualCookTime = nbttagcompound.getShort(References.MOD_ID + " " + "CookTime");
 		currentItemBurnTime = getItemBurnTime(infuserItemStacks[1]);
 
 	}
 
 	public void writeToNBT(NBTTagCompound nbttagcompound) {
 		super.writeToNBT(nbttagcompound);
-		nbttagcompound.setShort("BurnTime", (short) dualBurnTime);
-		nbttagcompound.setShort("CookTime", (short) dualCookTime);
+		nbttagcompound.setShort(References.MOD_ID + " " + "BurnTime", (short) dualBurnTime);
+		nbttagcompound.setShort(References.MOD_ID + " " + "CookTime", (short) dualCookTime);
 		NBTTagList nbttaglist = new NBTTagList();
 
 		for (int i = 0; i < infuserItemStacks.length; i++) {
@@ -188,7 +189,7 @@ public class TileEntityMagicInfuser extends TileEntity implements IInventory {
 			return false;
 		}
 
-		ItemStack itemstack = MagicInfuserRecipes.getSmeltingResult(infuserItemStacks[0].getItem().itemID, infuserItemStacks[1].getItem().itemID);
+		ItemStack itemstack = MagicInfuserRecipes.getInfusingResult(infuserItemStacks[0].getItem().itemID, infuserItemStacks[1].getItem().itemID, infuserItemStacks[0].getItemDamage(), infuserItemStacks[1].getItemDamage());
 
 		if (itemstack == null) {
 			return false;
@@ -217,7 +218,7 @@ public class TileEntityMagicInfuser extends TileEntity implements IInventory {
 			return;
 		}
 
-		ItemStack itemstack = MagicInfuserRecipes.getSmeltingResult(infuserItemStacks[0].getItem().itemID, infuserItemStacks[1].getItem().itemID);
+		ItemStack itemstack = MagicInfuserRecipes.getInfusingResult(infuserItemStacks[0].getItem().itemID, infuserItemStacks[1].getItem().itemID, infuserItemStacks[0].getItemDamage(), infuserItemStacks[1].getItemDamage());
 
 		if (infuserItemStacks[3] == null) {
 
