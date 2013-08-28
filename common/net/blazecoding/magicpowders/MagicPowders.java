@@ -8,7 +8,7 @@ import net.blazecoding.magicpowders.core.handlers.LocalizationHandler;
 import net.blazecoding.magicpowders.core.proxy.CommonProxy;
 import net.blazecoding.magicpowders.creativetab.TabMP;
 import net.blazecoding.magicpowders.item.ModItems;
-import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.lib.Reference;
 import net.blazecoding.magicpowders.network.PacketHandler;
 import net.blazecoding.magicpowders.world.gen.WorldGen;
 import net.minecraft.creativetab.CreativeTabs;
@@ -33,18 +33,18 @@ import cpw.mods.fml.common.network.NetworkRegistry;
  * 
  */
 
-@Mod(modid = References.MOD_ID, name = References.MOD_NAME, version = References.VERSION, dependencies = References.DEPENDENCIES)
-@NetworkMod(channels = { References.CHANNEL_NAME }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = Reference.DEPENDENCIES)
+@NetworkMod(channels = { Reference.CHANNEL_NAME }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
 public class MagicPowders {
 
-	@Instance(References.CHANNEL_NAME)
+	@Instance(Reference.CHANNEL_NAME)
 	public static MagicPowders instance;
 
-	@SidedProxy(clientSide = References.CLIENT_PROXY, serverSide = References.COMMON_PROXY)
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy;
 
 	// Adds the Magic Powder tab in the creative tabs.
-	public static final CreativeTabs tabMP = new TabMP(CreativeTabs.getNextID(), References.MOD_ID);
+	public static final CreativeTabs tabMP = new TabMP(CreativeTabs.getNextID(), Reference.MOD_ID);
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
@@ -53,7 +53,7 @@ public class MagicPowders {
 		LocalizationHandler.loadLanguages();
 
 		// Adds the config, that can change block and item ids as well as making the mob spawn in an already existing world.
-		ConfigurationHandler.init(new File(e.getModConfigurationDirectory().getAbsolutePath() + File.separator + References.CHANNEL_NAME + File.separator + References.MOD_ID + ".cfg"));
+		ConfigurationHandler.init(new File(e.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
 
 		// Adds the items that the mod contains. As well as item recipes.
 		ModItems.init();
@@ -68,8 +68,12 @@ public class MagicPowders {
 
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
-		
+
+		// Register the GUI Handler
 		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
+
+		// Initialize mod tile entities
+		proxy.registerTileEntities();
 
 	}
 

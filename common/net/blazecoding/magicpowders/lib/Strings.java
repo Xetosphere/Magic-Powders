@@ -13,17 +13,32 @@ package net.blazecoding.magicpowders.lib;
 
 public class Strings {
 
-	// Items
+	/* Miscellaneous */
+	public static final String ENABLE_CUSTOM_GEN = "Enable custom structures";
+
+	/* Localization Prefixes */
+	public static final String RESOURCE_PREFIX = Reference.MOD_ID.toLowerCase() + ":";
+
+	/* NBT related constants */
+	public static final String NBT_TE_STATE_KEY = "teState";
+	public static final String NBT_TE_CUSTOM_NAME = "CustomName";
+	public static final String NBT_TE_DIRECTION_KEY = "teDirection";
+
+	/* Block name constants */
+	public static final String POWDERORES_NAME = "powderOres";
+	public static final String STORAGEBLOCKS_NAME = "ingotBlocks";
+	public static final String FUSER_NAME = "fuser";
+
+	/* Item name constants */
 	public static final String MAGICDUST_NAME = "magicDust";
 	public static final String MAGICINGOT_NAME = "magicIngot";
 
-	// Blocks
-	public static final String POWDERORES_NAME = "powderOres";
-	public static final String STORAGEBLOCKS_NAME = "ingotBlocks";
-	public static final String MAGICINFUSER_NAME = "magicInfuser";
-	public static final String MAGICINFUSERACTIVE_NAME = "magicInfuserActive";
+	/* TileEntity name constants */
+	public static final String TE_FUSER_NAME = "tileFuser";
 
-	// Misc
-	public static final String CUSTOMGEN = "Enable custom structures";
+	/* Container related constants */
+	public static final String CONTAINER_FUSER_NAME = "container." + FUSER_NAME;
+	public static final String CONTAINER_INVENTORY = "container.inventory";
+	public static final String CONTAINER_PORTABLE_CRAFTING = "container.crafting";
 
 }

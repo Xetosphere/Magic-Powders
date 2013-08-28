@@ -1,6 +1,6 @@
 package net.blazecoding.magicpowders.core.util;
 
-import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.lib.Reference;
 import net.minecraft.util.ResourceLocation;
 
 
@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 public class ResourceLocationHelper {
 
 	public static ResourceLocation getResourceLocation(String path) {
-		return new ResourceLocation(References.MOD_ID.toLowerCase(), path);
+		return new ResourceLocation(Reference.MOD_ID.toLowerCase(), path);
 	}
 
 }

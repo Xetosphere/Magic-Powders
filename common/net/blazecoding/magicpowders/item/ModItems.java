@@ -27,8 +27,8 @@ public class ModItems {
 	 */
 	public static void init() {
 
-		magicDust = new ItemMagicDust(ItemIDs.magicDustID);
-		magicIngot = new ItemMagicIngot(ItemIDs.magicIngotID);
+		magicDust = new ItemMagicDust(ItemIDs.MAGICDUSTS);
+		magicIngot = new ItemMagicIngot(ItemIDs.MAGICINGOTS);
 
 		registerRecipes();
 

@@ -3,7 +3,7 @@ package net.blazecoding.magicpowders.item;
 import java.util.List;
 
 import net.blazecoding.magicpowders.MagicPowders;
-import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.lib.Reference;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -60,7 +60,7 @@ public class ItemMagicIngot extends ItemMP {
 		icons = new Icon[MAGIC_INGOT_NAMES.length];
 
 		for (int i = 0; i < MAGIC_INGOT_NAMES.length; ++i) {
-			icons[i] = iconRegister.registerIcon(References.MOD_ID.toLowerCase() + ":" + Strings.MAGICINGOT_NAME + MAGIC_INGOT_NAMES[i]);
+			icons[i] = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.MAGICINGOT_NAME + MAGIC_INGOT_NAMES[i]);
 		}
 
 	}

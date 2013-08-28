@@ -6,7 +6,7 @@ import java.util.logging.Level;
 import net.blazecoding.magicpowders.lib.BlockIDs;
 import net.blazecoding.magicpowders.lib.ItemIDs;
 import net.blazecoding.magicpowders.lib.ModConfigurations;
-import net.blazecoding.magicpowders.lib.References;
+import net.blazecoding.magicpowders.lib.Reference;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
@@ -35,20 +35,19 @@ public class ConfigurationHandler {
 			config.load();
 
 			// Blocks
-			BlockIDs.powderOresID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.POWDERORES_NAME, BlockIDs.POWDERORES_ID_DEFAULT).getInt(BlockIDs.POWDERORES_ID_DEFAULT);
-			BlockIDs.storageBlocksID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.STORAGEBLOCKS_NAME, BlockIDs.STORAGEBLOCKS_ID_DEFAULT).getInt(BlockIDs.STORAGEBLOCKS_ID_DEFAULT);
-			BlockIDs.magicInfuserID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.MAGICINFUSER_NAME, BlockIDs.MAGICINFUSER_ID_DEFAULT).getInt(BlockIDs.MAGICINFUSER_ID_DEFAULT);
-			BlockIDs.magicInfuserActiveID = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.MAGICINFUSERACTIVE_NAME, BlockIDs.MAGICINFUSERACTIVE_ID_DEFAULT).getInt(BlockIDs.MAGICINFUSERACTIVE_ID_DEFAULT);
+			BlockIDs.MAGIC_ORES = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.POWDERORES_NAME, BlockIDs.POWDERORES_DEFAULT).getInt(BlockIDs.POWDERORES_DEFAULT);
+			BlockIDs.STORAGE_BLOCKS = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.STORAGEBLOCKS_NAME, BlockIDs.STORAGEBLOCKS_DEFAULT).getInt(BlockIDs.STORAGEBLOCKS_DEFAULT);
+			BlockIDs.FUSER = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.FUSER_NAME, BlockIDs.FUSER_DEFAULT).getInt(BlockIDs.FUSER_DEFAULT);
 
 			// Items
-			ItemIDs.magicDustID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICDUST_NAME, ItemIDs.MAGICDUST_ID_DEFAULT).getInt(ItemIDs.MAGICDUST_ID_DEFAULT);
-			ItemIDs.magicIngotID = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICINGOT_NAME, ItemIDs.MAGICINGOT_ID_DEFAULT).getInt(ItemIDs.MAGICINGOT_ID_DEFAULT);
+			ItemIDs.MAGICDUSTS = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICDUST_NAME, ItemIDs.MAGICDUSTS_DEFAULT).getInt(ItemIDs.MAGICDUSTS_DEFAULT);
+			ItemIDs.MAGICINGOTS = config.getItem(Configuration.CATEGORY_ITEM, Strings.MAGICINGOT_NAME, ItemIDs.MAGICINGOTS_DEFAULT).getInt(ItemIDs.MAGICINGOTS_DEFAULT);
 
 			// Misc
-			ModConfigurations.enableCustomGeneration = config.get(Configuration.CATEGORY_GENERAL, Strings.CUSTOMGEN, ModConfigurations.DEFAULT_GENERATION).getBoolean(ModConfigurations.DEFAULT_GENERATION);
+			ModConfigurations.enableCustomGeneration = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_CUSTOM_GEN, ModConfigurations.DEFAULT_GENERATION).getBoolean(ModConfigurations.DEFAULT_GENERATION);
 
 		} catch (Exception e) {
-			FMLLog.log(Level.SEVERE, e, References.MOD_ID + " had a problem loading its configuration file.");
+			FMLLog.log(Level.SEVERE, e, Reference.MOD_ID + " had a problem loading its configuration file.");
 		} finally {
 			config.save();
 		}

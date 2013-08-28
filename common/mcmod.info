@@ -9,8 +9,8 @@
   "authorList": [
     "BlazeCoding-DevTeam"
   ],
-  "credits": "By BlazeCoding, credits to Xetosphere for original mod.",
-  "logoFile": "/mods/mp/textures/logo/magicpowder.png",
+  "credits": "By BlazeCoding, head coder Xetosphere.",
+  "logoFile": "/assets/mp/textures/logo/logo.png",
   "screenshots": [
   ],
   "parent":"",

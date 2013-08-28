@@ -14,4 +14,6 @@
 	<entry key = "tile.ingotBlocksSoroniteBlock.name">Soronite Block</entry>
 	<entry key = "tile.ingotBlocksTarditeBlock.name">Tardite Block</entry>
 	<entry key = "tile.ingotBlocksKoroninBlock.name">Koronin Block</entry>
+	<entry key = "tile.mp:fuser.name">Fusing Table</entry>
+	<entry key = "container.fuser">Fusing Table</entry>
 </properties>

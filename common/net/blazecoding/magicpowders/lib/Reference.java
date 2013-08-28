@@ -11,7 +11,7 @@ package net.blazecoding.magicpowders.lib;
  * 
  */
 
-public class References {
+public class Reference {
 
 	public static final String MOD_ID = "MP";
 	public static final String MOD_NAME = "Magic Powders";
