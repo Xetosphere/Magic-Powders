@@ -34,15 +34,21 @@ public class ItemMagicIngot extends ItemMP {
 
 	public ItemMagicIngot(int id) {
 		super(id);
-		setUnlocalizedName(Strings.MAGICINGOT_NAME);
 		setCreativeTab(MagicPowders.tabMP);
 		setHasSubtypes(true);
 	}
 
 	public String getUnlocalizedName(ItemStack itemStack) {
 
-		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, MAGIC_INGOT_NAMES.length);
-		return super.getUnlocalizedName() + MAGIC_INGOT_NAMES[meta];
+		StringBuilder unlocalizedName = new StringBuilder();
+        int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, MAGIC_INGOT_NAMES.length);
+
+		unlocalizedName.append("item.");
+		unlocalizedName.append(Strings.RESOURCE_PREFIX);
+		unlocalizedName.append(Strings.MAGICINGOT_NAME);
+		unlocalizedName.append(MAGIC_INGOT_NAMES[meta]);
+
+		return unlocalizedName.toString();
 
 	}
 

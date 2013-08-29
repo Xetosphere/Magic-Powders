@@ -3,7 +3,6 @@ package net.blazecoding.magicpowders.block;
 import java.util.List;
 
 import net.blazecoding.magicpowders.MagicPowders;
-import net.blazecoding.magicpowders.lib.Reference;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -34,7 +33,7 @@ public class BlockStorageBlocks extends Block {
 
 	public BlockStorageBlocks(int id) {
 		super(id, Material.rock);
-		setUnlocalizedName(Strings.STORAGEBLOCKS_NAME);
+		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.STORAGEBLOCKS_NAME);
 		setCreativeTab(MagicPowders.tabMP);
 		setHardness(3.0F);
 		setResistance(12.0F);
@@ -46,7 +45,7 @@ public class BlockStorageBlocks extends Block {
 		icons = new Icon[BLOCK_NAMES.length];
 
 		for (int i = 0; i < BLOCK_NAMES.length; ++i) {
-			icons[i] = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.STORAGEBLOCKS_NAME + BLOCK_NAMES[i]);
+			icons[i] = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.STORAGEBLOCKS_NAME + BLOCK_NAMES[i]);
 		}
 
 	}

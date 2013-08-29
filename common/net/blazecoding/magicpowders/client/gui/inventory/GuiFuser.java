@@ -52,12 +52,12 @@ public class GuiFuser extends GuiContainer {
 
 		int i1;
 
-		if (this.tileFuser.isFusing()) {
-			i1 = this.tileFuser.getTimeRemainingScaled(12);
+		if (this.tileFuser.isBurning()) {
+			i1 = this.tileFuser.getBurnTimeRemainingScaled(12);
 			this.drawTexturedModalRect(xStart + 56, yStart + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 2);
 		}
 
-		i1 = this.tileFuser.getProgressTimeScaled(24);
+		i1 = this.tileFuser.getCookProgressTimeScaled(24);
 		this.drawTexturedModalRect(xStart + 79, yStart + 34, 176, 14, i1 + 1, 16);
 
 	}

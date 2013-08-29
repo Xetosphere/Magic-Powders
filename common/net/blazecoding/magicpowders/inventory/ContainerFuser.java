@@ -4,8 +4,11 @@ import net.blazecoding.magicpowders.tileentity.TileFuser;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * 
@@ -20,13 +23,19 @@ import net.minecraft.item.ItemStack;
 
 public class ContainerFuser extends Container {
 
-	public ContainerFuser(InventoryPlayer inventoryPlayer, TileFuser fuser) {
+	private TileFuser tileFuser;
 
-		// Add the fuel slot to the container
-		this.addSlotToContainer(new Slot(fuser, TileFuser.FUEL_INVENTORY_INDEX, 56, 53));
+	private int lastCookTime = 0;
+	private int lastBurnTime = 0;
+	private int lastItemBurnTime = 0;
+
+	public ContainerFuser(InventoryPlayer inventoryPlayer, TileFuser fuser) {
 
 		// Add the input slot to the container
 		this.addSlotToContainer(new Slot(fuser, TileFuser.INPUT_INVENTORY_INDEX, 56, 17));
+
+		// Add the fuel slot to the container
+		this.addSlotToContainer(new Slot(fuser, TileFuser.FUEL_INVENTORY_INDEX, 56, 53));
 
 		// Add the output results slot to the container
 		this.addSlotToContainer(new SlotFuser(fuser, TileFuser.OUTPUT_INVENTORY_INDEX, 116, 35));
@@ -41,6 +50,57 @@ public class ContainerFuser extends Container {
 		// Add the player's action bar slots to the container
 		for (int actionBarSlotIndex = 0; actionBarSlotIndex < 9; ++actionBarSlotIndex) {
 			this.addSlotToContainer(new Slot(inventoryPlayer, actionBarSlotIndex, 8 + actionBarSlotIndex * 18, 142));
+		}
+
+	}
+
+	public void addCraftingToCrafters(ICrafting par1ICrafting) {
+		super.addCraftingToCrafters(par1ICrafting);
+		par1ICrafting.sendProgressBarUpdate(this, 0, this.tileFuser.furnaceCookTime);
+		par1ICrafting.sendProgressBarUpdate(this, 1, this.tileFuser.furnaceBurnTime);
+		par1ICrafting.sendProgressBarUpdate(this, 2, this.tileFuser.currentItemBurnTime);
+	}
+
+	public void detectAndSendChanges() {
+
+		super.detectAndSendChanges();
+
+		for (int var1 = 0; var1 < this.crafters.size(); ++var1) {
+
+			ICrafting var2 = (ICrafting) this.crafters.get(var1);
+
+			if (this.lastCookTime != this.tileFuser.furnaceCookTime) {
+				var2.sendProgressBarUpdate(this, 0, this.tileFuser.furnaceCookTime);
+			}
+
+			if (this.lastBurnTime != this.tileFuser.furnaceBurnTime) {
+				var2.sendProgressBarUpdate(this, 1, this.tileFuser.furnaceBurnTime);
+			}
+
+			if (this.lastItemBurnTime != this.tileFuser.currentItemBurnTime) {
+				var2.sendProgressBarUpdate(this, 2, this.tileFuser.currentItemBurnTime);
+			}
+
+			this.lastCookTime = this.tileFuser.furnaceCookTime;
+			this.lastBurnTime = this.tileFuser.furnaceBurnTime;
+			this.lastItemBurnTime = this.tileFuser.currentItemBurnTime;
+
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	public void updateProgressBar(int par1, int par2) {
+
+		if (par1 == 0) {
+			this.tileFuser.furnaceCookTime = par2;
+		}
+
+		if (par1 == 1) {
+			this.tileFuser.furnaceBurnTime = par2;
+		}
+
+		if (par1 == 2) {
+			this.tileFuser.currentItemBurnTime = par2;
 		}
 
 	}

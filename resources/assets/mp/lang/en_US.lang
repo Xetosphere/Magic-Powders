@@ -1,0 +1,19 @@
+
+item.mp:magicDustSoronite.name=Soronite Dust
+item.mp:magicDustTardite.name=Tardite Dust
+item.mp:magicDustKoronin.name=Koronin Dust
+item.mp:magicIngotSoroniteIngot.name=Soronite Ingot
+item.mp:magicIngotTarditeIngot.name=Tardite Ingot
+item.mp:magicIngotKoroninIngot.name=Koronin Ingot
+
+tile.mp:powderOresSoroniteOre.name=Soronite Ore
+tile.mp:powderOresTarditeOre.name=Tardite Ore
+tile.mp:powderOresKoroninOre.name=Koronin Ore
+tile.mp:ingotBlocksSoroniteBlock.name=Soronite Block
+tile.mp:ingotBlocksTarditeBlock.name=Tardite Block
+tile.mp:ingotBlocksKoroninBlock.name=Koronin Block
+tile.mp:fuser.name=Fusing Table
+
+container.fuser=Fusing Table
+
+itemGroup.MP=Magic Powders

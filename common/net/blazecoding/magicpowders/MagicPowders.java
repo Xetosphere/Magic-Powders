@@ -4,7 +4,6 @@ import java.io.File;
 
 import net.blazecoding.magicpowders.block.ModBlocks;
 import net.blazecoding.magicpowders.configuration.ConfigurationHandler;
-import net.blazecoding.magicpowders.core.handlers.LocalizationHandler;
 import net.blazecoding.magicpowders.core.proxy.CommonProxy;
 import net.blazecoding.magicpowders.creativetab.TabMP;
 import net.blazecoding.magicpowders.item.ModItems;
@@ -48,9 +47,6 @@ public class MagicPowders {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
-
-		// Gives the right language file for each language as well as giving the blocks, items, creative tabs etc. it's real name.
-		LocalizationHandler.loadLanguages();
 
 		// Adds the config, that can change block and item ids as well as making the mob spawn in an already existing world.
 		ConfigurationHandler.init(new File(e.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));

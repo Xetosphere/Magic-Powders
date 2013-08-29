@@ -42,7 +42,7 @@ public class BlockFuser extends BlockMP {
 
 	public BlockFuser(int id) {
 		super(id, Material.rock);
-		this.setUnlocalizedName(Strings.FUSER_NAME);
+		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.FUSER_NAME);
 		this.setCreativeTab(MagicPowders.tabMP);
 		this.setHardness(5F);
 		this.setResistance(12F);

@@ -8,12 +8,12 @@
 	<entry key = "item.magicIngotSoroniteIngot.name">Soronite Ingot</entry>
 	<entry key = "item.magicIngotTarditeIngot.name">Tardite Ingot</entry>
 	<entry key = "item.magicIngotKoroninIngot.name">Koronin Ingot</entry>
-	<entry key = "tile.powderOresSoroniteOre.name">Soronite Ore</entry>
-	<entry key = "tile.powderOresTarditeOre.name">Tardite Ore</entry>
-	<entry key = "tile.powderOresKoroninOre.name">Koronin Ore</entry>
-	<entry key = "tile.ingotBlocksSoroniteBlock.name">Soronite Block</entry>
-	<entry key = "tile.ingotBlocksTarditeBlock.name">Tardite Block</entry>
-	<entry key = "tile.ingotBlocksKoroninBlock.name">Koronin Block</entry>
+	<entry key = "tile.mp:powderOresSoroniteOre.name">Soronite Ore</entry>
+	<entry key = "tile.mp:powderOresTarditeOre.name">Tardite Ore</entry>
+	<entry key = "tile.mp:powderOresKoroninOre.name">Koronin Ore</entry>
+	<entry key = "tile.mp:ingotBlocksSoroniteBlock.name">Soronite Block</entry>
+	<entry key = "tile.mp:ingotBlocksTarditeBlock.name">Tardite Block</entry>
+	<entry key = "tile.mp:ingotBlocksKoroninBlock.name">Koronin Block</entry>
 	<entry key = "tile.mp:fuser.name">Fusing Table</entry>
 	<entry key = "container.fuser">Fusing Table</entry>
 </properties>

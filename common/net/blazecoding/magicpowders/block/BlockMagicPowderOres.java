@@ -5,7 +5,6 @@ import java.util.Random;
 
 import net.blazecoding.magicpowders.MagicPowders;
 import net.blazecoding.magicpowders.item.ModItems;
-import net.blazecoding.magicpowders.lib.Reference;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -36,7 +35,7 @@ public class BlockMagicPowderOres extends Block {
 
 	public BlockMagicPowderOres(int id) {
 		super(id, Material.rock);
-		setUnlocalizedName(Strings.POWDERORES_NAME);
+		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.POWDERORES_NAME);
 		setCreativeTab(MagicPowders.tabMP);
 		setHardness(3.0F);
 		setResistance(8.0F);
@@ -48,7 +47,7 @@ public class BlockMagicPowderOres extends Block {
 		icons = new Icon[POWDERORE_NAMES.length];
 
 		for (int i = 0; i < POWDERORE_NAMES.length; ++i) {
-			icons[i] = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.POWDERORES_NAME + POWDERORE_NAMES[i]);
+			icons[i] = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.POWDERORES_NAME + POWDERORE_NAMES[i]);
 		}
 
 	}
