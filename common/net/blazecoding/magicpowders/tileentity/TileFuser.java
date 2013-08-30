@@ -32,9 +32,9 @@ public class TileFuser extends TileMP implements IInventory {
 	public static final int FUEL_INVENTORY_INDEX = 1;
 	public static final int OUTPUT_INVENTORY_INDEX = 2;
 
-	public int furnaceBurnTime;
-	public int currentItemBurnTime;
-	public int furnaceCookTime;
+	public int fuserFuseTime;
+	public int currentItemFuseTime;
+	public int fuserFusedTime2;
 
 	public TileFuser() {
 		inventory = new ItemStack[INVENTORY_SIZE];
@@ -106,8 +106,8 @@ public class TileFuser extends TileMP implements IInventory {
 				inventory[slot] = ItemStack.loadItemStackFromNBT(tagCompound);
 			}
 
-			this.furnaceBurnTime = nbtTagCompound.getShort("FuseTime");
-			this.furnaceCookTime = nbtTagCompound.getShort("TimeSpent");
+			this.fuserFuseTime = nbtTagCompound.getShort("FuseTime");
+			this.fuserFusedTime2 = nbtTagCompound.getShort("TimeSpent");
 
 		}
 
@@ -117,8 +117,8 @@ public class TileFuser extends TileMP implements IInventory {
 
 		super.writeToNBT(nbtTagCompound);
 
-		nbtTagCompound.setShort("FuseTime", (short) this.furnaceBurnTime);
-		nbtTagCompound.setShort("TimeSpent", (short) this.furnaceCookTime);
+		nbtTagCompound.setShort("FuseTime", (short) this.fuserFuseTime);
+		nbtTagCompound.setShort("TimeSpent", (short) this.fuserFusedTime2);
 
 		NBTTagList tagList = new NBTTagList();
 		for (int currentIndex = 0; currentIndex < inventory.length; ++currentIndex) {
@@ -167,37 +167,37 @@ public class TileFuser extends TileMP implements IInventory {
 
 	@SideOnly(Side.CLIENT)
 	public int getCookProgressTimeScaled(int par1) {
-		return this.furnaceCookTime * par1 / 200;
+		return this.fuserFusedTime2 * par1 / 200;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public int getBurnTimeRemainingScaled(int par1) {
 
-		if (this.currentItemBurnTime == 0) {
-			this.currentItemBurnTime = 200;
+		if (this.currentItemFuseTime == 0) {
+			this.currentItemFuseTime = 200;
 		}
 
-		return this.furnaceBurnTime * par1 / this.currentItemBurnTime;
+		return this.fuserFuseTime * par1 / this.currentItemFuseTime;
 
 	}
 
 	public boolean isBurning() {
-		return this.furnaceBurnTime > 0;
+		return this.fuserFuseTime > 0;
 	}
 
 	public void updateEntity() {
 
-		boolean flag = this.furnaceBurnTime > 0;
+		boolean flag = this.fuserFuseTime > 0;
 		boolean flag1 = false;
 
-		if (this.furnaceBurnTime > 0) {
-			--this.furnaceBurnTime;
+		if (this.fuserFuseTime > 0) {
+			--this.fuserFuseTime;
 		}
 
 		if (!this.worldObj.isRemote) {
-			if (this.furnaceBurnTime == 0 && this.canSmelt()) {
-				this.currentItemBurnTime = this.furnaceBurnTime = getItemBurnTime(this.inventory[FUEL_INVENTORY_INDEX]);
-				if (this.furnaceBurnTime > 0) {
+			if (this.fuserFuseTime == 0 && this.canSmelt()) {
+				this.currentItemFuseTime = this.fuserFuseTime = getItemBurnTime(this.inventory[FUEL_INVENTORY_INDEX]);
+				if (this.fuserFuseTime > 0) {
 					flag1 = true;
 					if (this.inventory[FUEL_INVENTORY_INDEX] != null) {
 						--this.inventory[FUEL_INVENTORY_INDEX].stackSize;
@@ -209,21 +209,21 @@ public class TileFuser extends TileMP implements IInventory {
 			}
 
 			if (this.isBurning() && this.canSmelt()) {
-				++this.furnaceCookTime;
+				++this.fuserFusedTime2;
 
-				if (this.furnaceCookTime == 200) {
-					this.furnaceCookTime = 0;
+				if (this.fuserFusedTime2 == 200) {
+					this.fuserFusedTime2 = 0;
 					this.smeltItem();
 					flag1 = true;
 				}
 
 			} else {
 
-				this.furnaceCookTime = 0;
+				this.fuserFusedTime2 = 0;
 
 			}
 
-			if (flag != this.furnaceBurnTime > 0) {
+			if (flag != this.fuserFuseTime > 0) {
 				flag1 = true;
 			}
 

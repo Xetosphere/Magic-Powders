@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ContainerFuser extends Container {
 
-	private TileFuser tileFuser;
+	private TileFuser fuser;
 
 	private int lastCookTime = 0;
 	private int lastBurnTime = 0;
@@ -56,9 +56,9 @@ public class ContainerFuser extends Container {
 
 	public void addCraftingToCrafters(ICrafting par1ICrafting) {
 		super.addCraftingToCrafters(par1ICrafting);
-		par1ICrafting.sendProgressBarUpdate(this, 0, this.tileFuser.furnaceCookTime);
-		par1ICrafting.sendProgressBarUpdate(this, 1, this.tileFuser.furnaceBurnTime);
-		par1ICrafting.sendProgressBarUpdate(this, 2, this.tileFuser.currentItemBurnTime);
+		par1ICrafting.sendProgressBarUpdate(this, 0, this.fuser.fuserFusedTime2);
+		par1ICrafting.sendProgressBarUpdate(this, 1, this.fuser.fuserFuseTime);
+		par1ICrafting.sendProgressBarUpdate(this, 2, this.fuser.currentItemFuseTime);
 	}
 
 	public void detectAndSendChanges() {
@@ -69,21 +69,21 @@ public class ContainerFuser extends Container {
 
 			ICrafting var2 = (ICrafting) this.crafters.get(var1);
 
-			if (this.lastCookTime != this.tileFuser.furnaceCookTime) {
-				var2.sendProgressBarUpdate(this, 0, this.tileFuser.furnaceCookTime);
+			if (this.lastCookTime != this.fuser.fuserFusedTime2) {
+				var2.sendProgressBarUpdate(this, 0, this.fuser.fuserFusedTime2);
 			}
 
-			if (this.lastBurnTime != this.tileFuser.furnaceBurnTime) {
-				var2.sendProgressBarUpdate(this, 1, this.tileFuser.furnaceBurnTime);
+			if (this.lastBurnTime != this.fuser.fuserFuseTime) {
+				var2.sendProgressBarUpdate(this, 1, this.fuser.fuserFuseTime);
 			}
 
-			if (this.lastItemBurnTime != this.tileFuser.currentItemBurnTime) {
-				var2.sendProgressBarUpdate(this, 2, this.tileFuser.currentItemBurnTime);
+			if (this.lastItemBurnTime != this.fuser.currentItemFuseTime) {
+				var2.sendProgressBarUpdate(this, 2, this.fuser.currentItemFuseTime);
 			}
 
-			this.lastCookTime = this.tileFuser.furnaceCookTime;
-			this.lastBurnTime = this.tileFuser.furnaceBurnTime;
-			this.lastItemBurnTime = this.tileFuser.currentItemBurnTime;
+			this.lastCookTime = this.fuser.fuserFusedTime2;
+			this.lastBurnTime = this.fuser.fuserFuseTime;
+			this.lastItemBurnTime = this.fuser.currentItemFuseTime;
 
 		}
 	}
@@ -92,21 +92,21 @@ public class ContainerFuser extends Container {
 	public void updateProgressBar(int par1, int par2) {
 
 		if (par1 == 0) {
-			this.tileFuser.furnaceCookTime = par2;
+			this.fuser.fuserFusedTime2 = par2;
 		}
 
 		if (par1 == 1) {
-			this.tileFuser.furnaceBurnTime = par2;
+			this.fuser.fuserFuseTime = par2;
 		}
 
 		if (par1 == 2) {
-			this.tileFuser.currentItemBurnTime = par2;
+			this.fuser.currentItemFuseTime = par2;
 		}
 
 	}
 
 	public boolean canInteractWith(EntityPlayer player) {
-		return true;
+		return fuser.isUseableByPlayer(player);
 	}
 
 	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int slotIndex) {
