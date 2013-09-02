@@ -17,10 +17,12 @@ public class BlockIDs {
 	public static int POWDERORES_DEFAULT = 1500;
 	public static int STORAGEBLOCKS_DEFAULT = 1501;
 	public static int FUSER_DEFAULT = 1502;
+	public static int DUPLICATOR_DEFAULT = 1503;
 
 	/* Current block ids */
 	public static int MAGIC_ORES;
 	public static int STORAGE_BLOCKS;
 	public static int FUSER;
+	public static int DUPLICATOR;
 
 }

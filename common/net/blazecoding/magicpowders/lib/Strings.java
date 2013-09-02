@@ -28,6 +28,7 @@ public class Strings {
 	public static final String POWDERORES_NAME = "powderOres";
 	public static final String STORAGEBLOCKS_NAME = "ingotBlocks";
 	public static final String FUSER_NAME = "fuser";
+	public static final String DUPLICATOR_NAME = "duplicator";
 
 	/* Item name constants */
 	public static final String MAGICDUST_NAME = "magicDust";
@@ -35,10 +36,11 @@ public class Strings {
 
 	/* TileEntity name constants */
 	public static final String TE_FUSER_NAME = "tileFuser";
+	public static final String TE_DUPLICATOR_NAME = "tileDuplicator";
 
 	/* Container related constants */
-	public static final String CONTAINER_FUSER_NAME = "container." + FUSER_NAME;
 	public static final String CONTAINER_INVENTORY = "container.inventory";
-	public static final String CONTAINER_PORTABLE_CRAFTING = "container.crafting";
+	public static final String CONTAINER_FUSER_NAME = "container." + FUSER_NAME;
+	public static final String CONTAINER_DUPLICATOR_NAME = "container." + DUPLICATOR_NAME;
 
 }

@@ -30,9 +30,14 @@ public class ContainerFuser extends Container {
 	private int lastItemBurnTime = 0;
 
 	public ContainerFuser(InventoryPlayer inventoryPlayer, TileFuser fuser) {
+		
+		this.fuser = fuser;
 
 		// Add the input slot to the container
-		this.addSlotToContainer(new Slot(fuser, TileFuser.INPUT_INVENTORY_INDEX, 56, 17));
+		this.addSlotToContainer(new Slot(fuser, TileFuser.INPUT_INVENTORY_INDEX, 74, 17));
+		
+		// Add the dust input slot to the container
+		this.addSlotToContainer(new Slot(fuser, TileFuser.DUST_INVENTORY_INDEX, 38, 17));
 
 		// Add the fuel slot to the container
 		this.addSlotToContainer(new Slot(fuser, TileFuser.FUEL_INVENTORY_INDEX, 56, 53));
@@ -65,20 +70,20 @@ public class ContainerFuser extends Container {
 
 		super.detectAndSendChanges();
 
-		for (int var1 = 0; var1 < this.crafters.size(); ++var1) {
+		for (int i = 0; i < this.crafters.size(); ++i) {
 
-			ICrafting var2 = (ICrafting) this.crafters.get(var1);
+			ICrafting iCrafting = (ICrafting) this.crafters.get(i);
 
 			if (this.lastCookTime != this.fuser.fuserFusedTime2) {
-				var2.sendProgressBarUpdate(this, 0, this.fuser.fuserFusedTime2);
+				iCrafting.sendProgressBarUpdate(this, 0, this.fuser.fuserFusedTime2);
 			}
 
 			if (this.lastBurnTime != this.fuser.fuserFuseTime) {
-				var2.sendProgressBarUpdate(this, 1, this.fuser.fuserFuseTime);
+				iCrafting.sendProgressBarUpdate(this, 1, this.fuser.fuserFuseTime);
 			}
 
 			if (this.lastItemBurnTime != this.fuser.currentItemFuseTime) {
-				var2.sendProgressBarUpdate(this, 2, this.fuser.currentItemFuseTime);
+				iCrafting.sendProgressBarUpdate(this, 2, this.fuser.currentItemFuseTime);
 			}
 
 			this.lastCookTime = this.fuser.fuserFusedTime2;
@@ -127,8 +132,14 @@ public class ContainerFuser extends Container {
 
 			} else {
 
-				if (TileFuser.isItemDust(slotItemStack)) {
+				if (TileFuser.isItemFuel(slotItemStack)) {
 					if (!this.mergeItemStack(slotItemStack, TileFuser.FUEL_INVENTORY_INDEX, TileFuser.OUTPUT_INVENTORY_INDEX, false)) {
+						return null;
+					}
+				}
+				
+				else if (TileFuser.isItemDust(slotItemStack)) {
+					if (!this.mergeItemStack(slotItemStack, TileFuser.DUST_INVENTORY_INDEX, TileFuser.OUTPUT_INVENTORY_INDEX, false)) {
 						return null;
 					}
 				}

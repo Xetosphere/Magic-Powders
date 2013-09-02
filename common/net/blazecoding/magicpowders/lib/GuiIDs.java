@@ -14,5 +14,6 @@ package net.blazecoding.magicpowders.lib;
 public class GuiIDs {
 	
 	public static final int FUSER = 0;
+	public static final int DUPLICATOR = 1;
 
 }

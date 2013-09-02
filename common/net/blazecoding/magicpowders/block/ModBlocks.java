@@ -27,6 +27,7 @@ public class ModBlocks {
 	public static Block magicPowderOres;
 	public static Block storageBlocks;
 	public static Block fuser;
+	public static Block duplicator;
 
 	/**
 	 * Initializes the blocks that the mod contains. As well as block recipes and registering the blocks.
@@ -36,8 +37,10 @@ public class ModBlocks {
 		magicPowderOres = new BlockMagicPowderOres(BlockIDs.MAGIC_ORES);
 		storageBlocks = new BlockStorageBlocks(BlockIDs.STORAGE_BLOCKS);
 		fuser = new BlockFuser(BlockIDs.FUSER);
+		duplicator = new BlockDuplicator(BlockIDs.DUPLICATOR);
 
 		GameRegistry.registerBlock(fuser, Strings.FUSER_NAME);
+		GameRegistry.registerBlock(duplicator, Strings.DUPLICATOR_NAME);
 
 		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);
 		GameRegistry.registerBlock(storageBlocks, ItemBlockStorageBlocks.class, Strings.STORAGEBLOCKS_NAME);

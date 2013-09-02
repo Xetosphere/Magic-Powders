@@ -1,9 +1,12 @@
 package net.blazecoding.magicpowders.core.proxy;
 
+import net.blazecoding.magicpowders.client.gui.inventory.GuiDuplicator;
 import net.blazecoding.magicpowders.client.gui.inventory.GuiFuser;
+import net.blazecoding.magicpowders.inventory.ContainerDuplicator;
 import net.blazecoding.magicpowders.inventory.ContainerFuser;
 import net.blazecoding.magicpowders.lib.GuiIDs;
 import net.blazecoding.magicpowders.lib.Strings;
+import net.blazecoding.magicpowders.tileentity.TileDuplicator;
 import net.blazecoding.magicpowders.tileentity.TileFuser;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -26,6 +29,7 @@ public class CommonProxy implements IGuiHandler {
 
 	public void registerTileEntities() {
 		GameRegistry.registerTileEntity(TileFuser.class, Strings.FUSER_NAME);
+		GameRegistry.registerTileEntity(TileDuplicator.class, Strings.DUPLICATOR_NAME);
 	}
 
 	public void sendRequestEventPacket(byte eventType, int originX, int originY, int originZ, byte sideHit, byte rangeX, byte rangeY, byte rangeZ, String data) {
@@ -49,6 +53,13 @@ public class CommonProxy implements IGuiHandler {
 
 		}
 
+		else if (ID == GuiIDs.DUPLICATOR) {
+
+			TileDuplicator tileDuplicator = (TileDuplicator) world.getBlockTileEntity(x, y, z);
+			return new ContainerDuplicator(player.inventory, tileDuplicator);
+
+		}
+
 		return null;
 	}
 
@@ -58,6 +69,13 @@ public class CommonProxy implements IGuiHandler {
 
 			TileFuser tileFuser = (TileFuser) world.getBlockTileEntity(x, y, z);
 			return new GuiFuser(player.inventory, tileFuser);
+
+		}
+
+		else if (ID == GuiIDs.DUPLICATOR) {
+
+			TileDuplicator tileDuplicator = (TileDuplicator) world.getBlockTileEntity(x, y, z);
+			return new GuiDuplicator(player.inventory, tileDuplicator);
 
 		}
 

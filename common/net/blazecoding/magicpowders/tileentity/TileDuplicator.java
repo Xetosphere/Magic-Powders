@@ -2,49 +2,30 @@ package net.blazecoding.magicpowders.tileentity;
 
 import net.blazecoding.magicpowders.item.ModItems;
 import net.blazecoding.magicpowders.lib.Strings;
-import net.blazecoding.magicpowders.recipe.FuserRecipes;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.blazecoding.magicpowders.recipe.DuplicatorRecipes;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-/**
- * 
- * Magic Powders
- * 
- * TileFuser
- * 
- * @author BlazeCoding
- * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- * 
- */
-
-public class TileFuser extends TileMP implements IInventory {
+public class TileDuplicator extends TileMP implements IInventory {
 
 	private ItemStack[] inventory;
 
-	public static final int INVENTORY_SIZE = 4;
+	public static final int INVENTORY_SIZE = 3;
 
 	public static final int INPUT_INVENTORY_INDEX = 0;
 	public static final int DUST_INVENTORY_INDEX = 1;
-	public static final int FUEL_INVENTORY_INDEX = 2;
-	public static final int OUTPUT_INVENTORY_INDEX = 3;
+	public static final int OUTPUT_INVENTORY_INDEX = 2;
 
-	public int fuserFuseTime;
-	public int currentItemFuseTime;
-	public int fuserFusedTime2;
+	public int duplicatorDupleTime;
+	public int currentItemDupleTime;
+	public int duplicatorDupledTime2;
 
-	public TileFuser() {
+	public TileDuplicator() {
 		inventory = new ItemStack[INVENTORY_SIZE];
 	}
 
@@ -88,7 +69,7 @@ public class TileFuser extends TileMP implements IInventory {
 	}
 
 	public String getInvName() {
-		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_FUSER_NAME;
+		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_DUPLICATOR_NAME;
 	}
 
 	public int getInventoryStackLimit() {
@@ -114,8 +95,8 @@ public class TileFuser extends TileMP implements IInventory {
 				inventory[slot] = ItemStack.loadItemStackFromNBT(tagCompound);
 			}
 
-			this.fuserFuseTime = nbtTagCompound.getShort("FuseTime");
-			this.fuserFusedTime2 = nbtTagCompound.getShort("TimeSpent");
+			this.duplicatorDupleTime = nbtTagCompound.getShort("FuseTime");
+			this.duplicatorDupledTime2 = nbtTagCompound.getShort("TimeSpent");
 
 		}
 
@@ -125,8 +106,8 @@ public class TileFuser extends TileMP implements IInventory {
 
 		super.writeToNBT(nbtTagCompound);
 
-		nbtTagCompound.setShort("FuseTime", (short) this.fuserFuseTime);
-		nbtTagCompound.setShort("TimeSpent", (short) this.fuserFusedTime2);
+		nbtTagCompound.setShort("FuseTime", (short) this.duplicatorDupleTime);
+		nbtTagCompound.setShort("TimeSpent", (short) this.duplicatorDupledTime2);
 
 		NBTTagList tagList = new NBTTagList();
 		for (int currentIndex = 0; currentIndex < inventory.length; ++currentIndex) {
@@ -154,7 +135,7 @@ public class TileFuser extends TileMP implements IInventory {
 
 		stringBuilder.append(super.toString());
 
-		stringBuilder.append("TileFuser Data - ");
+		stringBuilder.append("TileDuplicator Data - ");
 		for (int i = 0; i < inventory.length; i++) {
 			if (i != 0) {
 				stringBuilder.append(", ");
@@ -175,63 +156,63 @@ public class TileFuser extends TileMP implements IInventory {
 
 	@SideOnly(Side.CLIENT)
 	public int getCookProgressTimeScaled(int par1) {
-		return this.fuserFusedTime2 * par1 / 200;
+		return this.duplicatorDupledTime2 * par1 / 200;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public int getBurnTimeRemainingScaled(int par1) {
 
-		if (this.currentItemFuseTime == 0) {
-			this.currentItemFuseTime = 200;
+		if (this.currentItemDupleTime == 0) {
+			this.currentItemDupleTime = 200;
 		}
 
-		return this.fuserFuseTime * par1 / this.currentItemFuseTime;
+		return this.duplicatorDupleTime * par1 / this.currentItemDupleTime;
 
 	}
 
 	public boolean isBurning() {
-		return this.fuserFuseTime > 0;
+		return this.duplicatorDupleTime > 0;
 	}
 
 	public void updateEntity() {
 
-		boolean flag = this.fuserFuseTime > 0;
+		boolean flag = this.duplicatorDupleTime > 0;
 		boolean flag1 = false;
 
-		if (this.fuserFuseTime > 0) {
-			--this.fuserFuseTime;
+		if (this.duplicatorDupleTime > 0) {
+			--this.duplicatorDupleTime;
 		}
 
 		if (!this.worldObj.isRemote) {
-			if (this.fuserFuseTime == 0 && this.canSmelt()) {
-				this.currentItemFuseTime = this.fuserFuseTime = getItemBurnTime(this.inventory[FUEL_INVENTORY_INDEX]);
-				if (this.fuserFuseTime > 0) {
+			if (this.duplicatorDupleTime == 0 && this.canSmelt()) {
+				this.currentItemDupleTime = this.duplicatorDupleTime = getItemBurnTime(this.inventory[DUST_INVENTORY_INDEX]);
+				if (this.duplicatorDupleTime > 0) {
 					flag1 = true;
-					if (this.inventory[FUEL_INVENTORY_INDEX] != null) {
-						--this.inventory[FUEL_INVENTORY_INDEX].stackSize;
-						if (this.inventory[FUEL_INVENTORY_INDEX].stackSize == 0) {
-							this.inventory[FUEL_INVENTORY_INDEX] = this.inventory[FUEL_INVENTORY_INDEX].getItem().getContainerItemStack(inventory[FUEL_INVENTORY_INDEX]);
+					if (this.inventory[DUST_INVENTORY_INDEX] != null) {
+						--this.inventory[DUST_INVENTORY_INDEX].stackSize;
+						if (this.inventory[DUST_INVENTORY_INDEX].stackSize == 0) {
+							this.inventory[DUST_INVENTORY_INDEX] = this.inventory[DUST_INVENTORY_INDEX].getItem().getContainerItemStack(inventory[DUST_INVENTORY_INDEX]);
 						}
 					}
 				}
 			}
 
 			if (this.isBurning() && this.canSmelt()) {
-				++this.fuserFusedTime2;
+				++this.duplicatorDupledTime2;
 
-				if (this.fuserFusedTime2 == 200) {
-					this.fuserFusedTime2 = 0;
+				if (this.duplicatorDupledTime2 == 200) {
+					this.duplicatorDupledTime2 = 0;
 					this.smeltItem();
 					flag1 = true;
 				}
 
 			} else {
 
-				this.fuserFusedTime2 = 0;
+				this.duplicatorDupledTime2 = 0;
 
 			}
 
-			if (flag != this.fuserFuseTime > 0) {
+			if (flag != this.duplicatorDupleTime > 0) {
 				flag1 = true;
 			}
 
@@ -244,13 +225,13 @@ public class TileFuser extends TileMP implements IInventory {
 
 	private boolean canSmelt() {
 
-		if (this.inventory[INPUT_INVENTORY_INDEX] == null || this.inventory[DUST_INVENTORY_INDEX] == null) {
+		if (this.inventory[INPUT_INVENTORY_INDEX] == null) {
 
 			return false;
 
 		} else {
 
-			ItemStack itemstack = FuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
+			ItemStack itemstack = DuplicatorRecipes.dupling().getDuplingResult(this.inventory[INPUT_INVENTORY_INDEX]);
 
 			if (itemstack == null) return false;
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) return true;
@@ -265,7 +246,7 @@ public class TileFuser extends TileMP implements IInventory {
 
 		if (this.canSmelt()) {
 
-			ItemStack itemstack = FuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
+			ItemStack itemstack = DuplicatorRecipes.dupling().getDuplingResult(this.inventory[INPUT_INVENTORY_INDEX]);
 
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) {
 
@@ -278,14 +259,9 @@ public class TileFuser extends TileMP implements IInventory {
 			}
 
 			--this.inventory[INPUT_INVENTORY_INDEX].stackSize;
-			--this.inventory[DUST_INVENTORY_INDEX].stackSize;
 
 			if (this.inventory[INPUT_INVENTORY_INDEX].stackSize <= 0) {
 				this.inventory[INPUT_INVENTORY_INDEX] = null;
-			}
-			
-			if (this.inventory[DUST_INVENTORY_INDEX].stackSize <= 0) {
-				this.inventory[DUST_INVENTORY_INDEX] = null;
 			}
 		}
 	}
@@ -297,48 +273,16 @@ public class TileFuser extends TileMP implements IInventory {
 		}
 
 		int i = itemStack.getItem().itemID;
-		Item item = itemStack.getItem();
+		int meta = itemStack.getItemDamage();
 
-		if (itemStack.getItem() instanceof ItemBlock && Block.blocksList[i] != null) {
-			Block block = Block.blocksList[i];
+		if (i == ModItems.magicDust.itemID && meta == 0) return 200;
 
-			if (block == Block.woodSingleSlab) {
-				return 150;
-			}
-
-			if (block.blockMaterial == Material.wood) {
-				return 300;
-			}
-
-			if (block == Block.field_111034_cE) {
-				return 16000;
-			}
-		}
-
-		if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD")) return 200;
-		if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD")) return 200;
-		if (item instanceof ItemHoe && ((ItemHoe) item).getMaterialName().equals("WOOD")) return 200;
-		if (i == Item.stick.itemID) return 100;
-		if (i == Item.coal.itemID) return 1600;
-		if (i == Item.bucketLava.itemID) return 20000;
-		if (i == Block.sapling.blockID) return 100;
-		if (i == Item.blazeRod.itemID) return 2400;
 		return GameRegistry.getFuelValue(itemStack);
 
 	}
 
 	public static boolean isItemFuel(ItemStack itemStack) {
 		return getItemBurnTime(itemStack) > 0;
-	}
-
-	public static boolean isItemDust(ItemStack itemStack) {
-
-		if (itemStack.itemID == ModItems.magicDust.itemID) {
-			return true;
-		} else {
-
-			return false;
-		}
 	}
 
 }

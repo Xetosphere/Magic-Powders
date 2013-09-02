@@ -1,10 +1,5 @@
 package net.blazecoding.magicpowders.recipe;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import net.blazecoding.magicpowders.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,55 +19,33 @@ public class FuserRecipes {
 
 	private static final FuserRecipes fusingBase = new FuserRecipes();
 
-	@SuppressWarnings("rawtypes")
-	private Map fusingList = new HashMap();
-	private HashMap<List<Integer>, ItemStack> metaFusingList = new HashMap<List<Integer>, ItemStack>();
-
 	public static final FuserRecipes fusing() {
 		return fusingBase;
 	}
 
 	private FuserRecipes() {
-		addFusing(Item.ingotIron.itemID, new ItemStack(ModItems.magicIngot, 1, 0));
+
 	}
 
-	@SuppressWarnings("unchecked")
-	public void addFusing(int par1, ItemStack par2ItemStack) {
-		this.fusingList.put(Integer.valueOf(par1), par2ItemStack);
+	public ItemStack getFusingResult(int itemID, int itemMeta, int dustID, int dustMeta) {
+		return getOutput(itemID, itemMeta, dustID, dustMeta);
 	}
 
-	@Deprecated
-	public ItemStack getFusingResult(int par1) {
-		return (ItemStack) this.fusingList.get(Integer.valueOf(par1));
-	}
+	private static ItemStack getOutput(int itemID, int itemMeta, int dustID, int dustMeta) {
 
-	@SuppressWarnings("rawtypes")
-	public Map getFusingList() {
-		return this.fusingList;
-	}
-
-	public void addFusing(int itemID, int metadata, ItemStack itemstack) {
-		metaFusingList.put(Arrays.asList(itemID, metadata), itemstack);
-	}
-
-	public ItemStack getFusingResult(ItemStack item) {
-
-		if (item == null) {
-			return null;
+		if (itemID == Item.ingotIron.itemID && dustID == ModItems.magicDust.itemID && dustMeta == 0) {
+			return new ItemStack(ModItems.magicIngot, 1, 0);
 		}
 
-		ItemStack ret = (ItemStack) metaFusingList.get(Arrays.asList(item.itemID, item.getItemDamage()));
-
-		if (ret != null) {
-			return ret;
+		if (itemID == Item.ingotIron.itemID && dustID == ModItems.magicDust.itemID && dustMeta == 1) {
+			return new ItemStack(ModItems.magicIngot, 1, 1);
 		}
 
-		return (ItemStack) fusingList.get(Integer.valueOf(item.itemID));
+		if (itemID == Item.ingotIron.itemID && dustID == ModItems.magicDust.itemID && dustMeta == 2) {
+			return new ItemStack(ModItems.magicIngot, 1, 2);
+		}
 
-	}
-
-	public Map<List<Integer>, ItemStack> getMetaSmeltingList() {
-		return metaFusingList;
+		return null;
 	}
 
 }
