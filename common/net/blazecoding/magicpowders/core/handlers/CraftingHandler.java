@@ -1,6 +1,5 @@
 package net.blazecoding.magicpowders.core.handlers;
 
-import net.blazecoding.magicpowders.item.ModItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -21,35 +20,10 @@ public class CraftingHandler implements ICraftingHandler {
 
 	public void onCrafting(EntityPlayer player, ItemStack item, IInventory craftMatrix) {
 
-		dupleCrafting(craftMatrix);
-		
 	}
 
 	public void onSmelting(EntityPlayer player, ItemStack item) {
 
-	}
-
-	private static void dupleCrafting(IInventory craftMatrix) {
-
-		for (int i = 0; i < craftMatrix.getSizeInventory(); ++i) {
-
-			if (craftMatrix.getStackInSlot(i) != null) {
-
-				ItemStack craftStack = craftMatrix.getStackInSlot(i);
-
-				if (craftStack.getItem() != null && craftStack.getItem() == ModItems.duplicatorGem) {
-
-					ItemStack dupleGem = new ItemStack(ModItems.duplicatorGem, 2, (craftStack.getItemDamage() + 1));
-
-					if (dupleGem.getItemDamage() >= dupleGem.getMaxDamage()) {
-						--dupleGem.stackSize;
-					}
-
-					craftMatrix.setInventorySlotContents(i, dupleGem);
-
-				}
-			}
-		}
 	}
 
 }

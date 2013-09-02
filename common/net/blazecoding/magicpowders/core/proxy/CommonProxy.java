@@ -1,7 +1,10 @@
 package net.blazecoding.magicpowders.core.proxy;
 
+import net.blazecoding.magicpowders.block.ModBlocks;
+import net.blazecoding.magicpowders.client.gui.inventory.GuiAlchemistTable;
 import net.blazecoding.magicpowders.client.gui.inventory.GuiDuplicator;
 import net.blazecoding.magicpowders.client.gui.inventory.GuiFuser;
+import net.blazecoding.magicpowders.inventory.ContainerAlchemistTable;
 import net.blazecoding.magicpowders.inventory.ContainerDuplicator;
 import net.blazecoding.magicpowders.inventory.ContainerFuser;
 import net.blazecoding.magicpowders.lib.GuiIDs;
@@ -60,6 +63,10 @@ public class CommonProxy implements IGuiHandler {
 
 		}
 
+		else if (ID == GuiIDs.ALCHEMISTTABLE) {
+			return ID == GuiIDs.ALCHEMISTTABLE && world.getBlockId(x, y, z) == ModBlocks.alchemistTable.blockID ? new ContainerAlchemistTable(player.inventory, world, x, y, z) : null;
+		}
+
 		return null;
 	}
 
@@ -77,6 +84,10 @@ public class CommonProxy implements IGuiHandler {
 			TileDuplicator tileDuplicator = (TileDuplicator) world.getBlockTileEntity(x, y, z);
 			return new GuiDuplicator(player.inventory, tileDuplicator);
 
+		}
+
+		else if (ID == GuiIDs.ALCHEMISTTABLE) {
+			return ID == GuiIDs.ALCHEMISTTABLE && world.getBlockId(x, y, z) == ModBlocks.alchemistTable.blockID ? new GuiAlchemistTable(player.inventory, world, x, y, z) : null;
 		}
 
 		return null;

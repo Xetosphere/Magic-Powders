@@ -29,6 +29,7 @@ public class Strings {
 	public static final String STORAGEBLOCKS_NAME = "ingotBlocks";
 	public static final String FUSER_NAME = "fuser";
 	public static final String DUPLICATOR_NAME = "duplicator";
+	public static final String ALCHEMISTTABLE_NAME = "alchemistTable";
 
 	/* Item name constants */
 	public static final String MAGICDUST_NAME = "magicDust";
@@ -43,5 +44,6 @@ public class Strings {
 	public static final String CONTAINER_INVENTORY = "container.inventory";
 	public static final String CONTAINER_FUSER_NAME = "container." + FUSER_NAME;
 	public static final String CONTAINER_DUPLICATOR_NAME = "container." + DUPLICATOR_NAME;
+	public static final String CONTAINER_ALCHEMISTTABLE_NAME = "container." + ALCHEMISTTABLE_NAME;
 
 }

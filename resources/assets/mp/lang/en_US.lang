@@ -15,8 +15,10 @@ tile.mp:ingotBlocksTarditeBlock.name=Tardite Block
 tile.mp:ingotBlocksKoroninBlock.name=Koronin Block
 tile.mp:fuser.name=Fusing Table
 tile.mp:duplicator.name=Duplicator
+tile.mp:alchemistTable.name=Alchemist Table
 
 container.fuser=Fusing Table
 container.duplicator=Duplicator
+container.alchemistTable=Alchemist Table
 
 itemGroup.MP=Magic Powders

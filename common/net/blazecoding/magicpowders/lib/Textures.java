@@ -24,5 +24,6 @@ public class Textures {
 	// GUI textures
 	public static final ResourceLocation GUI_FUSER = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "fuser.png");
 	public static final ResourceLocation GUI_DUPLICATOR = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "duplicator.png");
+	public static final ResourceLocation GUI_ALCHEMISTTABLE = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "alchemistTable.png");
 
 }

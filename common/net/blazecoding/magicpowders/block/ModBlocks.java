@@ -29,6 +29,7 @@ public class ModBlocks {
 	public static Block storageBlocks;
 	public static Block fuser;
 	public static Block duplicator;
+	public static Block alchemistTable;
 
 	/**
 	 * Initializes the blocks that the mod contains. As well as block recipes and registering the blocks.
@@ -39,9 +40,11 @@ public class ModBlocks {
 		storageBlocks = new BlockStorageBlocks(BlockIDs.STORAGE_BLOCKS);
 		fuser = new BlockFuser(BlockIDs.FUSER);
 		duplicator = new BlockDuplicator(BlockIDs.DUPLICATOR);
+		alchemistTable = new BlockAlchemistTable(BlockIDs.ALCHEMISTTABLE);
 
 		GameRegistry.registerBlock(fuser, Strings.FUSER_NAME);
 		GameRegistry.registerBlock(duplicator, Strings.DUPLICATOR_NAME);
+		GameRegistry.registerBlock(alchemistTable, Strings.ALCHEMISTTABLE_NAME);
 
 		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);
 		GameRegistry.registerBlock(storageBlocks, ItemBlockStorageBlocks.class, Strings.STORAGEBLOCKS_NAME);
@@ -85,8 +88,7 @@ public class ModBlocks {
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 0), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 1), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1) });
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 2), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2) });
-		
-		GameRegistry.addRecipe(new ItemStack(duplicator), new Object[] { "GRG", "BDB", "BFB", Character.valueOf('G'), Item.ingotGold, Character.valueOf('R'), new ItemStack(Block.cloth, 1, 10), Character.valueOf('B'), Block.netherBrick, Character.valueOf('D'), ModItems.duplicatorGem, Character.valueOf('F'), Block.furnaceIdle });
+
 		GameRegistry.addRecipe(new ItemStack(fuser), new Object[] { "IGI", "BDB", "BFB", Character.valueOf('I'), Item.ingotGold, Character.valueOf('G'), new ItemStack(Block.cloth, 1, 5), Character.valueOf('B'), Block.brick, Character.valueOf('D'), Item.diamond, Character.valueOf('F'), Block.furnaceIdle });
 		
 	}

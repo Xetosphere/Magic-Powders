@@ -41,10 +41,10 @@ public class BlockFuser extends BlockMP {
 	private Random random = new Random();
 
 	public BlockFuser(int id) {
-		super(id, Material.rock);
+		super(id, Material.ground);
 		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.FUSER_NAME);
 		this.setCreativeTab(MagicPowders.tabMP);
-		this.setHardness(5F);
+		this.setHardness(1F);
 		this.setResistance(12F);
 	}
 

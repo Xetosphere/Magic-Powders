@@ -27,14 +27,21 @@ public class ItemDuplicatorGem extends ItemMP {
 		setCreativeTab(MagicPowders.tabMP);
 		setMaxDamage(32 - 1);
 	}
-	
+
 	public String getItemDisplayName(ItemStack itemStack) {
 		return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
 	}
-	
+
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par5Boolean) {
 		list.add("Uses: " + (this.getMaxDamage() - itemStack.getItemDamage()));
+	}
+
+	public ItemStack getContainerItemStack(ItemStack itemStack) {
+
+		ItemStack dupleStack = new ItemStack(ModItems.duplicatorGem, 1, (itemStack.getItemDamage() + 1));
+
+		return dupleStack;
 	}
 
 }
