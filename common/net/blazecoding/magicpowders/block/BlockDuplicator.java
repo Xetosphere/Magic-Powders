@@ -20,6 +20,17 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * BlockDuplicator
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class BlockDuplicator extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)

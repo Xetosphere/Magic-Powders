@@ -9,6 +9,17 @@ import net.blazecoding.magicpowders.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * DuplicatorRecipes
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class DuplicatorRecipes {
 
 	private static final DuplicatorRecipes duplingBase = new DuplicatorRecipes();

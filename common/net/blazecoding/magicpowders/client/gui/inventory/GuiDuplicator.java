@@ -1,7 +1,5 @@
 package net.blazecoding.magicpowders.client.gui.inventory;
 
-import org.lwjgl.opengl.GL11;
-
 import net.blazecoding.magicpowders.inventory.ContainerDuplicator;
 import net.blazecoding.magicpowders.lib.Strings;
 import net.blazecoding.magicpowders.lib.Textures;
@@ -9,6 +7,19 @@ import net.blazecoding.magicpowders.tileentity.TileDuplicator;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.StatCollector;
+
+import org.lwjgl.opengl.GL11;
+
+/**
+ * 
+ * Magic Powders
+ * 
+ * GuiDuplicator
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
 
 public class GuiDuplicator extends GuiContainer {
 
@@ -18,7 +29,7 @@ public class GuiDuplicator extends GuiContainer {
 		super(new ContainerDuplicator(player, tileDuplicator));
 		this.tileDuplicator = tileDuplicator;
 	}
-	
+
 	protected void drawGuiContainerForegroundLayer(int x, int y) {
 
 		String containerName = tileDuplicator.isInvNameLocalized() ? tileDuplicator.getInvName() : StatCollector.translateToLocal(tileDuplicator.getInvName());
@@ -26,7 +37,7 @@ public class GuiDuplicator extends GuiContainer {
 		fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_INVENTORY), 8, ySize - 96 + 2, 4210752);
 
 	}
-	
+
 	protected void drawGuiContainerBackgroundLayer(float opacity, int x, int y) {
 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -50,5 +61,5 @@ public class GuiDuplicator extends GuiContainer {
 		this.drawTexturedModalRect(xStart + 79, yStart + 34, 176, 14, i1 + 1, 16);
 
 	}
-	
+
 }

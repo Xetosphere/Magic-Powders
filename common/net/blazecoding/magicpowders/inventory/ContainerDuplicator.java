@@ -11,6 +11,17 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * ContainerDuplicator
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class ContainerDuplicator extends Container {
 
 	private TileDuplicator duplicator;
@@ -102,12 +113,12 @@ public class ContainerDuplicator extends Container {
 	}
 
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
-	
+
 		ItemStack itemstack = null;
 		Slot slot = (Slot) this.inventorySlots.get(par2);
 
 		if (slot != null && slot.getHasStack()) {
-		
+
 			ItemStack itemstack1 = slot.getStack();
 			itemstack = itemstack1.copy();
 
