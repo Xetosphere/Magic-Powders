@@ -43,5 +43,9 @@ public class ItemDuplicatorGem extends ItemMP {
 
 		return dupleStack;
 	}
+	
+	public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack) {
+		return false;
+	}
 
 }
