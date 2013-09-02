@@ -5,6 +5,7 @@ item.mp:magicDustKoronin.name=Koronin Dust
 item.mp:magicIngotSoroniteIngot.name=Soronite Ingot
 item.mp:magicIngotTarditeIngot.name=Tardite Ingot
 item.mp:magicIngotKoroninIngot.name=Koronin Ingot
+item.mp:duplicatorGem.name=Duplicator Gem
 
 tile.mp:powderOresSoroniteOre.name=Soronite Ore
 tile.mp:powderOresTarditeOre.name=Tardite Ore

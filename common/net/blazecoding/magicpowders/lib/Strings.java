@@ -33,6 +33,7 @@ public class Strings {
 	/* Item name constants */
 	public static final String MAGICDUST_NAME = "magicDust";
 	public static final String MAGICINGOT_NAME = "magicIngot";
+	public static final String DUPLICATORGEM_NAME = "duplicatorGem";
 
 	/* TileEntity name constants */
 	public static final String TE_FUSER_NAME = "tileFuser";

@@ -21,6 +21,7 @@ public class ItemMP extends Item {
 	public ItemMP(int id) {
 		super(id - Reference.SHIFTED_ID_RANGE_CORRECTION);
 		setNoRepair();
+		maxStackSize = 1;
 	}
 
 	public void registerIcons(IconRegister iconRegister) {

@@ -36,6 +36,7 @@ public class ItemMagicIngot extends ItemMP {
 		super(id);
 		setCreativeTab(MagicPowders.tabMP);
 		setHasSubtypes(true);
+		maxStackSize = 64;
 	}
 
 	public String getUnlocalizedName(ItemStack itemStack) {

@@ -4,6 +4,7 @@ import java.io.File;
 
 import net.blazecoding.magicpowders.block.ModBlocks;
 import net.blazecoding.magicpowders.configuration.ConfigurationHandler;
+import net.blazecoding.magicpowders.core.handlers.CraftingHandler;
 import net.blazecoding.magicpowders.core.proxy.CommonProxy;
 import net.blazecoding.magicpowders.creativetab.TabMP;
 import net.blazecoding.magicpowders.item.ModItems;
@@ -20,6 +21,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
  * 
@@ -70,6 +72,8 @@ public class MagicPowders {
 
 		// Initialize mod tile entities
 		proxy.registerTileEntities();
+
+		GameRegistry.registerCraftingHandler(new CraftingHandler());
 
 	}
 
