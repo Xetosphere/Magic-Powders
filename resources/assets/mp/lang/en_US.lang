@@ -13,7 +13,9 @@ tile.mp:ingotBlocksSoroniteBlock.name=Soronite Block
 tile.mp:ingotBlocksTarditeBlock.name=Tardite Block
 tile.mp:ingotBlocksKoroninBlock.name=Koronin Block
 tile.mp:fuser.name=Fusing Table
+tile.mp:duplicator.name=Duplicator
 
 container.fuser=Fusing Table
+container.duplicator=Duplicator
 
 itemGroup.MP=Magic Powders
