@@ -1,7 +1,6 @@
 package net.blazecoding.magicpowders.item;
 
 import net.blazecoding.magicpowders.lib.Reference;
-import net.blazecoding.magicpowders.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
@@ -25,7 +24,7 @@ public class ItemMP extends Item {
 	}
 
 	public void registerIcons(IconRegister iconRegister) {
-		itemIcon = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+		itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
 	}
 
 }
