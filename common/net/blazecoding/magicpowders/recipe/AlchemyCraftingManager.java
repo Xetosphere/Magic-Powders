@@ -16,6 +16,17 @@ import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.world.World;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * AlchemyCraftingManager
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class AlchemyCraftingManager {
 
 	private static final AlchemyCraftingManager instance = new AlchemyCraftingManager();

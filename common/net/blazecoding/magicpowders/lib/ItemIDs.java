@@ -12,7 +12,7 @@ package net.blazecoding.magicpowders.lib;
  */
 
 public class ItemIDs {
-
+	
 	/* Default item ids */
 	public static int MAGICDUSTS_DEFAULT = 9000;
 	public static int MAGICINGOTS_DEFAULT = 9001;

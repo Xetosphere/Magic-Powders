@@ -12,6 +12,17 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * ContainerAlchemistTable
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class ContainerAlchemistTable extends Container {
 
 	public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 3);

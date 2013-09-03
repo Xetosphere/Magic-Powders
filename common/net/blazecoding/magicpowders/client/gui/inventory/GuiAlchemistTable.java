@@ -13,6 +13,17 @@ import org.lwjgl.opengl.GL11;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * GuiAlchemistTable
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 @SideOnly(Side.CLIENT)
 public class GuiAlchemistTable extends GuiContainer {
 

@@ -6,6 +6,17 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * SlotAlchemistTable
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 public class SlotAlchemistTable extends Slot {
 
 	/** The craft matrix inventory linked to this result slot. */

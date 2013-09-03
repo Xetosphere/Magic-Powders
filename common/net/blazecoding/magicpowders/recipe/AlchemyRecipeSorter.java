@@ -6,6 +6,17 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.crafting.ShapelessRecipes;
 
+/**
+ * 
+ * Magic Powders
+ * 
+ * AlchemyRecipeSorter
+ * 
+ * @author BlazeCoding
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
 @SuppressWarnings("rawtypes")
 public class AlchemyRecipeSorter implements Comparator {
 
