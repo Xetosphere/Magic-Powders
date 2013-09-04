@@ -1,15 +1,15 @@
 [
 {
-  "modid": "MP",
-  "name": "Magic Powders",
-  "description": "The Magic Powders mod.",
-  "version": "pre0.0.1",
-  "url": "http://www.minecraftforum.net/topic/1954538-",
+  "modid": "AEX",
+  "name": "Arcane Ephilesophy",
+  "description": "The Arcane Ephilesophy mod.",
+  "version": "pre0.1.1",
+  "url": "",
   "updateUrl": "",
   "authorList": [
-    "BlazeCoding-DevTeam"
+    "Xetosphere"
   ],
-  "credits": "By BlazeCoding, head coder Xetosphere.",
+  "credits": "By Xetosphere.",
   "logoFile": "/assets/mp/textures/logo/logo.png",
   "screenshots": [
   ],

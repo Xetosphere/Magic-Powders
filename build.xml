@@ -57,7 +57,7 @@
 
 		<!-- Build the jar -->
 		<mkdir dir="${build.dir.development}\${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}" />
-		<jar destfile="${build.dir.development}\${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\Magic Powders-${build.release.mod.version}.${build_number.build_number}.jar">
+		<jar destfile="${build.dir.development}\${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\Arcane-Ephilesophy-${build.release.mod.version}.${build_number.build_number}.jar">
 			<fileset dir="${build.dir.development}\forge\mcp\src\minecraft\" includes="mcmod.info" />
 			<fileset dir="${build.dir.development}\forge\mcp\reobf\minecraft" />
 			<fileset dir="${build.dir.development}\source\Magic-Powders\resources" excludes="**/xcf/**" />
