@@ -3,14 +3,14 @@
   "modid": "AEX",
   "name": "Arcane Ephilesophy",
   "description": "The Arcane Ephilesophy mod.",
-  "version": "pre0.1.1",
+  "version": "0.1.1",
   "url": "",
   "updateUrl": "",
   "authorList": [
     "Xetosphere"
   ],
   "credits": "By Xetosphere.",
-  "logoFile": "/assets/mp/textures/logo/logo.png",
+  "logoFile": "/assets/aex/textures/logo/logo.png",
   "screenshots": [
   ],
   "parent":"",

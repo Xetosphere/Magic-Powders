@@ -2,8 +2,11 @@ package com.xetosphere.arcane.world.gen;
 
 import java.util.Random;
 
+import com.xetosphere.arcane.block.ModBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemDoor;
+import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
@@ -124,6 +127,15 @@ public class WorldGenApprenticeHouse extends WorldGenerator {
 				}
 
 				ItemDoor.placeDoorBlock(world, x + 0, y + 1, z + 0, 1, Block.doorWood);
+				
+				world.setBlock(x + 0, y + 1, z + 3, Block.mobSpawner.blockID);
+				TileEntityMobSpawner spawner = (TileEntityMobSpawner)world.getBlockTileEntity(x + 0, y + 1, z + 3);
+				
+				if (spawner != null) {
+					spawner.getSpawnerLogic().setMobID("Witch");
+				}
+				
+				world.setBlock(x + 0, y + 1, z + 5, ModBlocks.alchemistTable.blockID);
 
 				return true;
 
@@ -235,6 +247,15 @@ public class WorldGenApprenticeHouse extends WorldGenerator {
 				}
 
 				ItemDoor.placeDoorBlock(world, x + 0, y + 1, z + 0, 0, Block.doorWood);
+				
+				world.setBlock(x + 3, y + 1, z + 0, Block.mobSpawner.blockID);
+				TileEntityMobSpawner spawner = (TileEntityMobSpawner)world.getBlockTileEntity(x + 3, y + 1, z + 0);
+				
+				if (spawner != null) {
+					spawner.getSpawnerLogic().setMobID("Witch");
+				}
+				
+				world.setBlock(x + 5, y + 1, z + 0, ModBlocks.alchemistTable.blockID);
 
 				return true;
 
@@ -344,6 +365,15 @@ public class WorldGenApprenticeHouse extends WorldGenerator {
 				}
 
 				ItemDoor.placeDoorBlock(world, x + 0, y + 1, z + 0, 3, Block.doorWood);
+				
+				world.setBlock(x + 0, y + 1, z - 3, Block.mobSpawner.blockID);
+				TileEntityMobSpawner spawner = (TileEntityMobSpawner)world.getBlockTileEntity(x + 0, y + 1, z - 3);
+				
+				if (spawner != null) {
+					spawner.getSpawnerLogic().setMobID("Witch");
+				}
+				
+				world.setBlock(x - 0, y + 1, z - 5, ModBlocks.alchemistTable.blockID);
 
 				return true;
 
@@ -455,6 +485,15 @@ public class WorldGenApprenticeHouse extends WorldGenerator {
 				}
 
 				ItemDoor.placeDoorBlock(world, x + 0, y + 1, z + 0, 2, Block.doorWood);
+				
+				world.setBlock(x - 3, y + 1, z + 0, Block.mobSpawner.blockID);
+				TileEntityMobSpawner spawner = (TileEntityMobSpawner)world.getBlockTileEntity(x - 3, y + 1, z + 0);
+				
+				if (spawner != null) {
+					spawner.getSpawnerLogic().setMobID("Witch");
+				}
+				
+				world.setBlock(x - 5, y + 1, z - 0, ModBlocks.alchemistTable.blockID);
 
 				return true;
 
