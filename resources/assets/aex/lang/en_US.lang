@@ -1,24 +1,24 @@
 
-item.mp:magicDustSoronite.name=Soronite Dust
-item.mp:magicDustTardite.name=Tardite Dust
-item.mp:magicDustKoronin.name=Koronin Dust
-item.mp:magicIngotSoroniteIngot.name=Soronite Ingot
-item.mp:magicIngotTarditeIngot.name=Tardite Ingot
-item.mp:magicIngotKoroninIngot.name=Koronin Ingot
-item.mp:duplicatorGem.name=Duplicator Gem
+item.aex:magicDustSoronite.name=Soronite Dust
+item.aex:magicDustTardite.name=Tardite Dust
+item.aex:magicDustKoronin.name=Koronin Dust
+item.aex:magicIngotSoroniteIngot.name=Soronite Ingot
+item.aex:magicIngotTarditeIngot.name=Tardite Ingot
+item.aex:magicIngotKoroninIngot.name=Koronin Ingot
+item.aex:arcaneGem.name=Arcane Gem
 
-tile.mp:powderOresSoroniteOre.name=Soronite Ore
-tile.mp:powderOresTarditeOre.name=Tardite Ore
-tile.mp:powderOresKoroninOre.name=Koronin Ore
-tile.mp:ingotBlocksSoroniteBlock.name=Soronite Block
-tile.mp:ingotBlocksTarditeBlock.name=Tardite Block
-tile.mp:ingotBlocksKoroninBlock.name=Koronin Block
-tile.mp:fuser.name=Fusing Table
-tile.mp:duplicator.name=Duplicator
-tile.mp:alchemistTable.name=Alchemist Table
+tile.aex:powderOresSoroniteOre.name=Soronite Ore
+tile.aex:powderOresTarditeOre.name=Tardite Ore
+tile.aex:powderOresKoroninOre.name=Koronin Ore
+tile.aex:ingotBlocksSoroniteBlock.name=Soronite Block
+tile.aex:ingotBlocksTarditeBlock.name=Tardite Block
+tile.aex:ingotBlocksKoroninBlock.name=Koronin Block
+tile.aex:arcaneFuser.name=Arcane Fuser
+tile.aex:duplicator.name=Duplicator
+tile.aex:alchemistTable.name=Alchemist Table
 
-container.fuser=Fusing Table
+container.arcaneFuser=Arcane Fuser
 container.duplicator=Duplicator
 container.alchemistTable=Alchemist Table
 
-itemGroup.MP=Magic Powders
+itemGroup.AEX=Arcane Ephilesophy

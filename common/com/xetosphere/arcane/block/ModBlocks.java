@@ -28,11 +28,11 @@ public class ModBlocks {
 
 		magicPowderOres = new BlockMagicPowderOres(BlockIDs.MAGIC_ORES);
 		storageBlocks = new BlockStorageBlocks(BlockIDs.STORAGE_BLOCKS);
-		fuser = new BlockFuser(BlockIDs.FUSER);
+		fuser = new BlockArcaneFuser(BlockIDs.ARCANE_FUSER);
 		duplicator = new BlockDuplicator(BlockIDs.DUPLICATOR);
 		alchemistTable = new BlockAlchemistTable(BlockIDs.ALCHEMISTTABLE);
 
-		GameRegistry.registerBlock(fuser, Strings.FUSER_NAME);
+		GameRegistry.registerBlock(fuser, Strings.ARCANE_FUSER_NAME);
 		GameRegistry.registerBlock(duplicator, Strings.DUPLICATOR_NAME);
 		GameRegistry.registerBlock(alchemistTable, Strings.ALCHEMISTTABLE_NAME);
 

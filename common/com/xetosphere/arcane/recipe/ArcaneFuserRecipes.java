@@ -5,15 +5,15 @@ import com.xetosphere.arcane.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class FuserRecipes {
+public class ArcaneFuserRecipes {
 
-	private static final FuserRecipes fusingBase = new FuserRecipes();
+	private static final ArcaneFuserRecipes fusingBase = new ArcaneFuserRecipes();
 
-	public static final FuserRecipes fusing() {
+	public static final ArcaneFuserRecipes fusing() {
 		return fusingBase;
 	}
 
-	private FuserRecipes() {
+	private ArcaneFuserRecipes() {
 
 	}
 

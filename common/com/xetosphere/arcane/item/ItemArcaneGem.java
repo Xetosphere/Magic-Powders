@@ -9,11 +9,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
-public class ItemDuplicatorGem extends ItemAEX {
+public class ItemArcaneGem extends ItemAEX {
 
-	public ItemDuplicatorGem(int id) {
+	public ItemArcaneGem(int id) {
 		super(id);
-		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.DUPLICATORGEM_NAME);
+		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ARCANE_GEM_NAME);
 		setCreativeTab(ArcaneEphilesophy.tabAEX);
 		setMaxDamage(32 - 1);
 	}
@@ -29,7 +29,7 @@ public class ItemDuplicatorGem extends ItemAEX {
 
 	public ItemStack getContainerItemStack(ItemStack itemStack) {
 
-		ItemStack dupleStack = new ItemStack(ModItems.duplicatorGem, 1, (itemStack.getItemDamage() + 1));
+		ItemStack dupleStack = new ItemStack(ModItems.arcaneGem, 1, (itemStack.getItemDamage() + 1));
 
 		return dupleStack;
 	}

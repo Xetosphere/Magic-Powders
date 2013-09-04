@@ -6,23 +6,23 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-import com.xetosphere.arcane.inventory.ContainerFuser;
+import com.xetosphere.arcane.inventory.ContainerArcaneFuser;
 import com.xetosphere.arcane.lib.Strings;
 import com.xetosphere.arcane.lib.Textures;
-import com.xetosphere.arcane.tileentity.TileFuser;
+import com.xetosphere.arcane.tileentity.TileArcaneFuser;
 
-public class GuiFuser extends GuiContainer {
+public class GuiArcaneFuser extends GuiContainer {
 
-	private TileFuser tileFuser;
+	private TileArcaneFuser tileArcaneFuser;
 
-	public GuiFuser(InventoryPlayer player, TileFuser tileFuser) {
-		super(new ContainerFuser(player, tileFuser));
-		this.tileFuser = tileFuser;
+	public GuiArcaneFuser(InventoryPlayer player, TileArcaneFuser tileArcaneFuser) {
+		super(new ContainerArcaneFuser(player, tileArcaneFuser));
+		this.tileArcaneFuser = tileArcaneFuser;
 	}
 
 	protected void drawGuiContainerForegroundLayer(int x, int y) {
 
-		String containerName = tileFuser.isInvNameLocalized() ? tileFuser.getInvName() : StatCollector.translateToLocal(tileFuser.getInvName());
+		String containerName = tileArcaneFuser.isInvNameLocalized() ? tileArcaneFuser.getInvName() : StatCollector.translateToLocal(tileArcaneFuser.getInvName());
 		fontRenderer.drawString(containerName, xSize / 2 - fontRenderer.getStringWidth(containerName) / 2, 6, 4210752);
 		fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_INVENTORY), 8, ySize - 96 + 2, 4210752);
 
@@ -33,7 +33,7 @@ public class GuiFuser extends GuiContainer {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
 		// this.mc.getTextureManager().bindTexture(...)
-		this.mc.func_110434_K().func_110577_a(Textures.GUI_FUSER);
+		this.mc.func_110434_K().func_110577_a(Textures.GUI_ARCANE_FUSER);
 
 		int xStart = (width - xSize) / 2;
 		int yStart = (height - ySize) / 2;
@@ -42,12 +42,12 @@ public class GuiFuser extends GuiContainer {
 
 		int i1;
 
-		if (this.tileFuser.isBurning()) {
-			i1 = this.tileFuser.getBurnTimeRemainingScaled(12);
+		if (this.tileArcaneFuser.isBurning()) {
+			i1 = this.tileArcaneFuser.getBurnTimeRemainingScaled(12);
 			this.drawTexturedModalRect(xStart + 56, yStart + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 2);
 		}
 
-		i1 = this.tileFuser.getCookProgressTimeScaled(24);
+		i1 = this.tileArcaneFuser.getCookProgressTimeScaled(24);
 		this.drawTexturedModalRect(xStart + 79, yStart + 34, 176, 14, i1 + 1, 16);
 
 	}

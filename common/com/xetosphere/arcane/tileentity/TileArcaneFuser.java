@@ -2,7 +2,7 @@ package com.xetosphere.arcane.tileentity;
 
 import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.recipe.FuserRecipes;
+import com.xetosphere.arcane.recipe.ArcaneFuserRecipes;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,7 +19,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileFuser extends TileAEX implements IInventory {
+public class TileArcaneFuser extends TileAEX implements IInventory {
 
 	private ItemStack[] inventory;
 
@@ -34,7 +34,7 @@ public class TileFuser extends TileAEX implements IInventory {
 	public int currentItemFuseTime;
 	public int fuserFusedTime2;
 
-	public TileFuser() {
+	public TileArcaneFuser() {
 		inventory = new ItemStack[INVENTORY_SIZE];
 	}
 
@@ -78,7 +78,7 @@ public class TileFuser extends TileAEX implements IInventory {
 	}
 
 	public String getInvName() {
-		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_FUSER_NAME;
+		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_ARCANE_FUSER_NAME;
 	}
 
 	public int getInventoryStackLimit() {
@@ -144,7 +144,7 @@ public class TileFuser extends TileAEX implements IInventory {
 
 		stringBuilder.append(super.toString());
 
-		stringBuilder.append("TileFuser Data - ");
+		stringBuilder.append("TileArcaneFuser Data - ");
 		for (int i = 0; i < inventory.length; i++) {
 			if (i != 0) {
 				stringBuilder.append(", ");
@@ -240,7 +240,7 @@ public class TileFuser extends TileAEX implements IInventory {
 
 		} else {
 
-			ItemStack itemstack = FuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
+			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
 
 			if (itemstack == null) return false;
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) return true;
@@ -255,7 +255,7 @@ public class TileFuser extends TileAEX implements IInventory {
 
 		if (this.canSmelt()) {
 
-			ItemStack itemstack = FuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
+			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
 
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) {
 

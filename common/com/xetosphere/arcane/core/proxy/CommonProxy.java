@@ -3,14 +3,14 @@ package com.xetosphere.arcane.core.proxy;
 import com.xetosphere.arcane.block.ModBlocks;
 import com.xetosphere.arcane.client.gui.inventory.GuiAlchemistTable;
 import com.xetosphere.arcane.client.gui.inventory.GuiDuplicator;
-import com.xetosphere.arcane.client.gui.inventory.GuiFuser;
+import com.xetosphere.arcane.client.gui.inventory.GuiArcaneFuser;
 import com.xetosphere.arcane.inventory.ContainerAlchemistTable;
 import com.xetosphere.arcane.inventory.ContainerDuplicator;
-import com.xetosphere.arcane.inventory.ContainerFuser;
+import com.xetosphere.arcane.inventory.ContainerArcaneFuser;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Strings;
 import com.xetosphere.arcane.tileentity.TileDuplicator;
-import com.xetosphere.arcane.tileentity.TileFuser;
+import com.xetosphere.arcane.tileentity.TileArcaneFuser;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -21,7 +21,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class CommonProxy implements IGuiHandler {
 
 	public void registerTileEntities() {
-		GameRegistry.registerTileEntity(TileFuser.class, Strings.FUSER_NAME);
+		GameRegistry.registerTileEntity(TileArcaneFuser.class, Strings.ARCANE_FUSER_NAME);
 		GameRegistry.registerTileEntity(TileDuplicator.class, Strings.DUPLICATOR_NAME);
 	}
 
@@ -39,10 +39,10 @@ public class CommonProxy implements IGuiHandler {
 
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 
-		if (ID == GuiIDs.FUSER) {
+		if (ID == GuiIDs.ARCANE_FUSER) {
 
-			TileFuser tileFuser = (TileFuser) world.getBlockTileEntity(x, y, z);
-			return new ContainerFuser(player.inventory, tileFuser);
+			TileArcaneFuser tileFuser = (TileArcaneFuser) world.getBlockTileEntity(x, y, z);
+			return new ContainerArcaneFuser(player.inventory, tileFuser);
 
 		}
 
@@ -62,10 +62,10 @@ public class CommonProxy implements IGuiHandler {
 
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 
-		if (ID == GuiIDs.FUSER) {
+		if (ID == GuiIDs.ARCANE_FUSER) {
 
-			TileFuser tileFuser = (TileFuser) world.getBlockTileEntity(x, y, z);
-			return new GuiFuser(player.inventory, tileFuser);
+			TileArcaneFuser tileFuser = (TileArcaneFuser) world.getBlockTileEntity(x, y, z);
+			return new GuiArcaneFuser(player.inventory, tileFuser);
 
 		}
 

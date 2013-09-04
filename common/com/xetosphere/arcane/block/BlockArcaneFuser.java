@@ -5,7 +5,7 @@ import java.util.Random;
 import com.xetosphere.arcane.ArcaneEphilesophy;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.tileentity.TileFuser;
+import com.xetosphere.arcane.tileentity.TileArcaneFuser;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockFuser extends BlockAEX {
+public class BlockArcaneFuser extends BlockAEX {
 
 	@SideOnly(Side.CLIENT)
 	private Icon iconTop;
@@ -30,9 +30,9 @@ public class BlockFuser extends BlockAEX {
 
 	private Random random = new Random();
 
-	public BlockFuser(int id) {
+	public BlockArcaneFuser(int id) {
 		super(id, Material.ground);
-		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.FUSER_NAME);
+		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME);
 		this.setCreativeTab(ArcaneEphilesophy.tabAEX);
 		this.setHardness(1F);
 		this.setResistance(12F);
@@ -45,9 +45,9 @@ public class BlockFuser extends BlockAEX {
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.FUSER_NAME + "_side");
-		this.iconTop = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.FUSER_NAME + "_top");
-		this.iconBottom = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.FUSER_NAME + "_bottom");
+		this.blockIcon = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME + "_side");
+		this.iconTop = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME + "_top");
+		this.iconBottom = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME + "_bottom");
 	}
 
 	public String getUnlocalizedName() {
@@ -56,14 +56,14 @@ public class BlockFuser extends BlockAEX {
 
 		unlocalizedName.append("tile.");
 		unlocalizedName.append(Strings.RESOURCE_PREFIX);
-		unlocalizedName.append(Strings.FUSER_NAME);
+		unlocalizedName.append(Strings.ARCANE_FUSER_NAME);
 
 		return unlocalizedName.toString();
 
 	}
 
 	public TileEntity createNewTileEntity(World world) {
-		return new TileFuser();
+		return new TileArcaneFuser();
 	}
 
 	public void breakBlock(World world, int x, int y, int z, int id, int meta) {
@@ -78,10 +78,10 @@ public class BlockFuser extends BlockAEX {
 		} else {
 			if (!world.isRemote) {
 
-				TileFuser tileFuser = (TileFuser) world.getBlockTileEntity(x, y, z);
+				TileArcaneFuser tileFuser = (TileArcaneFuser) world.getBlockTileEntity(x, y, z);
 
 				if (tileFuser != null) {
-					player.openGui(ArcaneEphilesophy.instance, GuiIDs.FUSER, world, x, y, z);
+					player.openGui(ArcaneEphilesophy.instance, GuiIDs.ARCANE_FUSER, world, x, y, z);
 				}
 			}
 			return true;

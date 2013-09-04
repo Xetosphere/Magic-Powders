@@ -1,6 +1,6 @@
 package com.xetosphere.arcane.inventory;
 
-import com.xetosphere.arcane.tileentity.TileFuser;
+import com.xetosphere.arcane.tileentity.TileArcaneFuser;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -11,29 +11,29 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ContainerFuser extends Container {
+public class ContainerArcaneFuser extends Container {
 
-	private TileFuser fuser;
+	private TileArcaneFuser fuser;
 
 	private int lastCookTime = 0;
 	private int lastBurnTime = 0;
 	private int lastItemBurnTime = 0;
 
-	public ContainerFuser(InventoryPlayer inventoryPlayer, TileFuser fuser) {
+	public ContainerArcaneFuser(InventoryPlayer inventoryPlayer, TileArcaneFuser fuser) {
 		
 		this.fuser = fuser;
 
 		// Add the input slot to the container
-		this.addSlotToContainer(new Slot(fuser, TileFuser.INPUT_INVENTORY_INDEX, 74, 17));
+		this.addSlotToContainer(new Slot(fuser, TileArcaneFuser.INPUT_INVENTORY_INDEX, 74, 17));
 		
 		// Add the dust input slot to the container
-		this.addSlotToContainer(new Slot(fuser, TileFuser.DUST_INVENTORY_INDEX, 38, 17));
+		this.addSlotToContainer(new Slot(fuser, TileArcaneFuser.DUST_INVENTORY_INDEX, 38, 17));
 
 		// Add the fuel slot to the container
-		this.addSlotToContainer(new Slot(fuser, TileFuser.FUEL_INVENTORY_INDEX, 56, 53));
+		this.addSlotToContainer(new Slot(fuser, TileArcaneFuser.FUEL_INVENTORY_INDEX, 56, 53));
 
 		// Add the output results slot to the container
-		this.addSlotToContainer(new SlotFuser(fuser, TileFuser.OUTPUT_INVENTORY_INDEX, 116, 35));
+		this.addSlotToContainer(new SlotArcaneFuser(fuser, TileArcaneFuser.OUTPUT_INVENTORY_INDEX, 116, 35));
 
 		// Add the player's inventory slots to the container
 		for (int inventoryRowIndex = 0; inventoryRowIndex < 3; ++inventoryRowIndex) {
@@ -114,27 +114,27 @@ public class ContainerFuser extends Container {
 			ItemStack slotItemStack = slot.getStack();
 			itemStack = slotItemStack.copy();
 
-			if (slotIndex < TileFuser.INVENTORY_SIZE) {
+			if (slotIndex < TileArcaneFuser.INVENTORY_SIZE) {
 
-				if (!this.mergeItemStack(slotItemStack, TileFuser.INVENTORY_SIZE, inventorySlots.size(), false)) {
+				if (!this.mergeItemStack(slotItemStack, TileArcaneFuser.INVENTORY_SIZE, inventorySlots.size(), false)) {
 					return null;
 				}
 
 			} else {
 
-				if (TileFuser.isItemFuel(slotItemStack)) {
-					if (!this.mergeItemStack(slotItemStack, TileFuser.FUEL_INVENTORY_INDEX, TileFuser.OUTPUT_INVENTORY_INDEX, false)) {
+				if (TileArcaneFuser.isItemFuel(slotItemStack)) {
+					if (!this.mergeItemStack(slotItemStack, TileArcaneFuser.FUEL_INVENTORY_INDEX, TileArcaneFuser.OUTPUT_INVENTORY_INDEX, false)) {
 						return null;
 					}
 				}
 				
-				else if (TileFuser.isItemDust(slotItemStack)) {
-					if (!this.mergeItemStack(slotItemStack, TileFuser.DUST_INVENTORY_INDEX, TileFuser.OUTPUT_INVENTORY_INDEX, false)) {
+				else if (TileArcaneFuser.isItemDust(slotItemStack)) {
+					if (!this.mergeItemStack(slotItemStack, TileArcaneFuser.DUST_INVENTORY_INDEX, TileArcaneFuser.OUTPUT_INVENTORY_INDEX, false)) {
 						return null;
 					}
 				}
 
-				else if (!this.mergeItemStack(slotItemStack, TileFuser.INPUT_INVENTORY_INDEX, TileFuser.OUTPUT_INVENTORY_INDEX, false)) {
+				else if (!this.mergeItemStack(slotItemStack, TileArcaneFuser.INPUT_INVENTORY_INDEX, TileArcaneFuser.OUTPUT_INVENTORY_INDEX, false)) {
 					return null;
 				}
 

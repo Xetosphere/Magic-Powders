@@ -11,7 +11,7 @@ public class ModItems {
 
 	public static Item magicDust;
 	public static Item magicIngot;
-	public static Item duplicatorGem;
+	public static Item arcaneGem;
 
 	/**
 	 * Adds the items that the mod contains. As well as item recipes.
@@ -20,7 +20,7 @@ public class ModItems {
 
 		magicDust = new ItemMagicDust(ItemIDs.MAGICDUSTS);
 		magicIngot = new ItemMagicIngot(ItemIDs.MAGICINGOTS);
-		duplicatorGem = new ItemDuplicatorGem(ItemIDs.DUPLICATORGEM);
+		arcaneGem = new ItemArcaneGem(ItemIDs.ARCANE_GEM);
 
 		registerRecipes();
 
@@ -31,7 +31,7 @@ public class ModItems {
 	 */
 	public static void registerRecipes() {
 
-		GameRegistry.addRecipe(new ItemStack(duplicatorGem), new Object[] { "XYX", "YZY", "XYX", Character.valueOf('X'), new ItemStack(magicDust, 1, 0), Character.valueOf('Y'), Item.diamond, Character.valueOf('Z'), Item.emerald });
+		GameRegistry.addRecipe(new ItemStack(arcaneGem), new Object[] { "XYX", "YZY", "XYX", Character.valueOf('X'), new ItemStack(magicDust, 1, 0), Character.valueOf('Y'), Item.diamond, Character.valueOf('Z'), Item.emerald });
 
 		duplicateItems();
 
@@ -41,7 +41,7 @@ public class ModItems {
 
 		int i = OreDictionary.WILDCARD_VALUE;
 
-		Item dupleGem = duplicatorGem.setContainerItem(ModItems.duplicatorGem);
+		Item dupleGem = arcaneGem.setContainerItem(ModItems.arcaneGem);
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.coal, 2, 0), new ItemStack(Item.coal, 1, 0), new ItemStack(dupleGem, 1, i));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.coal, 2, 1), new ItemStack(Item.coal, 1, 1), new ItemStack(dupleGem, 1, i));

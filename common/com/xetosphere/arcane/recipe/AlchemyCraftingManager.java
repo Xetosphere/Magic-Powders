@@ -33,7 +33,7 @@ public class AlchemyCraftingManager {
 
 		recipes = new ArrayList();
 
-		addRecipe(new ItemStack(ModBlocks.duplicator), new Object[] { "GRG", "BDB", "BFB", Character.valueOf('G'), Item.ingotGold, Character.valueOf('R'), new ItemStack(Block.cloth, 1, 10), Character.valueOf('B'), Block.netherBrick, Character.valueOf('D'), new ItemStack(ModItems.duplicatorGem, 1, 0), Character.valueOf('F'), Block.furnaceIdle });
+		addRecipe(new ItemStack(ModBlocks.duplicator), new Object[] { "GRG", "BDB", "BFB", Character.valueOf('G'), Item.ingotGold, Character.valueOf('R'), new ItemStack(Block.cloth, 1, 10), Character.valueOf('B'), Block.netherBrick, Character.valueOf('D'), new ItemStack(ModItems.arcaneGem, 1, 0), Character.valueOf('F'), Block.furnaceIdle });
 
 		Collections.sort(this.recipes, new AlchemyRecipeSorter(this));
 
