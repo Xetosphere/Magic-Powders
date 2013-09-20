@@ -2,7 +2,7 @@ package com.xetosphere.arcane.block;
 
 import java.util.Random;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Strings;
 import com.xetosphere.arcane.tileentity.TileArcaneFuser;
@@ -33,7 +33,7 @@ public class BlockArcaneFuser extends BlockAEX {
 	public BlockArcaneFuser(int id) {
 		super(id, Material.ground);
 		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME);
-		this.setCreativeTab(ArcaneEphilesophy.tabAEX);
+		this.setCreativeTab(ArchaniCommutatio.tabARC);
 		this.setHardness(1F);
 		this.setResistance(12F);
 	}
@@ -81,7 +81,7 @@ public class BlockArcaneFuser extends BlockAEX {
 				TileArcaneFuser tileFuser = (TileArcaneFuser) world.getBlockTileEntity(x, y, z);
 
 				if (tileFuser != null) {
-					player.openGui(ArcaneEphilesophy.instance, GuiIDs.ARCANE_FUSER, world, x, y, z);
+					player.openGui(ArchaniCommutatio.instance, GuiIDs.ARCANE_FUSER, world, x, y, z);
 				}
 			}
 			return true;

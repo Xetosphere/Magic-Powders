@@ -1,0 +1,24 @@
+
+item.arc:magicDustSoronite.name=Soronite Dust
+item.arc:magicDustTardite.name=Tardite Dust
+item.arc:magicDustKoronin.name=Koronin Dust
+item.arc:magicIngotSoroniteIngot.name=Soronite Ingot
+item.arc:magicIngotTarditeIngot.name=Tardite Ingot
+item.arc:magicIngotKoroninIngot.name=Koronin Ingot
+item.arc:arcaneGem.name=Arcane Gem
+
+tile.arc:powderOresSoroniteOre.name=Soronite Ore
+tile.arc:powderOresTarditeOre.name=Tardite Ore
+tile.arc:powderOresKoroninOre.name=Koronin Ore
+tile.arc:ingotBlocksSoroniteBlock.name=Soronite Block
+tile.arc:ingotBlocksTarditeBlock.name=Tardite Block
+tile.arc:ingotBlocksKoroninBlock.name=Koronin Block
+tile.arc:arcaneFuser.name=Arcane Fuser
+tile.arc:duplicator.name=Duplicator
+tile.arc:alchemistTable.name=Alchemist Table
+
+container.arcaneFuser=Arcane Fuser
+container.duplicator=Duplicator
+container.alchemistTable=Alchemist Table
+
+itemGroup.ARC=Archani Commutatio

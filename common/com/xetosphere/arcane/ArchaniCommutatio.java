@@ -5,7 +5,7 @@ import java.io.File;
 import com.xetosphere.arcane.block.ModBlocks;
 import com.xetosphere.arcane.configuration.ConfigurationHandler;
 import com.xetosphere.arcane.core.proxy.CommonProxy;
-import com.xetosphere.arcane.creativetab.TabAEX;
+import com.xetosphere.arcane.creativetab.TabARC;
 import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.network.PacketHandler;
@@ -24,16 +24,16 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = Reference.DEPENDENCIES)
 @NetworkMod(channels = { Reference.CHANNEL_NAME }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
-public class ArcaneEphilesophy {
+public class ArchaniCommutatio {
 
 	@Instance(Reference.CHANNEL_NAME)
-	public static ArcaneEphilesophy instance;
+	public static ArchaniCommutatio instance;
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy;
 
 	// Adds the Magic Powder tab in the creative tabs.
-	public static final CreativeTabs tabAEX = new TabAEX(CreativeTabs.getNextID(), Reference.MOD_ID);
+	public static final CreativeTabs tabARC = new TabARC(CreativeTabs.getNextID(), Reference.MOD_ID);
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {

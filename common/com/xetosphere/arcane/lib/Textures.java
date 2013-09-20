@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation;
 public class Textures {
 
 	// Base file paths
-	public static final String ARMOR_SHEET_LOCATION = "textures/armor/";
+	public static final String ARMOR_SHEET_LOCATION = "textures/armour/";
 	public static final String GUI_SHEET_LOCATION = "textures/gui/";
 
 	// GUI textures

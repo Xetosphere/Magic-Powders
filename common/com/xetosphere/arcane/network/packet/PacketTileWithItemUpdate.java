@@ -4,7 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.network.PacketTypeHandler;
 
 import net.minecraft.network.INetworkManager;
@@ -64,7 +64,7 @@ public class PacketTileWithItemUpdate extends PacketAEX {
 	}
 
 	public void execute(INetworkManager manager, Player player) {
-		ArcaneEphilesophy.proxy.handleTileWithItemPacket(x, y, z, ForgeDirection.getOrientation(orientation), state, customName, itemID, metaData, stackSize, color);
+		ArchaniCommutatio.proxy.handleTileWithItemPacket(x, y, z, ForgeDirection.getOrientation(orientation), state, customName, itemID, metaData, stackSize, color);
 	}
 
 }

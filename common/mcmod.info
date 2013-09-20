@@ -1,8 +1,8 @@
 [
 {
-  "modid": "AEX",
-  "name": "Arcane Ephilesophy",
-  "description": "The Arcane Ephilesophy mod.",
+  "modid": "ARC",
+  "name": "Archani Commutatio",
+  "description": "The Archani Commutatio mod.",
   "version": "0.1.1",
   "url": "",
   "updateUrl": "",
@@ -10,7 +10,7 @@
     "Xetosphere"
   ],
   "credits": "By Xetosphere.",
-  "logoFile": "/assets/aex/textures/logo/logo.png",
+  "logoFile": "/assets/arc/textures/logo/logo.png",
   "screenshots": [
   ],
   "parent":"",

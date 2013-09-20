@@ -2,7 +2,7 @@ package com.xetosphere.arcane.block;
 
 import java.util.Random;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Strings;
 import com.xetosphere.arcane.tileentity.TileDuplicator;
@@ -34,7 +34,7 @@ public class BlockDuplicator extends BlockContainer {
 	public BlockDuplicator(int id) {
 		super(id, Material.ground);
 		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.DUPLICATOR_NAME);
-		this.setCreativeTab(ArcaneEphilesophy.tabAEX);
+		this.setCreativeTab(ArchaniCommutatio.tabARC);
 		this.setHardness(1F);
 		this.setResistance(12F);
 	}
@@ -82,7 +82,7 @@ public class BlockDuplicator extends BlockContainer {
 				TileDuplicator tileDuplicator = (TileDuplicator) world.getBlockTileEntity(x, y, z);
 
 				if (tileDuplicator != null) {
-					player.openGui(ArcaneEphilesophy.instance, GuiIDs.DUPLICATOR, world, x, y, z);
+					player.openGui(ArchaniCommutatio.instance, GuiIDs.DUPLICATOR, world, x, y, z);
 				}
 			}
 			return true;

@@ -2,7 +2,7 @@ package com.xetosphere.arcane.block;
 
 import java.util.List;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.Strings;
 
 import net.minecraft.block.Block;
@@ -24,7 +24,7 @@ public class BlockStorageBlocks extends Block {
 	public BlockStorageBlocks(int id) {
 		super(id, Material.rock);
 		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.STORAGEBLOCKS_NAME);
-		setCreativeTab(ArcaneEphilesophy.tabAEX);
+		setCreativeTab(ArchaniCommutatio.tabARC);
 		setHardness(3.0F);
 		setResistance(12.0F);
 	}

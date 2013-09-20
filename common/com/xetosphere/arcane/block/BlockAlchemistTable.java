@@ -1,6 +1,6 @@
 package com.xetosphere.arcane.block;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Strings;
 
@@ -22,7 +22,7 @@ public class BlockAlchemistTable extends Block {
 
 	public BlockAlchemistTable(int i) {
 		super(i, Material.ground);
-		setCreativeTab(ArcaneEphilesophy.tabAEX);
+		setCreativeTab(ArchaniCommutatio.tabARC);
 		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ALCHEMISTTABLE_NAME);
 		setHardness(1F);
 		setResistance(12F);
@@ -44,7 +44,7 @@ public class BlockAlchemistTable extends Block {
 
 		if (!player.isSneaking()) {
 
-			player.openGui(ArcaneEphilesophy.instance, GuiIDs.ALCHEMISTTABLE, var1, var2, var3, var4);
+			player.openGui(ArchaniCommutatio.instance, GuiIDs.ALCHEMISTTABLE, var1, var2, var3, var4);
 			return true;
 
 		} else {

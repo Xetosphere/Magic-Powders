@@ -2,19 +2,19 @@ package com.xetosphere.arcane.item;
 
 import java.util.List;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.Strings;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
-public class ItemArcaneGem extends ItemAEX {
+public class ItemArcaneGem extends ItemARC {
 
 	public ItemArcaneGem(int id) {
 		super(id);
 		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ARCANE_GEM_NAME);
-		setCreativeTab(ArcaneEphilesophy.tabAEX);
+		setCreativeTab(ArchaniCommutatio.tabARC);
 		setMaxDamage(32 - 1);
 	}
 

@@ -3,7 +3,7 @@ package com.xetosphere.arcane.block;
 import java.util.List;
 import java.util.Random;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Strings;
 
@@ -26,7 +26,7 @@ public class BlockMagicPowderOres extends Block {
 	public BlockMagicPowderOres(int id) {
 		super(id, Material.rock);
 		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.POWDERORES_NAME);
-		setCreativeTab(ArcaneEphilesophy.tabAEX);
+		setCreativeTab(ArchaniCommutatio.tabARC);
 		setHardness(3.0F);
 		setResistance(8.0F);
 	}

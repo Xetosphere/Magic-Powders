@@ -2,7 +2,7 @@ package com.xetosphere.arcane.item;
 
 import java.util.List;
 
-import com.xetosphere.arcane.ArcaneEphilesophy;
+import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.lib.Strings;
 
@@ -15,7 +15,7 @@ import net.minecraft.util.MathHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemMagicDust extends ItemAEX {
+public class ItemMagicDust extends ItemARC {
 
 	private static final String[] MAGIC_DUST_NAMES = new String[] { "Soronite", "Tardite", "Koronin" };
 
@@ -24,7 +24,7 @@ public class ItemMagicDust extends ItemAEX {
 
 	public ItemMagicDust(int id) {
 		super(id);
-		setCreativeTab(ArcaneEphilesophy.tabAEX);
+		setCreativeTab(ArchaniCommutatio.tabARC);
 		setHasSubtypes(true);
 		maxStackSize = 64;
 	}

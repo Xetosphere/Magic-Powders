@@ -5,9 +5,9 @@ import com.xetosphere.arcane.item.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class TabAEX extends CreativeTabs {
+public class TabARC extends CreativeTabs {
 
-	public TabAEX(int id, String nameInCode) {
+	public TabARC(int id, String nameInCode) {
 		super(id, nameInCode);
 	}
 
