@@ -12,7 +12,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileDuplicator extends TileAEX implements IInventory {
+public class TileDuplicator extends TileARC implements IInventory {
 
 	private ItemStack[] inventory;
 

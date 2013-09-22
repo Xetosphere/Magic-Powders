@@ -29,10 +29,10 @@ public class ModItems {
 	public static Item koroninChest;
 	public static Item koroninLegs;
 	public static Item koroninBoots;
-	
+
 	public static EnumArmorMaterial armourSoronite = EnumHelper.addArmorMaterial("SORONITE", 12, new int[] { 3, 6, 4, 3 }, 10);
-	public static EnumArmorMaterial armourTardite = EnumHelper.addArmorMaterial("SORONITE", 12, new int[] { 3, 6, 4, 3 }, 10);
-	public static EnumArmorMaterial armourKoronin = EnumHelper.addArmorMaterial("SORONITE", 12, new int[] { 3, 6, 4, 3 }, 10);
+	public static EnumArmorMaterial armourTardite = EnumHelper.addArmorMaterial("TARDITE", 12, new int[] { 3, 6, 4, 3 }, 10);
+	public static EnumArmorMaterial armourKoronin = EnumHelper.addArmorMaterial("KORONIN", 12, new int[] { 3, 6, 4, 3 }, 10);
 
 	/**
 	 * Adds the items that the mod contains. As well as item recipes.
@@ -42,6 +42,7 @@ public class ModItems {
 		magicDust = new ItemMagicDust(ItemIDs.MAGICDUSTS);
 		magicIngot = new ItemMagicIngot(ItemIDs.MAGICINGOTS);
 		arcaneGem = new ItemArcaneGem(ItemIDs.ARCANE_GEM);
+
 		soroniteHelmet = new ItemSoroniteArmour(ItemIDs.SORONITEHELMET, armourSoronite, 0, 0).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITEHELMET_NAME);
 		soroniteChest = new ItemSoroniteArmour(ItemIDs.SORONITECHEST, armourSoronite, 0, 1).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITECHEST_NAME);
 		soroniteLegs = new ItemSoroniteArmour(ItemIDs.SORONITELEGS, armourSoronite, 0, 2).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITELEGS_NAME);

@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockArcaneFuser extends BlockAEX {
+public class BlockArcaneFuser extends BlockARC {
 
 	@SideOnly(Side.CLIENT)
 	private Icon iconTop;

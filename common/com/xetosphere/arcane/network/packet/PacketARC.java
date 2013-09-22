@@ -10,12 +10,12 @@ import com.xetosphere.arcane.network.PacketTypeHandler;
 import net.minecraft.network.INetworkManager;
 import cpw.mods.fml.common.network.Player;
 
-public class PacketAEX {
+public class PacketARC {
 
 	public PacketTypeHandler packetType;
 	public boolean isChunkDataPacket;
 
-	public PacketAEX(PacketTypeHandler packetType, boolean isChunkDataPacket) {
+	public PacketARC(PacketTypeHandler packetType, boolean isChunkDataPacket) {
 		this.packetType = packetType;
 		this.isChunkDataPacket = isChunkDataPacket;
 	}

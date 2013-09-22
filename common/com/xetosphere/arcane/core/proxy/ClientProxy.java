@@ -1,6 +1,6 @@
 package com.xetosphere.arcane.core.proxy;
 
-import com.xetosphere.arcane.tileentity.TileAEX;
+import com.xetosphere.arcane.tileentity.TileARC;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
@@ -13,10 +13,10 @@ public class ClientProxy extends CommonProxy {
 		TileEntity tileEntity = FMLClientHandler.instance().getClient().theWorld.getBlockTileEntity(x, y, z);
 
 		if (tileEntity != null) {
-			if (tileEntity instanceof TileAEX) {
-				((TileAEX) tileEntity).setOrientation(orientation);
-				((TileAEX) tileEntity).setState(state);
-				((TileAEX) tileEntity).setCustomName(customName);
+			if (tileEntity instanceof TileARC) {
+				((TileARC) tileEntity).setOrientation(orientation);
+				((TileARC) tileEntity).setState(state);
+				((TileARC) tileEntity).setCustomName(customName);
 			}
 		}
 

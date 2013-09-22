@@ -11,7 +11,7 @@ import net.minecraft.network.INetworkManager;
 import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.common.network.Player;
 
-public class PacketTileWithItemUpdate extends PacketAEX {
+public class PacketTileWithItemUpdate extends PacketARC {
 
 	public int x, y, z;
 	public byte orientation;

@@ -19,7 +19,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileArcaneFuser extends TileAEX implements IInventory {
+public class TileArcaneFuser extends TileARC implements IInventory {
 
 	private ItemStack[] inventory;
 

@@ -18,10 +18,12 @@ public class ItemTarditeArmour extends ItemArmor {
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-		if (stack.toString().contains("leggings")) {
+		if (slot == 0 || slot == 1 || slot == 3) {
+			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.TARDITEARMOUR_NAME + "_1.png";
+		} else if (slot == 2) {
 			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.TARDITEARMOUR_NAME + "_2.png";
 		}
-		return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.TARDITEARMOUR_NAME + "_1.png";
+		return null;
 	}
 
 	public void registerIcons(IconRegister iconRegister) {

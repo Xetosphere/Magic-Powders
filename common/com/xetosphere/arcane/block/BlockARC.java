@@ -1,7 +1,7 @@
 package com.xetosphere.arcane.block;
 
 import com.xetosphere.arcane.lib.Reference;
-import com.xetosphere.arcane.tileentity.TileAEX;
+import com.xetosphere.arcane.tileentity.TileARC;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -14,9 +14,9 @@ import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public abstract class BlockAEX extends BlockContainer {
+public abstract class BlockARC extends BlockContainer {
 
-	public BlockAEX(int id, Material material) {
+	public BlockARC(int id, Material material) {
 		super(id, material);
 	}
 
@@ -53,10 +53,10 @@ public abstract class BlockAEX extends BlockContainer {
 		world.setBlockMetadataWithNotify(x, y, z, direction, 3);
 
 		if (itemStack.hasDisplayName()) {
-			((TileAEX) world.getBlockTileEntity(x, y, z)).setCustomName(itemStack.getDisplayName());
+			((TileARC) world.getBlockTileEntity(x, y, z)).setCustomName(itemStack.getDisplayName());
 		}
 
-		((TileAEX) world.getBlockTileEntity(x, y, z)).setOrientation(direction);
+		((TileARC) world.getBlockTileEntity(x, y, z)).setOrientation(direction);
 
 	}
 

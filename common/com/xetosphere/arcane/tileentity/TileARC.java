@@ -10,13 +10,13 @@ import net.minecraft.network.packet.Packet;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 
-public class TileAEX extends TileEntity {
+public class TileARC extends TileEntity {
 
 	protected ForgeDirection orientation;
 	protected byte state;
 	protected String customName;
 
-	public TileAEX() {
+	public TileARC() {
 		orientation = ForgeDirection.SOUTH;
 		state = 0;
 		customName = "";
@@ -97,7 +97,7 @@ public class TileAEX extends TileEntity {
 
 		StringBuilder stringBuilder = new StringBuilder();
 
-		stringBuilder.append(String.format("TileAEX Data - xCoord: %d, yCoord: %d, zCoord: %d, customName: '%s', orientation: %s, state: %d\n", xCoord, yCoord, zCoord, customName, orientation, state));
+		stringBuilder.append(String.format("TileARC Data - xCoord: %d, yCoord: %d, zCoord: %d, customName: '%s', orientation: %s, state: %d\n", xCoord, yCoord, zCoord, customName, orientation, state));
 
 		return stringBuilder.toString();
 	}
