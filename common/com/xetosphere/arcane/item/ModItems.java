@@ -1,6 +1,7 @@
 package com.xetosphere.arcane.item;
 
 import net.minecraft.item.EnumArmorMaterial;
+import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.EnumHelper;
@@ -30,6 +31,14 @@ public class ModItems {
 	public static Item koroninLegs;
 	public static Item koroninBoots;
 
+	public static Item soronitePaxel;
+	public static Item tarditePaxel;
+	public static Item koroninPaxel;
+
+	public static EnumToolMaterial toolSoronite = EnumHelper.addToolMaterial("SORONITE", 2, 1800, 7.0F, 2.0F, 17);
+	public static EnumToolMaterial toolTardite = EnumHelper.addToolMaterial("TARDITE", 2, 1800, 7.0F, 2.0F, 17);
+	public static EnumToolMaterial toolKoronin = EnumHelper.addToolMaterial("KORONIN", 2, 1800, 7.0F, 2.0F, 17);
+
 	public static EnumArmorMaterial armourSoronite = EnumHelper.addArmorMaterial("SORONITE", 12, new int[] { 3, 6, 4, 3 }, 10);
 	public static EnumArmorMaterial armourTardite = EnumHelper.addArmorMaterial("TARDITE", 12, new int[] { 3, 6, 4, 3 }, 10);
 	public static EnumArmorMaterial armourKoronin = EnumHelper.addArmorMaterial("KORONIN", 12, new int[] { 3, 6, 4, 3 }, 10);
@@ -55,6 +64,10 @@ public class ModItems {
 		koroninChest = new ItemKoroninArmour(ItemIDs.KORONINCHEST, armourKoronin, 0, 1).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.KORONINCHEST_NAME);
 		koroninLegs = new ItemKoroninArmour(ItemIDs.KORONINLEGS, armourKoronin, 0, 2).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.KORONINLEGS_NAME);
 		koroninBoots = new ItemKoroninArmour(ItemIDs.KORONINBOOTS, armourKoronin, 0, 3).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.KORONINBOOTS_NAME);
+
+		soronitePaxel = new ItemPaxel(ItemIDs.SORONITEPAXEL, toolSoronite).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITEPAXEL_NAME);
+		tarditePaxel = new ItemPaxel(ItemIDs.TARDITEPAXEL, toolTardite).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.TARDITEPAXEL_NAME);
+		koroninPaxel = new ItemPaxel(ItemIDs.KORONINPAXEL, toolKoronin).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.KORONINPAXEL_NAME);
 
 		registerRecipes();
 

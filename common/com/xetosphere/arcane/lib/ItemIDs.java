@@ -1,7 +1,7 @@
 package com.xetosphere.arcane.lib;
 
 public class ItemIDs {
-	
+
 	/* Default item ids */
 	public static int MAGICDUSTS_DEFAULT = 9000;
 	public static int MAGICINGOTS_DEFAULT = 9001;
@@ -19,6 +19,10 @@ public class ItemIDs {
 	public static int KORONINLEGS_DEFAULT = 9013;
 	public static int KORONINBOOTS_DEFAULT = 9014;
 
+	public static int SORONITEPAXEL_DEFAULT = 9015;
+	public static int TARDITEPAXEL_DEFAULT = 9016;
+	public static int KORONINPAXEL_DEFAULT = 9017;
+
 	/* Current item ids */
 	public static int MAGICDUSTS;
 	public static int MAGICINGOTS;
@@ -35,5 +39,8 @@ public class ItemIDs {
 	public static int KORONINCHEST;
 	public static int KORONINLEGS;
 	public static int KORONINBOOTS;
+	public static int SORONITEPAXEL;
+	public static int TARDITEPAXEL;
+	public static int KORONINPAXEL;
 
 }

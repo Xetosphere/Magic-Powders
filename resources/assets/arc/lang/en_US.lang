@@ -18,6 +18,9 @@ item.arc:helmetKoronin.name=Koronin Helmet
 item.arc:chestplateKoronin.name=Koronin Chestplate
 item.arc:leggingsKoronin.name=Koronin Leggings
 item.arc:bootsKoronin.name=Koronin Boots
+item.arc:paxelSoronite.name=Soronite Paxel
+item.arc:paxelTardite.name=Tardite Paxel
+item.arc:paxelKoronin.name=Koronin Paxel
 
 tile.arc:powderOresSoroniteOre.name=Soronite Ore
 tile.arc:powderOresTarditeOre.name=Tardite Ore

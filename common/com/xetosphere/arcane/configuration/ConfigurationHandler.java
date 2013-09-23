@@ -47,6 +47,9 @@ public class ConfigurationHandler {
 			ItemIDs.KORONINCHEST = config.getItem(Configuration.CATEGORY_ITEM, Strings.KORONINCHEST_NAME, ItemIDs.KORONINCHEST_DEFAULT).getInt(ItemIDs.KORONINCHEST_DEFAULT);
 			ItemIDs.KORONINLEGS = config.getItem(Configuration.CATEGORY_ITEM, Strings.KORONINLEGS_NAME, ItemIDs.KORONINLEGS_DEFAULT).getInt(ItemIDs.KORONINLEGS_DEFAULT);
 			ItemIDs.KORONINBOOTS = config.getItem(Configuration.CATEGORY_ITEM, Strings.KORONINBOOTS_NAME, ItemIDs.KORONINBOOTS_DEFAULT).getInt(ItemIDs.KORONINBOOTS_DEFAULT);
+			ItemIDs.SORONITEPAXEL = config.getItem(Configuration.CATEGORY_ITEM, Strings.SORONITEPAXEL_NAME, ItemIDs.SORONITEPAXEL_DEFAULT).getInt(ItemIDs.SORONITEPAXEL_DEFAULT);
+			ItemIDs.TARDITEPAXEL = config.getItem(Configuration.CATEGORY_ITEM, Strings.TARDITEPAXEL_NAME, ItemIDs.TARDITEPAXEL_DEFAULT).getInt(ItemIDs.TARDITEPAXEL_DEFAULT);
+			ItemIDs.KORONINPAXEL = config.getItem(Configuration.CATEGORY_ITEM, Strings.KORONINPAXEL_NAME, ItemIDs.KORONINPAXEL_DEFAULT).getInt(ItemIDs.KORONINPAXEL_DEFAULT);
 
 			// Misc
 			ModConfigurations.enableCustomGeneration = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_CUSTOM_GEN, ModConfigurations.DEFAULT_GENERATION).getBoolean(ModConfigurations.DEFAULT_GENERATION);
