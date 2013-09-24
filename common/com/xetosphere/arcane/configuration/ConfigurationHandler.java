@@ -3,13 +3,14 @@ package com.xetosphere.arcane.configuration;
 import java.io.File;
 import java.util.logging.Level;
 
+import net.minecraftforge.common.Configuration;
+
 import com.xetosphere.arcane.lib.BlockIDs;
 import com.xetosphere.arcane.lib.ItemIDs;
 import com.xetosphere.arcane.lib.ModConfigurations;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.lib.Strings;
 
-import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 
 public class ConfigurationHandler {

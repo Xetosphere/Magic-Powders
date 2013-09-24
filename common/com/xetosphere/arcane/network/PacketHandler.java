@@ -1,9 +1,10 @@
 package com.xetosphere.arcane.network;
 
-import com.xetosphere.arcane.network.packet.PacketARC;
-
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
+
+import com.xetosphere.arcane.network.packet.PacketARC;
+
 import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.Player;
 

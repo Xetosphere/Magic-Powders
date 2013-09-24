@@ -24,12 +24,12 @@ public class Strings {
 	public static final String MAGICDUST_NAME = "magicDust";
 	public static final String MAGICINGOT_NAME = "magicIngot";
 	public static final String ARCANE_GEM_NAME = "arcaneGem";
-	
+
 	/* Tool name constants */
 	public static final String SORONITEPAXEL_NAME = "paxelSoronite";
 	public static final String TARDITEPAXEL_NAME = "paxelTardite";
 	public static final String KORONINPAXEL_NAME = "paxelKoronin";
-	
+
 	/* Armour name constants */
 	public static final String SORONITEHELMET_NAME = "helmetSoronite";
 	public static final String SORONITECHEST_NAME = "chestplateSoronite";
@@ -46,10 +46,11 @@ public class Strings {
 	public static final String SORONITEARMOUR_NAME = "soroniteArmour";
 	public static final String TARDITEARMOUR_NAME = "tarditeArmour";
 	public static final String KORONINARMOUR_NAME = "koroninArmour";
-	
+
 	/* TileEntity name constants */
 	public static final String TE_ARCANE_FUSER_NAME = "tileArcaneFuser";
 	public static final String TE_DUPLICATOR_NAME = "tileDuplicator";
+	public static final String TE_ALCHEMISTTABLE_NAME = "tileAlchemistTable";
 
 	/* Container related constants */
 	public static final String CONTAINER_INVENTORY = "container.inventory";

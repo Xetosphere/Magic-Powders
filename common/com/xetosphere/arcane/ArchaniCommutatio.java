@@ -2,6 +2,8 @@ package com.xetosphere.arcane;
 
 import java.io.File;
 
+import net.minecraft.creativetab.CreativeTabs;
+
 import com.xetosphere.arcane.block.ModBlocks;
 import com.xetosphere.arcane.configuration.ConfigurationHandler;
 import com.xetosphere.arcane.core.proxy.CommonProxy;
@@ -11,7 +13,6 @@ import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.network.PacketHandler;
 import com.xetosphere.arcane.world.gen.WorldGen;
 
-import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -60,6 +61,9 @@ public class ArchaniCommutatio {
 
 		// Initialize mod tile entities
 		proxy.registerTileEntities();
+
+		// Initialize custom rendering and pre-load textures (Client only)
+		proxy.initRenderingAndTextures();
 
 	}
 

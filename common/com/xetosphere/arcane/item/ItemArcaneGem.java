@@ -2,12 +2,12 @@ package com.xetosphere.arcane.item;
 
 import java.util.List;
 
-import com.xetosphere.arcane.ArchaniCommutatio;
-import com.xetosphere.arcane.lib.Strings;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+
+import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.lib.Strings;
 
 public class ItemArcaneGem extends ItemARC {
 
@@ -33,7 +33,7 @@ public class ItemArcaneGem extends ItemARC {
 
 		return dupleStack;
 	}
-	
+
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack) {
 		return false;
 	}

@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.xetosphere.arcane.item.ModItems;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import com.xetosphere.arcane.item.ModItems;
 
 public class DuplicatorRecipes {
 

@@ -2,16 +2,17 @@ package com.xetosphere.arcane.item;
 
 import java.util.List;
 
-import com.xetosphere.arcane.ArchaniCommutatio;
-import com.xetosphere.arcane.lib.Reference;
-import com.xetosphere.arcane.lib.Strings;
-
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
+
+import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.lib.Reference;
+import com.xetosphere.arcane.lib.Strings;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -32,7 +33,7 @@ public class ItemMagicIngot extends ItemARC {
 	public String getUnlocalizedName(ItemStack itemStack) {
 
 		StringBuilder unlocalizedName = new StringBuilder();
-        int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, MAGIC_INGOT_NAMES.length);
+		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, MAGIC_INGOT_NAMES.length);
 
 		unlocalizedName.append("item.");
 		unlocalizedName.append(Strings.RESOURCE_PREFIX);
@@ -67,14 +68,14 @@ public class ItemMagicIngot extends ItemARC {
 		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, MAGIC_INGOT_NAMES.length);
 
 		switch (meta) {
-			case 0:
-				return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
-			case 1:
-				return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
-			case 2:
-				return EnumChatFormatting.AQUA + super.getItemDisplayName(itemStack);
-			default:
-				return EnumChatFormatting.WHITE + super.getItemDisplayName(itemStack);
+		case 0:
+			return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
+		case 1:
+			return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
+		case 2:
+			return EnumChatFormatting.AQUA + super.getItemDisplayName(itemStack);
+		default:
+			return EnumChatFormatting.WHITE + super.getItemDisplayName(itemStack);
 
 		}
 

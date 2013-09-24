@@ -97,6 +97,21 @@ public class ModItems {
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.diamond, 2, 0), new ItemStack(Item.diamond, 1, 0), new ItemStack(dupleGem, 1, i));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.emerald, 2, 0), new ItemStack(Item.emerald, 1, 0), new ItemStack(dupleGem, 1, i));
 
+		GameRegistry.addRecipe(new ItemStack(soroniteHelmet), new Object[] { "SSS", "S S", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(soroniteChest), new Object[] { "S S", "SSS", "SSS", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(soroniteLegs), new Object[] { "SSS", "S S", "S S", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(soroniteBoots), new Object[] { "S S", "S S", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
+
+		GameRegistry.addRecipe(new ItemStack(tarditeHelmet), new Object[] { "TTT", "T T", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(tarditeChest), new Object[] { "T T", "TTT", "TTT", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(tarditeLegs), new Object[] { "TTT", "T T", "T T", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(tarditeBoots), new Object[] { "T T", "T T", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
+
+		GameRegistry.addRecipe(new ItemStack(koroninHelmet), new Object[] { "KKK", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(koroninChest), new Object[] { "K K", "KKK", "KKK", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(koroninLegs), new Object[] { "KKK", "K K", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(koroninBoots), new Object[] { "K K", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
+
 	}
 
 }

@@ -1,14 +1,14 @@
 package com.xetosphere.arcane.tileentity;
 
-import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.network.PacketTypeHandler;
-import com.xetosphere.arcane.network.packet.PacketTileUpdate;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
+
+import com.xetosphere.arcane.lib.Strings;
+import com.xetosphere.arcane.network.PacketTypeHandler;
+import com.xetosphere.arcane.network.packet.PacketTileUpdate;
 
 public class TileARC extends TileEntity {
 

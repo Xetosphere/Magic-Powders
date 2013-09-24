@@ -1,13 +1,14 @@
 package com.xetosphere.arcane.tileentity;
 
-import com.xetosphere.arcane.item.ModItems;
-import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.recipe.DuplicatorRecipes;
-
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+
+import com.xetosphere.arcane.item.ModItems;
+import com.xetosphere.arcane.lib.Strings;
+import com.xetosphere.arcane.recipe.DuplicatorRecipes;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -234,9 +235,12 @@ public class TileDuplicator extends TileARC implements IInventory {
 
 			ItemStack itemstack = DuplicatorRecipes.dupling().getDuplingResult(this.inventory[INPUT_INVENTORY_INDEX]);
 
-			if (itemstack == null) return false;
-			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) return true;
-			if (!this.inventory[OUTPUT_INVENTORY_INDEX].isItemEqual(itemstack)) return false;
+			if (itemstack == null)
+				return false;
+			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null)
+				return true;
+			if (!this.inventory[OUTPUT_INVENTORY_INDEX].isItemEqual(itemstack))
+				return false;
 			int result = inventory[OUTPUT_INVENTORY_INDEX].stackSize + itemstack.stackSize;
 
 			return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
@@ -276,7 +280,8 @@ public class TileDuplicator extends TileARC implements IInventory {
 		int i = itemStack.getItem().itemID;
 		int meta = itemStack.getItemDamage();
 
-		if (i == ModItems.magicDust.itemID && meta == 0) return 200;
+		if (i == ModItems.magicDust.itemID && meta == 0)
+			return 200;
 
 		return GameRegistry.getFuelValue(itemStack);
 

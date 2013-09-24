@@ -1,8 +1,5 @@
 package com.xetosphere.arcane.block;
 
-import com.xetosphere.arcane.lib.Reference;
-import com.xetosphere.arcane.tileentity.TileARC;
-
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -11,6 +8,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
+
+import com.xetosphere.arcane.lib.Reference;
+import com.xetosphere.arcane.tileentity.TileARC;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

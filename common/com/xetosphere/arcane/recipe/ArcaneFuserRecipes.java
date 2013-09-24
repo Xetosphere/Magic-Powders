@@ -1,9 +1,9 @@
 package com.xetosphere.arcane.recipe;
 
-import com.xetosphere.arcane.item.ModItems;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import com.xetosphere.arcane.item.ModItems;
 
 public class ArcaneFuserRecipes {
 

@@ -1,13 +1,14 @@
 package com.xetosphere.arcane.inventory;
 
-import com.xetosphere.arcane.tileentity.TileArcaneFuser;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+
+import com.xetosphere.arcane.tileentity.TileArcaneFuser;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -20,12 +21,12 @@ public class ContainerArcaneFuser extends Container {
 	private int lastItemBurnTime = 0;
 
 	public ContainerArcaneFuser(InventoryPlayer inventoryPlayer, TileArcaneFuser fuser) {
-		
+
 		this.fuser = fuser;
 
 		// Add the input slot to the container
 		this.addSlotToContainer(new Slot(fuser, TileArcaneFuser.INPUT_INVENTORY_INDEX, 74, 17));
-		
+
 		// Add the dust input slot to the container
 		this.addSlotToContainer(new Slot(fuser, TileArcaneFuser.DUST_INVENTORY_INDEX, 38, 17));
 
@@ -127,7 +128,7 @@ public class ContainerArcaneFuser extends Container {
 						return null;
 					}
 				}
-				
+
 				else if (TileArcaneFuser.isItemDust(slotItemStack)) {
 					if (!this.mergeItemStack(slotItemStack, TileArcaneFuser.DUST_INVENTORY_INDEX, TileArcaneFuser.OUTPUT_INVENTORY_INDEX, false)) {
 						return null;

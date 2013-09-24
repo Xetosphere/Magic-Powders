@@ -4,11 +4,12 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import net.minecraft.network.INetworkManager;
+import net.minecraftforge.common.ForgeDirection;
+
 import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.network.PacketTypeHandler;
 
-import net.minecraft.network.INetworkManager;
-import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.common.network.Player;
 
 public class PacketTileUpdate extends PacketARC {

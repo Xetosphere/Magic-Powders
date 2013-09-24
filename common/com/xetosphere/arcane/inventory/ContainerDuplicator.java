@@ -1,14 +1,15 @@
 package com.xetosphere.arcane.inventory;
 
-import com.xetosphere.arcane.recipe.DuplicatorRecipes;
-import com.xetosphere.arcane.tileentity.TileDuplicator;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+
+import com.xetosphere.arcane.recipe.DuplicatorRecipes;
+import com.xetosphere.arcane.tileentity.TileDuplicator;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

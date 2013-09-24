@@ -1,9 +1,9 @@
 package com.xetosphere.arcane.item;
 
-import com.xetosphere.arcane.lib.Reference;
-
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
+
+import com.xetosphere.arcane.lib.Reference;
 
 public class ItemARC extends Item {
 

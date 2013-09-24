@@ -1,9 +1,9 @@
 package com.xetosphere.arcane.creativetab;
 
-import com.xetosphere.arcane.item.ModItems;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+
+import com.xetosphere.arcane.item.ModItems;
 
 public class TabARC extends CreativeTabs {
 

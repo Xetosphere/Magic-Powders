@@ -1,8 +1,8 @@
 package com.xetosphere.arcane.core.util;
 
-import com.xetosphere.arcane.lib.Reference;
-
 import net.minecraft.util.ResourceLocation;
+
+import com.xetosphere.arcane.lib.Reference;
 
 public class ResourceLocationHelper {
 

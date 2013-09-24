@@ -1,9 +1,5 @@
 package com.xetosphere.arcane.tileentity;
 
-import com.xetosphere.arcane.item.ModItems;
-import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.recipe.ArcaneFuserRecipes;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.inventory.IInventory;
@@ -15,6 +11,11 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+
+import com.xetosphere.arcane.item.ModItems;
+import com.xetosphere.arcane.lib.Strings;
+import com.xetosphere.arcane.recipe.ArcaneFuserRecipes;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -242,9 +243,12 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 
 			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
 
-			if (itemstack == null) return false;
-			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) return true;
-			if (!this.inventory[OUTPUT_INVENTORY_INDEX].isItemEqual(itemstack)) return false;
+			if (itemstack == null)
+				return false;
+			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null)
+				return true;
+			if (!this.inventory[OUTPUT_INVENTORY_INDEX].isItemEqual(itemstack))
+				return false;
 			int result = inventory[OUTPUT_INVENTORY_INDEX].stackSize + itemstack.stackSize;
 
 			return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
@@ -273,7 +277,7 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 			if (this.inventory[INPUT_INVENTORY_INDEX].stackSize <= 0) {
 				this.inventory[INPUT_INVENTORY_INDEX] = null;
 			}
-			
+
 			if (this.inventory[DUST_INVENTORY_INDEX].stackSize <= 0) {
 				this.inventory[DUST_INVENTORY_INDEX] = null;
 			}
@@ -305,14 +309,22 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 			}
 		}
 
-		if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD")) return 200;
-		if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD")) return 200;
-		if (item instanceof ItemHoe && ((ItemHoe) item).getMaterialName().equals("WOOD")) return 200;
-		if (i == Item.stick.itemID) return 100;
-		if (i == Item.coal.itemID) return 1600;
-		if (i == Item.bucketLava.itemID) return 20000;
-		if (i == Block.sapling.blockID) return 100;
-		if (i == Item.blazeRod.itemID) return 2400;
+		if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD"))
+			return 200;
+		if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD"))
+			return 200;
+		if (item instanceof ItemHoe && ((ItemHoe) item).getMaterialName().equals("WOOD"))
+			return 200;
+		if (i == Item.stick.itemID)
+			return 100;
+		if (i == Item.coal.itemID)
+			return 1600;
+		if (i == Item.bucketLava.itemID)
+			return 20000;
+		if (i == Block.sapling.blockID)
+			return 100;
+		if (i == Item.blazeRod.itemID)
+			return 2400;
 		return GameRegistry.getFuelValue(itemStack);
 
 	}

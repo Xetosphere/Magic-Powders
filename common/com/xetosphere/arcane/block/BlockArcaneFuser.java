@@ -2,11 +2,6 @@ package com.xetosphere.arcane.block;
 
 import java.util.Random;
 
-import com.xetosphere.arcane.ArchaniCommutatio;
-import com.xetosphere.arcane.lib.GuiIDs;
-import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.tileentity.TileArcaneFuser;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.item.EntityItem;
@@ -17,6 +12,12 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
+
+import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.lib.GuiIDs;
+import com.xetosphere.arcane.lib.Strings;
+import com.xetosphere.arcane.tileentity.TileArcaneFuser;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

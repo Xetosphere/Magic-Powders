@@ -3,13 +3,13 @@ package com.xetosphere.arcane.network;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet250CustomPayload;
+
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.network.packet.PacketARC;
 import com.xetosphere.arcane.network.packet.PacketTileUpdate;
 import com.xetosphere.arcane.network.packet.PacketTileWithItemUpdate;
-
-import net.minecraft.network.packet.Packet;
-import net.minecraft.network.packet.Packet250CustomPayload;
 
 public enum PacketTypeHandler {
 	TILE(PacketTileUpdate.class), TILE_WITH_ITEM(PacketTileWithItemUpdate.class);

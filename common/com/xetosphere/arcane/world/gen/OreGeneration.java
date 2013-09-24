@@ -2,13 +2,14 @@ package com.xetosphere.arcane.world.gen;
 
 import java.util.Random;
 
-import com.xetosphere.arcane.block.ModBlocks;
-
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+
+import com.xetosphere.arcane.block.ModBlocks;
+
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class OreGeneration implements IWorldGenerator {
@@ -17,12 +18,12 @@ public class OreGeneration implements IWorldGenerator {
 
 		switch (world.provider.dimensionId) {
 
-			case -1:
-				generateNether(world, random, chunkX * 16, chunkZ * 16);
-			case 0:
-				genereateSurface(world, random, chunkX * 16, chunkZ * 16);
-			case 1:
-				generateEnd(world, random, chunkX * 16, chunkZ * 16);
+		case -1:
+			generateNether(world, random, chunkX * 16, chunkZ * 16);
+		case 0:
+			genereateSurface(world, random, chunkX * 16, chunkZ * 16);
+		case 1:
+			generateEnd(world, random, chunkX * 16, chunkZ * 16);
 
 		}
 

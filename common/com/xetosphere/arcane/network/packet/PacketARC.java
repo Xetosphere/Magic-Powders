@@ -5,9 +5,10 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import net.minecraft.network.INetworkManager;
+
 import com.xetosphere.arcane.network.PacketTypeHandler;
 
-import net.minecraft.network.INetworkManager;
 import cpw.mods.fml.common.network.Player;
 
 public class PacketARC {
