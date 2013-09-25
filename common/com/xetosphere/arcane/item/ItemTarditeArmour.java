@@ -1,10 +1,14 @@
 package com.xetosphere.arcane.item;
 
+import java.util.List;
+
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 
 import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.Strings;
@@ -28,6 +32,15 @@ public class ItemTarditeArmour extends ItemArmor {
 
 	public void registerIcons(IconRegister iconRegister) {
 		itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par5Boolean) {
+		list.add("Uses: " + (this.getMaxDamage() - itemStack.getItemDamage()));
+	}
+
+	public String getItemDisplayName(ItemStack itemStack) {
+		return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
 	}
 
 }

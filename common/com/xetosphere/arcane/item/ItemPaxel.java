@@ -10,6 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.Event.Result;
@@ -95,4 +96,18 @@ public class ItemPaxel extends ItemTool {
 	public float getStrVsBlock(ItemStack par1ItemStack, Block par2Block) {
 		return par2Block != null && (par2Block.blockMaterial == Material.iron || par2Block.blockMaterial == Material.anvil || par2Block.blockMaterial == Material.rock || par2Block.blockMaterial == Material.wood || par2Block.blockMaterial == Material.plants || par2Block.blockMaterial == Material.vine) ? this.efficiencyOnProperMaterial : super.getStrVsBlock(par1ItemStack, par2Block);
 	}
+
+	public String getItemDisplayName(ItemStack itemStack) {
+		if (itemStack.getItem() == ModItems.soronitePaxel) {
+			return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
+		}
+		if (itemStack.getItem() == ModItems.tarditePaxel) {
+			return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
+		}
+		if (itemStack.getItem() == ModItems.koroninPaxel) {
+			return EnumChatFormatting.AQUA + super.getItemDisplayName(itemStack);
+		}
+		return null;
+	}
+
 }

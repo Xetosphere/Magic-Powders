@@ -44,7 +44,6 @@ public class AlchemyCraftingManager {
 		ItemStack koroninArmour = new ItemStack(ModItems.koroninChest);
 		ItemStack koroninLeggings = new ItemStack(ModItems.koroninLegs);
 		ItemStack koroninBoots = new ItemStack(ModItems.koroninBoots);
-		ItemStack soronitePaxel = new ItemStack(ModItems.soronitePaxel);
 
 		soroniteHelmet.addEnchantment(Enchantment.protection, 1);
 		soroniteArmour.addEnchantment(Enchantment.blastProtection, 1);
@@ -58,8 +57,6 @@ public class AlchemyCraftingManager {
 		koroninArmour.addEnchantment(Enchantment.unbreaking, 1);
 		koroninLeggings.addEnchantment(Enchantment.unbreaking, 1);
 		koroninBoots.addEnchantment(Enchantment.thorns, 1);
-		soronitePaxel.addEnchantment(Enchantment.efficiency, 2);
-		soronitePaxel.addEnchantment(Enchantment.fortune, 2);
 
 		recipes = new ArrayList();
 
@@ -77,7 +74,6 @@ public class AlchemyCraftingManager {
 		addRecipe(koroninArmour, new Object[] { "K K", "KKK", "KKK", Character.valueOf('K'), new ItemStack(ModItems.magicIngot, 1, 2) });
 		addRecipe(koroninLeggings, new Object[] { "KKK", "K K", "K K", Character.valueOf('K'), new ItemStack(ModItems.magicIngot, 1, 2) });
 		addRecipe(koroninBoots, new Object[] { "K K", "K K", Character.valueOf('K'), new ItemStack(ModItems.magicIngot, 1, 2) });
-		// addShapelessRecipe(soronitePaxel, Item.ingotGold, Block.dirt);
 
 		Collections.sort(this.recipes, new AlchemyRecipeSorter(this));
 

@@ -30,19 +30,40 @@ public class Strings {
 	public static final String TARDITEPAXEL_NAME = "paxelTardite";
 	public static final String KORONINPAXEL_NAME = "paxelKoronin";
 
+	public static final String SORONITESWORD_NAME = "swordSoronite";
+	public static final String SORONITEPICK_NAME = "pickaxeSoronite";
+	public static final String SORONITEAXE_NAME = "axeSoronite";
+	public static final String SORONITESHOVEL_NAME = "shovelSoronite";
+	public static final String SORONITEHOE_NAME = "hoeSoronite";
+
+	public static final String TARDITESWORD_NAME = "swordTardite";
+	public static final String TARDITEPICK_NAME = "pickaxeTardite";
+	public static final String TARDITEAXE_NAME = "axeTardite";
+	public static final String TARDITESHOVEL_NAME = "shovelTardite";
+	public static final String TARDITEHOE_NAME = "hoeTardite";
+
+	public static final String KORONINSWORD_NAME = "swordKoronin";
+	public static final String KORONINPICK_NAME = "pickaxeKoronin";
+	public static final String KORONINAXE_NAME = "axeKoronin";
+	public static final String KORONINSHOVEL_NAME = "shovelKoronin";
+	public static final String KORONINHOE_NAME = "hoeKoronin";
+
 	/* Armour name constants */
 	public static final String SORONITEHELMET_NAME = "helmetSoronite";
 	public static final String SORONITECHEST_NAME = "chestplateSoronite";
 	public static final String SORONITELEGS_NAME = "leggingsSoronite";
 	public static final String SORONITEBOOTS_NAME = "bootsSoronite";
+
 	public static final String TARDITEHELMET_NAME = "helmetTardite";
 	public static final String TARDITECHEST_NAME = "chestplateTardite";
 	public static final String TARDITELEGS_NAME = "leggingsTardite";
 	public static final String TARDITEBOOTS_NAME = "bootsTardite";
+
 	public static final String KORONINHELMET_NAME = "helmetKoronin";
 	public static final String KORONINCHEST_NAME = "chestplateKoronin";
 	public static final String KORONINLEGS_NAME = "leggingsKoronin";
 	public static final String KORONINBOOTS_NAME = "bootsKoronin";
+
 	public static final String SORONITEARMOUR_NAME = "soroniteArmour";
 	public static final String TARDITEARMOUR_NAME = "tarditeArmour";
 	public static final String KORONINARMOUR_NAME = "koroninArmour";
