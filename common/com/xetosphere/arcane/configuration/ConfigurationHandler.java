@@ -76,6 +76,7 @@ public class ConfigurationHandler {
 
 			// Misc
 			ModConfigurations.enableCustomGeneration = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_CUSTOM_GEN, ModConfigurations.DEFAULT_GENERATION).getBoolean(ModConfigurations.DEFAULT_GENERATION);
+			ModConfigurations.enableRecipeAlcTab = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_RECIPE_ALCTAB, ModConfigurations.DEFAULT_CRAFTING).getBoolean(ModConfigurations.DEFAULT_CRAFTING);
 
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_ID + " had a problem loading its configuration file.");

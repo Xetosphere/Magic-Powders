@@ -4,6 +4,7 @@ public class Strings {
 
 	/* Miscellaneous */
 	public static final String ENABLE_CUSTOM_GEN = "Enable custom structures";
+	public static final String ENABLE_RECIPE_ALCTAB = "Enable the recipe for the Alchemist Table";
 
 	/* Localization Prefixes */
 	public static final String RESOURCE_PREFIX = Reference.MOD_ID.toLowerCase() + ":";

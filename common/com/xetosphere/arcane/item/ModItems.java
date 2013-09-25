@@ -130,6 +130,27 @@ public class ModItems {
 		GameRegistry.addRecipe(new ItemStack(koroninLegs), new Object[] { "KKK", "K K", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
 		GameRegistry.addRecipe(new ItemStack(koroninBoots), new Object[] { "K K", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
 
+		GameRegistry.addRecipe(new ItemStack(soroniteSword), new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(soronitePick), new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(soroniteAxe), new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(soroniteShovel), new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(soroniteHoe), new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(soronitePaxel), new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.soroniteSword, Character.valueOf('A'), ModItems.soroniteAxe, Character.valueOf('P'), ModItems.soronitePick, Character.valueOf('G'), ModItems.soroniteShovel, Character.valueOf('H'), ModItems.soroniteHoe });
+
+		GameRegistry.addRecipe(new ItemStack(tarditeSword), new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(tarditePick), new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(tarditeAxe), new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(tarditeShovel), new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(tarditeHoe), new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(tarditePaxel), new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.tarditeSword, Character.valueOf('A'), ModItems.tarditeAxe, Character.valueOf('P'), ModItems.tarditePick, Character.valueOf('G'), ModItems.tarditeShovel, Character.valueOf('H'), ModItems.tarditeHoe });
+
+		GameRegistry.addRecipe(new ItemStack(koroninSword), new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(koroninPick), new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(koroninAxe), new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(koroninShovel), new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(koroninHoe), new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		GameRegistry.addRecipe(new ItemStack(koroninPaxel), new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.koroninSword, Character.valueOf('A'), ModItems.koroninAxe, Character.valueOf('P'), ModItems.koroninPick, Character.valueOf('G'), ModItems.koroninShovel, Character.valueOf('H'), ModItems.koroninHoe });
+
 		duplicateItems();
 
 	}

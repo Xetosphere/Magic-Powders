@@ -45,6 +45,27 @@ public class AlchemyCraftingManager {
 		ItemStack koroninLeggings = new ItemStack(ModItems.koroninLegs);
 		ItemStack koroninBoots = new ItemStack(ModItems.koroninBoots);
 
+		ItemStack soroniteSword = new ItemStack(ModItems.soroniteSword);
+		ItemStack soronitePick = new ItemStack(ModItems.soronitePick);
+		ItemStack soroniteAxe = new ItemStack(ModItems.soroniteAxe);
+		ItemStack soroniteShovel = new ItemStack(ModItems.soroniteShovel);
+		ItemStack soroniteHoe = new ItemStack(ModItems.soroniteHoe);
+		ItemStack soronitePaxel = new ItemStack(ModItems.soronitePaxel);
+
+		ItemStack tarditeSword = new ItemStack(ModItems.tarditeSword);
+		ItemStack tarditePick = new ItemStack(ModItems.tarditePick);
+		ItemStack tarditeAxe = new ItemStack(ModItems.tarditeAxe);
+		ItemStack tarditeShovel = new ItemStack(ModItems.tarditeShovel);
+		ItemStack tarditeHoe = new ItemStack(ModItems.tarditeHoe);
+		ItemStack tarditePaxel = new ItemStack(ModItems.tarditePaxel);
+
+		ItemStack koroninSword = new ItemStack(ModItems.koroninSword);
+		ItemStack koroninPick = new ItemStack(ModItems.koroninPick);
+		ItemStack koroninAxe = new ItemStack(ModItems.koroninAxe);
+		ItemStack koroninShovel = new ItemStack(ModItems.koroninShovel);
+		ItemStack koroninHoe = new ItemStack(ModItems.koroninHoe);
+		ItemStack koroninPaxel = new ItemStack(ModItems.koroninPaxel);
+
 		soroniteHelmet.addEnchantment(Enchantment.protection, 1);
 		soroniteArmour.addEnchantment(Enchantment.blastProtection, 1);
 		soroniteLeggings.addEnchantment(Enchantment.fireProtection, 1);
@@ -57,6 +78,27 @@ public class AlchemyCraftingManager {
 		koroninArmour.addEnchantment(Enchantment.unbreaking, 1);
 		koroninLeggings.addEnchantment(Enchantment.unbreaking, 1);
 		koroninBoots.addEnchantment(Enchantment.thorns, 1);
+
+		soroniteSword.addEnchantment(Enchantment.sharpness, 1);
+		soronitePick.addEnchantment(Enchantment.efficiency, 1);
+		soroniteAxe.addEnchantment(Enchantment.unbreaking, 1);
+		soroniteShovel.addEnchantment(Enchantment.efficiency, 1);
+		soroniteHoe.addEnchantment(Enchantment.fireAspect, 1);
+		soronitePaxel.addEnchantment(Enchantment.fortune, 1);
+
+		tarditeSword.addEnchantment(Enchantment.baneOfArthropods, 1);
+		tarditePick.addEnchantment(Enchantment.fortune, 1);
+		tarditeAxe.addEnchantment(Enchantment.efficiency, 1);
+		tarditeShovel.addEnchantment(Enchantment.unbreaking, 1);
+		tarditeHoe.addEnchantment(Enchantment.unbreaking, 1);
+		tarditePaxel.addEnchantment(Enchantment.fireAspect, 1);
+
+		koroninSword.addEnchantment(Enchantment.knockback, 1);
+		koroninPick.addEnchantment(Enchantment.silkTouch, 1);
+		koroninAxe.addEnchantment(Enchantment.baneOfArthropods, 1);
+		koroninShovel.addEnchantment(Enchantment.unbreaking, 1);
+		koroninHoe.addEnchantment(Enchantment.fortune, 1);
+		koroninPaxel.addEnchantment(Enchantment.looting, 1);
 
 		recipes = new ArrayList();
 
@@ -74,6 +116,27 @@ public class AlchemyCraftingManager {
 		addRecipe(koroninArmour, new Object[] { "K K", "KKK", "KKK", Character.valueOf('K'), new ItemStack(ModItems.magicIngot, 1, 2) });
 		addRecipe(koroninLeggings, new Object[] { "KKK", "K K", "K K", Character.valueOf('K'), new ItemStack(ModItems.magicIngot, 1, 2) });
 		addRecipe(koroninBoots, new Object[] { "K K", "K K", Character.valueOf('K'), new ItemStack(ModItems.magicIngot, 1, 2) });
+
+		addRecipe(soroniteSword, new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		addRecipe(soronitePick, new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		addRecipe(soroniteAxe, new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		addRecipe(soroniteShovel, new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		addRecipe(soroniteHoe, new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
+		addRecipe(soronitePaxel, new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.soroniteSword, Character.valueOf('A'), ModItems.soroniteAxe, Character.valueOf('P'), ModItems.soronitePick, Character.valueOf('G'), ModItems.soroniteShovel, Character.valueOf('H'), ModItems.soroniteHoe });
+
+		addRecipe(tarditeSword, new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		addRecipe(tarditePick, new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		addRecipe(tarditeAxe, new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		addRecipe(tarditeShovel, new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		addRecipe(tarditeHoe, new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
+		addRecipe(tarditePaxel, new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.tarditeSword, Character.valueOf('A'), ModItems.tarditeAxe, Character.valueOf('P'), ModItems.tarditePick, Character.valueOf('G'), ModItems.tarditeShovel, Character.valueOf('H'), ModItems.tarditeHoe });
+
+		addRecipe(koroninSword, new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		addRecipe(koroninPick, new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		addRecipe(koroninAxe, new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		addRecipe(koroninShovel, new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		addRecipe(koroninHoe, new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
+		addRecipe(koroninPaxel, new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.koroninSword, Character.valueOf('A'), ModItems.koroninAxe, Character.valueOf('P'), ModItems.koroninPick, Character.valueOf('G'), ModItems.koroninShovel, Character.valueOf('H'), ModItems.koroninHoe });
 
 		Collections.sort(this.recipes, new AlchemyRecipeSorter(this));
 
