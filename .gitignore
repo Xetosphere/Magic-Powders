@@ -2,6 +2,7 @@
 ## Eclipse
 #################
 
+private.properties
 *.pydevproject
 .project
 .metadata
