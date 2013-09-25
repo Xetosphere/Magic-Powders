@@ -38,7 +38,7 @@
 		<delete dir="${environment.base_location}/temp" />
 		<delete file="${environment.mcp_location}/src/minecraft/mcmod.info" />
 		<delete file="${environment.mcp_location}/src/minecraft/pack.mcmeta" />
-		<delete dir="${environment.mcp_location}/src/minecraft/com/pahimar" />
+		<delete dir="${environment.mcp_location}/src/minecraft/com/xetosphere" />
 		<delete dir="${environment.mcp_location}/reobf/minecraft" />
 	</target>
 
@@ -55,9 +55,9 @@
 	</target>
 
 	<target name="replace_tokens">
-		<replace dir="${environment.mcp_location}/src/minecraft/com/pahimar" token="@VERSION@" value="${build.mod_version}" />
-		<replace dir="${environment.mcp_location}/src/minecraft/com/pahimar" token="@FINGERPRINT@" value="${private.fingerprint_signature}" />
-		<replace dir="${environment.mcp_location}/src/minecraft/com/pahimar" token="@BUILD_NUMBER@" value="${build.build_number}" />
+		<replace dir="${environment.mcp_location}/src/minecraft/com/xetosphere" token="@VERSION@" value="${build.mod_version}" />
+		<replace dir="${environment.mcp_location}/src/minecraft/com/xetosphere" token="@FINGERPRINT@" value="${private.fingerprint_signature}" />
+		<replace dir="${environment.mcp_location}/src/minecraft/com/xetosphere" token="@BUILD_NUMBER@" value="${build.build_number}" />
 	</target>
 
 	<target name="recompile">
