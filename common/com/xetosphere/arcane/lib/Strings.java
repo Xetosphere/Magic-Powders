@@ -2,12 +2,26 @@ package com.xetosphere.arcane.lib;
 
 public class Strings {
 
-	/* Miscellaneous */
-	public static final String ENABLE_CUSTOM_GEN = "Enable custom structures";
-	public static final String ENABLE_RECIPE_ALCTAB = "Enable the recipe for the Alchemist Table";
+	/* General keys */
+	public static final String TRUE = "true";
+	public static final String FALSE = "false";
+	public static final String TOKEN_DELIMITER = ",";
 
 	/* Localization Prefixes */
 	public static final String RESOURCE_PREFIX = Reference.MOD_ID.toLowerCase() + ":";
+
+	/* Fingerprint check related constants */
+	public static final String NO_FINGERPRINT_MESSAGE = "The copy of Achani Commutatio that you are running is a development version of the mod, and as such may be unstable and/or incomplete.";
+	public static final String INVALID_FINGERPRINT_MESSAGE = "The copy of Achani Commutatio that you are running has been modified from the original, and unpredictable things may happen. Please consider re-downloading the original version of the mod.";
+
+	/* Version check related constants */
+	public static final String VERSION_CHECK_INIT_LOG_MESSAGE = "version.arc:init_log_message";
+	public static final String UNINITIALIZED_MESSAGE = "version.arc:uninitialized";
+	public static final String CURRENT_MESSAGE = "version.arc:current";
+	public static final String OUTDATED_MESSAGE = "version.arc:outdated";
+	public static final String GENERAL_ERROR_MESSAGE = "version.arc:general_error";
+	public static final String FINAL_ERROR_MESSAGE = "version.arc:final_error";
+	public static final String MC_VERSION_NOT_FOUND = "version.arc:mc_version_not_found";
 
 	/* NBT related constants */
 	public static final String NBT_TE_STATE_KEY = "teState";
@@ -79,5 +93,9 @@ public class Strings {
 	public static final String CONTAINER_ARCANE_FUSER_NAME = "container." + ARCANE_FUSER_NAME;
 	public static final String CONTAINER_DUPLICATOR_NAME = "container." + DUPLICATOR_NAME;
 	public static final String CONTAINER_ALCHEMISTTABLE_NAME = "container." + ALCHEMISTTABLE_NAME;
+
+	/* Miscellaneous */
+	public static final String ENABLE_CUSTOM_GEN = "Enable custom structures";
+	public static final String ENABLE_RECIPE_ALCTAB = "Enable the recipe for the Alchemist Table";
 
 }

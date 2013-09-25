@@ -1,6 +1,6 @@
 package com.xetosphere.arcane.world.gen;
 
-import com.xetosphere.arcane.lib.ModConfigurations;
+import com.xetosphere.arcane.configuration.ConfigurationSettings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -13,7 +13,7 @@ public class WorldGen {
 
 		GameRegistry.registerWorldGenerator(oreGenerator);
 
-		if (ModConfigurations.enableCustomGeneration) {
+		if (ConfigurationSettings.enableCustomGeneration) {
 			GameRegistry.registerWorldGenerator(structureGenerator);
 		}
 	}

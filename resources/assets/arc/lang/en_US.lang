@@ -52,3 +52,11 @@ container.duplicator=Duplicator
 container.alchemistTable=Alchemist Table
 
 itemGroup.ARC=Archani Commutatio
+
+version.arc:init_log_message=Initializing remote version check against remote version authority, located at: %s
+version.arc:uninitialized=Remote version check failed to initialize properly
+version.arc:current=Currently using the most up to date version (%s) of Equivalent Exchange 3 for %s
+version.arc:outdated=A new %s version exists (%s) for %s. Get it here: %s
+version.arc:general_error=Error while connecting to remote version authority file; trying again
+version.arc:final_error=Version check stopping after three unsuccessful connection attempts
+version.arc:mc_version_not_found=Unable to find a version of %s for %s in the remote version authority

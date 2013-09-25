@@ -5,11 +5,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.xetosphere.arcane.configuration.ConfigurationSettings;
 import com.xetosphere.arcane.item.ItemBlockMagicPowderOres;
 import com.xetosphere.arcane.item.ItemBlockStorageBlocks;
 import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.BlockIDs;
-import com.xetosphere.arcane.lib.ModConfigurations;
 import com.xetosphere.arcane.lib.Strings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -80,7 +80,7 @@ public class ModBlocks {
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 1), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1) });
 		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 2), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2) });
 
-		if (ModConfigurations.enableRecipeAlcTab) {
+		if (ConfigurationSettings.enableRecipeAlcTab) {
 			GameRegistry.addRecipe(new ItemStack(alchemistTable), new Object[] { "STS", "---", "F F", Character.valueOf('S'), new ItemStack(ModItems.magicDust, 1, 0), Character.valueOf('T'), new ItemStack(ModItems.magicDust, 1, 1), Character.valueOf('-'), Block.woodSingleSlab, Character.valueOf('F'), Block.fence });
 		}
 	}

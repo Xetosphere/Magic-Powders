@@ -7,7 +7,6 @@ import net.minecraftforge.common.Configuration;
 
 import com.xetosphere.arcane.lib.BlockIDs;
 import com.xetosphere.arcane.lib.ItemIDs;
-import com.xetosphere.arcane.lib.ModConfigurations;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.lib.Strings;
 
@@ -75,14 +74,26 @@ public class ConfigurationHandler {
 			ItemIDs.KORONINHOE = config.getItem(Configuration.CATEGORY_ITEM, Strings.KORONINHOE_NAME, ItemIDs.KORONINHOE_DEFAULT).getInt(ItemIDs.KORONINHOE_DEFAULT);
 
 			// Misc
-			ModConfigurations.enableCustomGeneration = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_CUSTOM_GEN, ModConfigurations.DEFAULT_GENERATION).getBoolean(ModConfigurations.DEFAULT_GENERATION);
-			ModConfigurations.enableRecipeAlcTab = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_RECIPE_ALCTAB, ModConfigurations.DEFAULT_CRAFTING).getBoolean(ModConfigurations.DEFAULT_CRAFTING);
+			ConfigurationSettings.enableCustomGeneration = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_CUSTOM_GEN, ConfigurationSettings.DEFAULT_GENERATION).getBoolean(ConfigurationSettings.DEFAULT_GENERATION);
+			ConfigurationSettings.enableRecipeAlcTab = config.get(Configuration.CATEGORY_GENERAL, Strings.ENABLE_RECIPE_ALCTAB, ConfigurationSettings.DEFAULT_CRAFTING).getBoolean(ConfigurationSettings.DEFAULT_CRAFTING);
 
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_ID + " had a problem loading its configuration file.");
 		} finally {
 			config.save();
 		}
+
+	}
+
+	public static void set(String categoryName, String propertyName, String newValue) {
+
+		config.load();
+		if (config.getCategoryNames().contains(categoryName)) {
+			if (config.getCategory(categoryName).containsKey(propertyName)) {
+				config.getCategory(categoryName).get(propertyName).set(newValue);
+			}
+		}
+		config.save();
 
 	}
 
