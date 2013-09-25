@@ -89,7 +89,7 @@
 			<fileset dir="${environment.mcp_location}/src/minecraft/" includes="mcmod.info" />
 			<fileset dir="${environment.mcp_location}/src/minecraft/" includes="pack.mcmeta" />
 			<fileset dir="${environment.mcp_location}/reobf/minecraft" />
-			<fileset dir="${environment.source_location}/resources" excludes="**/xcf/**" />
+			<fileset dir="${environment.source_location}/resources" />
 		</jar>
 
 		<antcall target="clean" />
@@ -102,7 +102,7 @@
 			<fileset dir="${environment.mcp_location}/src/minecraft/" includes="mcmod.info" />
 			<fileset dir="${environment.mcp_location}/src/minecraft/" includes="pack.mcmeta" />
 			<fileset dir="${environment.mcp_location}/reobf/minecraft" />
-			<fileset dir="${environment.source_location}/resources" excludes="**/xcf/**" />
+			<fileset dir="${environment.source_location}/resources" />
 		</jar>
 
 		<antcall target="sign_jar" />
