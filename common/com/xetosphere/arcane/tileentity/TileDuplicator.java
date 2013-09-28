@@ -170,14 +170,14 @@ public class TileDuplicator extends TileARC implements IInventory {
 	@SideOnly(Side.CLIENT)
 	public int getCookProgressTimeScaled(int par1) {
 
-		return this.duplicatorDupledTime2 * par1 / 200;
+		return this.duplicatorDupledTime2 * par1 / 400;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public int getBurnTimeRemainingScaled(int par1) {
 
 		if (this.currentItemDupleTime == 0) {
-			this.currentItemDupleTime = 200;
+			this.currentItemDupleTime = 400;
 		}
 
 		return this.duplicatorDupleTime * par1 / this.currentItemDupleTime;
@@ -214,7 +214,7 @@ public class TileDuplicator extends TileARC implements IInventory {
 			if (this.isBurning() && this.canSmelt()) {
 				++this.duplicatorDupledTime2;
 
-				if (this.duplicatorDupledTime2 == 200) {
+				if (this.duplicatorDupledTime2 == 400) {
 					this.duplicatorDupledTime2 = 0;
 					this.smeltItem();
 					flag1 = true;
@@ -289,7 +289,7 @@ public class TileDuplicator extends TileARC implements IInventory {
 		int i = itemStack.getItem().itemID;
 		int meta = itemStack.getItemDamage();
 
-		if (i == ModItems.magicDust.itemID && meta == 0) return 200;
+		if (i == ModItems.magicDust.itemID && meta == 0) return 400;
 
 		return GameRegistry.getFuelValue(itemStack);
 	}
