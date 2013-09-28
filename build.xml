@@ -54,12 +54,6 @@
 		</copy>
 	</target>
 
-	<target name="replace_tokens">
-		<replace dir="${environment.mcp_location}/src/minecraft/com/xetosphere" token="@VERSION@" value="${build.mod_version}" />
-		<replace dir="${environment.mcp_location}/src/minecraft/com/xetosphere" token="@FINGERPRINT@" value="${private.fingerprint_signature}" />
-		<replace dir="${environment.mcp_location}/src/minecraft/com/xetosphere" token="@BUILD_NUMBER@" value="${build.build_number}" />
-	</target>
-
 	<target name="recompile">
 		<exec dir="${environment.mcp_location}" executable="cmd" osfamily="windows">
 			<arg line="/c recompile.bat" />
@@ -78,10 +72,6 @@
 		</exec>
 	</target>
 
-	<target name="sign_jar">
-		<signjar jar="${environment.release_location}/MC ${build.minecraft_version}/${build.mod_version}/arc-universal-${build.mod_version}-${build.build_number}.jar" keystore="${private.keystore_location}" alias="${private.keystore_user_alias}" storepass="${private.keystore_user_password}" />
-	</target>
-
 	<target name="build" depends="clean, increment_build_number, prep, recompile, reobfuscate">
 
 		<mkdir dir="${environment.release_location}/MC ${build.minecraft_version}/${build.mod_version}" />
@@ -95,7 +85,7 @@
 		<antcall target="clean" />
 	</target>
 
-	<target name="release" depends="clean, increment_build_number, prep, replace_tokens, recompile, reobfuscate">
+	<target name="release" depends="clean, increment_build_number, prep, recompile, reobfuscate">
 
 		<mkdir dir="${environment.release_location}/MC ${build.minecraft_version}/${build.mod_version}" />
 		<jar destfile="${environment.release_location}/MC ${build.minecraft_version}/${build.mod_version}/arc-universal-${build.mod_version}-${build.build_number}.jar">
