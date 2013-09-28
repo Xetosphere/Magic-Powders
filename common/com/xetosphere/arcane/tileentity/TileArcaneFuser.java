@@ -36,18 +36,22 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 	public int fuserFusedTime2;
 
 	public TileArcaneFuser() {
+
 		inventory = new ItemStack[INVENTORY_SIZE];
 	}
 
 	public int getSizeInventory() {
+
 		return inventory.length;
 	}
 
 	public ItemStack getStackInSlot(int slot) {
+
 		return inventory[slot];
 	}
 
 	public ItemStack decrStackSize(int slot, int ammount) {
+
 		ItemStack itemStack = getStackInSlot(slot);
 		if (itemStack != null) {
 			if (itemStack.stackSize <= ammount) {
@@ -59,6 +63,7 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 				}
 			}
 		}
+
 		return itemStack;
 	}
 
@@ -68,10 +73,12 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 		if (itemStack != null) {
 			setInventorySlotContents(slot, null);
 		}
+
 		return itemStack;
 	}
 
 	public void setInventorySlotContents(int slot, ItemStack itemStack) {
+
 		inventory[slot] = itemStack;
 		if (itemStack != null && itemStack.stackSize > getInventoryStackLimit()) {
 			itemStack.stackSize = getInventoryStackLimit();
@@ -79,17 +86,21 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 	}
 
 	public String getInvName() {
+
 		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_ARCANE_FUSER_NAME;
 	}
 
 	public int getInventoryStackLimit() {
+
 		return 64;
 	}
 
 	public void openChest() {
+
 	}
 
 	public void closeChest() {
+
 	}
 
 	public void readFromNBT(NBTTagCompound nbtTagCompound) {
@@ -107,9 +118,7 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 
 			this.fuserFuseTime = nbtTagCompound.getShort("FuseTime");
 			this.fuserFusedTime2 = nbtTagCompound.getShort("TimeSpent");
-
 		}
-
 	}
 
 	public void writeToNBT(NBTTagCompound nbtTagCompound) {
@@ -128,14 +137,17 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 				tagList.appendTag(tagCompound);
 			}
 		}
+
 		nbtTagCompound.setTag("Items", tagList);
 	}
 
 	public boolean isInvNameLocalized() {
+
 		return this.hasCustomName();
 	}
 
 	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
+
 		return true;
 	}
 
@@ -161,11 +173,11 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 		stringBuilder.append("\n");
 
 		return stringBuilder.toString();
-
 	}
 
 	@SideOnly(Side.CLIENT)
 	public int getCookProgressTimeScaled(int par1) {
+
 		return this.fuserFusedTime2 * par1 / 200;
 	}
 
@@ -177,10 +189,10 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 		}
 
 		return this.fuserFuseTime * par1 / this.currentItemFuseTime;
-
 	}
 
 	public boolean isBurning() {
+
 		return this.fuserFuseTime > 0;
 	}
 
@@ -243,12 +255,9 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 
 			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
 
-			if (itemstack == null)
-				return false;
-			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null)
-				return true;
-			if (!this.inventory[OUTPUT_INVENTORY_INDEX].isItemEqual(itemstack))
-				return false;
+			if (itemstack == null) return false;
+			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) return true;
+			if (!this.inventory[OUTPUT_INVENTORY_INDEX].isItemEqual(itemstack)) return false;
 			int result = inventory[OUTPUT_INVENTORY_INDEX].stackSize + itemstack.stackSize;
 
 			return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
@@ -309,27 +318,19 @@ public class TileArcaneFuser extends TileARC implements IInventory {
 			}
 		}
 
-		if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD"))
-			return 200;
-		if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD"))
-			return 200;
-		if (item instanceof ItemHoe && ((ItemHoe) item).getMaterialName().equals("WOOD"))
-			return 200;
-		if (i == Item.stick.itemID)
-			return 100;
-		if (i == Item.coal.itemID)
-			return 1600;
-		if (i == Item.bucketLava.itemID)
-			return 20000;
-		if (i == Block.sapling.blockID)
-			return 100;
-		if (i == Item.blazeRod.itemID)
-			return 2400;
+		if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD")) return 200;
+		if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD")) return 200;
+		if (item instanceof ItemHoe && ((ItemHoe) item).getMaterialName().equals("WOOD")) return 200;
+		if (i == Item.stick.itemID) return 100;
+		if (i == Item.coal.itemID) return 1600;
+		if (i == Item.bucketLava.itemID) return 20000;
+		if (i == Block.sapling.blockID) return 100;
+		if (i == Item.blazeRod.itemID) return 2400;
 		return GameRegistry.getFuelValue(itemStack);
-
 	}
 
 	public static boolean isItemFuel(ItemStack itemStack) {
+
 		return getItemBurnTime(itemStack) > 0;
 	}
 

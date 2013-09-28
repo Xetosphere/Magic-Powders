@@ -18,15 +18,18 @@ import cpw.mods.fml.relauncher.SideOnly;
 public abstract class BlockARC extends BlockContainer {
 
 	public BlockARC(int id, Material material) {
+
 		super(id, material);
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
+
 		blockIcon = iconRegister.registerIcon(String.format("%s:%s", Reference.MOD_ID.toLowerCase(), getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
 	}
 
 	protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
+
 		return unlocalizedName.substring(unlocalizedName.indexOf(":") + 1);
 	}
 
@@ -58,7 +61,6 @@ public abstract class BlockARC extends BlockContainer {
 		}
 
 		((TileARC) world.getBlockTileEntity(x, y, z)).setOrientation(direction);
-
 	}
 
 }

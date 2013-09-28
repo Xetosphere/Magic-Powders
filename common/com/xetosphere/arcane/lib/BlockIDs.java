@@ -15,5 +15,4 @@ public class BlockIDs {
 	public static int ARCANE_FUSER;
 	public static int DUPLICATOR;
 	public static int ALCHEMISTTABLE;
-
 }

@@ -10,6 +10,7 @@ public class ArcaneFuserRecipes {
 	private static final ArcaneFuserRecipes fusingBase = new ArcaneFuserRecipes();
 
 	public static final ArcaneFuserRecipes fusing() {
+
 		return fusingBase;
 	}
 
@@ -18,6 +19,7 @@ public class ArcaneFuserRecipes {
 	}
 
 	public ItemStack getFusingResult(int itemID, int itemMeta, int dustID, int dustMeta) {
+
 		return getOutput(itemID, itemMeta, dustID, dustMeta);
 	}
 

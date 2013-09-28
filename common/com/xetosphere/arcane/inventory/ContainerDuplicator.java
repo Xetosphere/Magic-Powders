@@ -45,10 +45,10 @@ public class ContainerDuplicator extends Container {
 		for (int actionBarSlotIndex = 0; actionBarSlotIndex < 9; ++actionBarSlotIndex) {
 			this.addSlotToContainer(new Slot(inventoryPlayer, actionBarSlotIndex, 8 + actionBarSlotIndex * 18, 142));
 		}
-
 	}
 
 	public void addCraftingToCrafters(ICrafting par1ICrafting) {
+
 		super.addCraftingToCrafters(par1ICrafting);
 		par1ICrafting.sendProgressBarUpdate(this, 0, this.duplicator.duplicatorDupledTime2);
 		par1ICrafting.sendProgressBarUpdate(this, 1, this.duplicator.duplicatorDupleTime);
@@ -78,7 +78,6 @@ public class ContainerDuplicator extends Container {
 			this.lastCookTime = this.duplicator.duplicatorDupledTime2;
 			this.lastBurnTime = this.duplicator.duplicatorDupleTime;
 			this.lastItemBurnTime = this.duplicator.currentItemDupleTime;
-
 		}
 	}
 
@@ -96,10 +95,10 @@ public class ContainerDuplicator extends Container {
 		if (par1 == 2) {
 			this.duplicator.currentItemDupleTime = par2;
 		}
-
 	}
 
 	public boolean canInteractWith(EntityPlayer player) {
+
 		return duplicator.isUseableByPlayer(player);
 	}
 

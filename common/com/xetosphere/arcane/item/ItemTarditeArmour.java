@@ -17,29 +17,35 @@ import com.xetosphere.arcane.lib.Textures;
 public class ItemTarditeArmour extends ItemArmor {
 
 	public ItemTarditeArmour(int id, EnumArmorMaterial armourMaterial, int renderIndex, int armourPart) {
+
 		super(id, armourMaterial, renderIndex, armourPart);
 		setCreativeTab(ArchaniCommutatio.tabARC);
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+
 		if (slot == 0 || slot == 1 || slot == 3) {
 			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.TARDITEARMOUR_NAME + "_1.png";
 		} else if (slot == 2) {
 			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.TARDITEARMOUR_NAME + "_2.png";
 		}
+
 		return null;
 	}
 
 	public void registerIcons(IconRegister iconRegister) {
+
 		itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par5Boolean) {
+
 		list.add("Uses: " + (this.getMaxDamage() - itemStack.getItemDamage()));
 	}
 
 	public String getItemDisplayName(ItemStack itemStack) {
+
 		return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
 	}
 

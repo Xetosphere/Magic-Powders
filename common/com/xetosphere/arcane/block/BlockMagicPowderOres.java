@@ -25,6 +25,7 @@ public class BlockMagicPowderOres extends Block {
 	private Icon[] icons;
 
 	public BlockMagicPowderOres(int id) {
+
 		super(id, Material.rock);
 		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.POWDERORES_NAME);
 		setCreativeTab(ArchaniCommutatio.tabARC);
@@ -40,11 +41,11 @@ public class BlockMagicPowderOres extends Block {
 		for (int i = 0; i < POWDERORE_NAMES.length; ++i) {
 			icons[i] = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.POWDERORES_NAME + POWDERORE_NAMES[i]);
 		}
-
 	}
 
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int id, int meta) {
+
 		return icons[meta];
 	}
 
@@ -55,14 +56,15 @@ public class BlockMagicPowderOres extends Block {
 		for (int var4 = 0; var4 < 3; ++var4) {
 			par3List.add(new ItemStack(par1, 1, var4));
 		}
-
 	}
 
 	public int idDropped(int id, Random random, int meta) {
+
 		return ModItems.magicDust.itemID;
 	}
 
 	public int damageDropped(int meta) {
+
 		return meta == 0 ? 0 : (meta == 1 ? 1 : (meta == 2 ? 2 : 0));
 	}
 

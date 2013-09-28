@@ -17,44 +17,54 @@ public class TileARC extends TileEntity {
 	protected String customName;
 
 	public TileARC() {
+
 		orientation = ForgeDirection.SOUTH;
 		state = 0;
 		customName = "";
 	}
 
 	public ForgeDirection getOrientation() {
+
 		return orientation;
 	}
 
 	public void setOrientation(ForgeDirection orientation) {
+
 		this.orientation = orientation;
 	}
 
 	public void setOrientation(int orientation) {
+
 		this.orientation = ForgeDirection.getOrientation(orientation);
 	}
 
 	public short getState() {
+
 		return state;
 	}
 
 	public void setState(byte state) {
+
 		this.state = state;
 	}
 
 	public boolean hasCustomName() {
+
 		return customName != null && customName.length() > 0;
 	}
 
 	public String getCustomName() {
+
 		return customName;
 	}
 
 	public void setCustomName(String customName) {
+
 		this.customName = customName;
 	}
 
 	public boolean isUseableByPlayer(EntityPlayer player) {
+
 		return true;
 	}
 
@@ -73,7 +83,6 @@ public class TileARC extends TileEntity {
 		if (nbtTagCompound.hasKey(Strings.NBT_TE_CUSTOM_NAME)) {
 			customName = nbtTagCompound.getString(Strings.NBT_TE_CUSTOM_NAME);
 		}
-
 	}
 
 	public void writeToNBT(NBTTagCompound nbtTagCompound) {
@@ -86,10 +95,10 @@ public class TileARC extends TileEntity {
 		if (this.hasCustomName()) {
 			nbtTagCompound.setString(Strings.NBT_TE_CUSTOM_NAME, customName);
 		}
-
 	}
 
 	public Packet getDescriptionPacket() {
+
 		return PacketTypeHandler.populatePacket(new PacketTileUpdate(xCoord, yCoord, zCoord, orientation, state, customName));
 	}
 

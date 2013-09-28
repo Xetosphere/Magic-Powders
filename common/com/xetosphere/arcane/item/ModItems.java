@@ -105,7 +105,6 @@ public class ModItems {
 		koroninHoe = new ItemModHoe(ItemIDs.KORONINHOE, toolKoronin).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.KORONINHOE_NAME);
 
 		registerRecipes();
-
 	}
 
 	/**
@@ -152,7 +151,6 @@ public class ModItems {
 		GameRegistry.addRecipe(new ItemStack(koroninPaxel), new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.koroninSword, Character.valueOf('A'), ModItems.koroninAxe, Character.valueOf('P'), ModItems.koroninPick, Character.valueOf('G'), ModItems.koroninShovel, Character.valueOf('H'), ModItems.koroninHoe });
 
 		duplicateItems();
-
 	}
 
 	public static void duplicateItems() {
@@ -167,7 +165,6 @@ public class ModItems {
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.ingotGold, 2, 0), new ItemStack(Item.ingotGold, 1, 0), new ItemStack(dupleGem, 1, i));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.diamond, 2, 0), new ItemStack(Item.diamond, 1, 0), new ItemStack(dupleGem, 1, i));
 		GameRegistry.addShapelessRecipe(new ItemStack(Item.emerald, 2, 0), new ItemStack(Item.emerald, 1, 0), new ItemStack(dupleGem, 1, i));
-
 	}
 
 }

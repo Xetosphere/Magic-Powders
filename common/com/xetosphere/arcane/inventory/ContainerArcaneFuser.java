@@ -47,10 +47,10 @@ public class ContainerArcaneFuser extends Container {
 		for (int actionBarSlotIndex = 0; actionBarSlotIndex < 9; ++actionBarSlotIndex) {
 			this.addSlotToContainer(new Slot(inventoryPlayer, actionBarSlotIndex, 8 + actionBarSlotIndex * 18, 142));
 		}
-
 	}
 
 	public void addCraftingToCrafters(ICrafting par1ICrafting) {
+
 		super.addCraftingToCrafters(par1ICrafting);
 		par1ICrafting.sendProgressBarUpdate(this, 0, this.fuser.fuserFusedTime2);
 		par1ICrafting.sendProgressBarUpdate(this, 1, this.fuser.fuserFuseTime);
@@ -80,7 +80,6 @@ public class ContainerArcaneFuser extends Container {
 			this.lastCookTime = this.fuser.fuserFusedTime2;
 			this.lastBurnTime = this.fuser.fuserFuseTime;
 			this.lastItemBurnTime = this.fuser.currentItemFuseTime;
-
 		}
 	}
 
@@ -98,10 +97,10 @@ public class ContainerArcaneFuser extends Container {
 		if (par1 == 2) {
 			this.fuser.currentItemFuseTime = par2;
 		}
-
 	}
 
 	public boolean canInteractWith(EntityPlayer player) {
+
 		return fuser.isUseableByPlayer(player);
 	}
 
@@ -150,7 +149,6 @@ public class ContainerArcaneFuser extends Container {
 		}
 
 		return itemStack;
-
 	}
 
 }

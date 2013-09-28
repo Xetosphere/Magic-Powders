@@ -17,6 +17,7 @@ public enum PacketTypeHandler {
 	private Class<? extends PacketARC> clazz;
 
 	PacketTypeHandler(Class<? extends PacketARC> clazz) {
+
 		this.clazz = clazz;
 	}
 
@@ -37,7 +38,6 @@ public enum PacketTypeHandler {
 		packet.readPopulate(dis);
 
 		return packet;
-
 	}
 
 	public static PacketARC buildPacket(PacketTypeHandler type) {
@@ -51,7 +51,6 @@ public enum PacketTypeHandler {
 		}
 
 		return packet;
-
 	}
 
 	public static Packet populatePacket(PacketARC packetARC) {
@@ -65,7 +64,6 @@ public enum PacketTypeHandler {
 		packet250.isChunkDataPacket = packetARC.isChunkDataPacket;
 
 		return packet250;
-
 	}
 
 }

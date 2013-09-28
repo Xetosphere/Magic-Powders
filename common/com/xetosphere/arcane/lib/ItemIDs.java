@@ -83,5 +83,4 @@ public class ItemIDs {
 	public static int KORONINAXE;
 	public static int KORONINSHOVEL;
 	public static int KORONINHOE;
-
 }

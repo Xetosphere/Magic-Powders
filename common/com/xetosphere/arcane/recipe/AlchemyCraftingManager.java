@@ -26,6 +26,7 @@ public class AlchemyCraftingManager {
 	private List recipes = new ArrayList();
 
 	public static final AlchemyCraftingManager getInstance() {
+
 		return instance;
 	}
 
@@ -139,7 +140,6 @@ public class AlchemyCraftingManager {
 		addRecipe(koroninPaxel, new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.koroninSword, Character.valueOf('A'), ModItems.koroninAxe, Character.valueOf('P'), ModItems.koroninPick, Character.valueOf('G'), ModItems.koroninShovel, Character.valueOf('H'), ModItems.koroninHoe });
 
 		Collections.sort(this.recipes, new AlchemyRecipeSorter(this));
-
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -200,7 +200,6 @@ public class AlchemyCraftingManager {
 		ShapedRecipes shapedrecipes = new ShapedRecipes(j, k, aitemstack, par1ItemStack);
 		this.recipes.add(shapedrecipes);
 		return shapedrecipes;
-
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -230,6 +229,7 @@ public class AlchemyCraftingManager {
 	}
 
 	public ItemStack findMatchingRecipe(InventoryCrafting par1InventoryCrafting, World par2World) {
+
 		int i = 0;
 		ItemStack itemstack = null;
 		ItemStack itemstack1 = null;
@@ -274,11 +274,11 @@ public class AlchemyCraftingManager {
 
 			return null;
 		}
-
 	}
 
 	@SuppressWarnings("rawtypes")
 	public List getRecipeList() {
+
 		return this.recipes;
 	}
 

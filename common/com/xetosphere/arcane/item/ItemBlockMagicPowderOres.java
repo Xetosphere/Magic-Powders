@@ -9,6 +9,7 @@ public class ItemBlockMagicPowderOres extends ItemBlock {
 	public static final String[] ORE_NAMES = { "SoroniteOre", "TarditeOre", "KoroninOre" };
 
 	public ItemBlockMagicPowderOres(int id) {
+
 		super(id);
 		setHasSubtypes(true);
 	}
@@ -21,6 +22,7 @@ public class ItemBlockMagicPowderOres extends ItemBlock {
 	}
 
 	public int getMetadata(int meta) {
+
 		return meta;
 	}
 

@@ -14,6 +14,7 @@ import com.xetosphere.arcane.tileentity.TileAlchemistTable;
 public class BlockAlchemistTable extends BlockARC {
 
 	public BlockAlchemistTable(int i) {
+
 		super(i, Material.ground);
 		setCreativeTab(ArchaniCommutatio.tabARC);
 		setUnlocalizedName(Strings.ALCHEMISTTABLE_NAME);
@@ -35,18 +36,22 @@ public class BlockAlchemistTable extends BlockARC {
 	}
 
 	public boolean renderAsNormalBlock() {
+
 		return false;
 	}
 
 	public boolean isOpaqueCube() {
+
 		return false;
 	}
 
 	public int getRenderType() {
+
 		return RenderIDs.alchemistTableRender;
 	}
 
 	public TileEntity createNewTileEntity(World world) {
+
 		return new TileAlchemistTable();
 	}
 

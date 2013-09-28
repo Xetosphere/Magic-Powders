@@ -6,5 +6,4 @@ public class Models {
 	public static final String MODEL_LOCATION = "/assets/arc/models/";
 
 	public static final String ALCHEMISTTABLE = MODEL_LOCATION + "alchemistTable.obj";
-
 }

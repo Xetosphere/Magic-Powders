@@ -18,13 +18,12 @@ public class OreGeneration implements IWorldGenerator {
 
 		switch (world.provider.dimensionId) {
 
-		case -1:
-			generateNether(world, random, chunkX * 16, chunkZ * 16);
-		case 0:
-			genereateSurface(world, random, chunkX * 16, chunkZ * 16);
-		case 1:
-			generateEnd(world, random, chunkX * 16, chunkZ * 16);
-
+			case -1:
+				generateNether(world, random, chunkX * 16, chunkZ * 16);
+			case 0:
+				genereateSurface(world, random, chunkX * 16, chunkZ * 16);
+			case 1:
+				generateEnd(world, random, chunkX * 16, chunkZ * 16);
 		}
 
 	}
@@ -52,7 +51,6 @@ public class OreGeneration implements IWorldGenerator {
 		} else if (world.getBiomeGenForCoords(x, z) != BiomeGenBase.swampland) {
 			addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 6, 0, 60);
 		}
-
 	}
 
 	private void generateEnd(World world, Random random, int x, int z) {
@@ -76,9 +74,7 @@ public class OreGeneration implements IWorldGenerator {
 			int zPos = blockZPos + random.nextInt(maxZ);
 
 			(new WorldGenMinable(block.blockID, meta, maxVeinSize, blockBeingReplaced.blockID)).generate(world, random, xPos, yPos, zPos);
-
 		}
-
 	}
 
 }

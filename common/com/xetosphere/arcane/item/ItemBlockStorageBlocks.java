@@ -9,6 +9,7 @@ public class ItemBlockStorageBlocks extends ItemBlock {
 	public static final String[] BLOCK_NAMES = { "SoroniteBlock", "TarditeBlock", "KoroninBlock" };
 
 	public ItemBlockStorageBlocks(int id) {
+
 		super(id);
 		setHasSubtypes(true);
 	}
@@ -21,6 +22,7 @@ public class ItemBlockStorageBlocks extends ItemBlock {
 	}
 
 	public int getMetadata(int meta) {
+
 		return meta;
 	}
 

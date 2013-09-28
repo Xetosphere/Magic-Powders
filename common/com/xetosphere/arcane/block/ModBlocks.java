@@ -43,7 +43,6 @@ public class ModBlocks {
 		addOreLevels();
 		initToOreDictionary();
 		addRecipe();
-
 	}
 
 	public static void addOreLevels() {
@@ -55,7 +54,6 @@ public class ModBlocks {
 		MinecraftForge.setBlockHarvestLevel(storageBlocks, 0, "pickaxe", 0);
 		MinecraftForge.setBlockHarvestLevel(storageBlocks, 1, "pickaxe", 0);
 		MinecraftForge.setBlockHarvestLevel(storageBlocks, 2, "pickaxe", 0);
-
 	}
 
 	public static void initToOreDictionary() {
@@ -63,7 +61,6 @@ public class ModBlocks {
 		OreDictionary.registerOre("oreSoronite", new ItemStack(magicPowderOres, 1, 0));
 		OreDictionary.registerOre("oreTardite", new ItemStack(magicPowderOres, 1, 1));
 		OreDictionary.registerOre("oreKoronin", new ItemStack(magicPowderOres, 1, 2));
-
 	}
 
 	private static void addRecipe() {

@@ -15,42 +15,45 @@ public class ItemAlchemistTableRenderer implements IItemRenderer {
 	private ModelAlchemistTable modelAlcTab;
 
 	public ItemAlchemistTableRenderer() {
+
 		modelAlcTab = new ModelAlchemistTable();
 	}
 
 	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
+
 		return true;
 	}
 
 	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper) {
+
 		return true;
 	}
 
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 
 		switch (type) {
-		case ENTITY: {
-			renderAlcTab(-0.5F, -0.38F, 0.5F, 1.0F);
-			return;
-		}
+			case ENTITY: {
+				renderAlcTab(-0.5F, -0.38F, 0.5F, 1.0F);
+				return;
+			}
 
-		case EQUIPPED: {
-			renderAlcTab(0.15F, 0.05F, 1.10F, 1.0F);
-			return;
-		}
+			case EQUIPPED: {
+				renderAlcTab(0.15F, 0.05F, 1.10F, 1.0F);
+				return;
+			}
 
-		case EQUIPPED_FIRST_PERSON: {
-			renderAlcTab(1.0F, -0.10F, 1.0F, 1.0F);
-			return;
-		}
+			case EQUIPPED_FIRST_PERSON: {
+				renderAlcTab(1.0F, -0.10F, 1.0F, 1.0F);
+				return;
+			}
 
-		case INVENTORY: {
-			renderAlcTab(1.0F, 0.75F, 2.0F, 1.0F);
-			return;
-		}
+			case INVENTORY: {
+				renderAlcTab(1.0F, 0.75F, 2.0F, 1.0F);
+				return;
+			}
 
-		default:
-			return;
+			default:
+				return;
 		}
 	}
 
@@ -72,7 +75,6 @@ public class ItemAlchemistTableRenderer implements IItemRenderer {
 
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glPopMatrix();
-
 	}
 
 }

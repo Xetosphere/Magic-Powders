@@ -13,15 +13,14 @@ public class StructureGeneration implements IWorldGenerator {
 
 		switch (world.provider.dimensionId) {
 
-		case -1:
-			generateNether(world, random, chunkX * 16, chunkZ * 16);
-		case 0:
-			generateSurface(world, random, chunkX * 16, chunkZ * 16);
-		case 1:
-			generateEnd(world, random, chunkX * 16, chunkZ * 16);
+			case -1:
+				generateNether(world, random, chunkX * 16, chunkZ * 16);
+			case 0:
+				generateSurface(world, random, chunkX * 16, chunkZ * 16);
+			case 1:
+				generateEnd(world, random, chunkX * 16, chunkZ * 16);
 
 		}
-
 	}
 
 	public static void generateNether(World world, Random random, int x, int z) {
@@ -37,9 +36,7 @@ public class StructureGeneration implements IWorldGenerator {
 			int zCoord = z + random.nextInt(16);
 
 			(new WorldGenApprenticeHouse()).generate(world, random, xCoord, yCoord, zCoord);
-
 		}
-
 	}
 
 	public static void generateEnd(World world, Random random, int x, int z) {

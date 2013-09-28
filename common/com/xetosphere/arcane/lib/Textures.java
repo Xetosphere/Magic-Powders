@@ -18,5 +18,4 @@ public class Textures {
 
 	// Model textures
 	public static final ResourceLocation MODEL_ALCHEMISTTABLE = ResourceLocationHelper.getResourceLocation(MODEL_SHEET_LOCATION + "alchemistTable.png");
-
 }

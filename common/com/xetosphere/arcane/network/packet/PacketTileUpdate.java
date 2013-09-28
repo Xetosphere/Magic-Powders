@@ -20,10 +20,12 @@ public class PacketTileUpdate extends PacketARC {
 	public String customName;
 
 	public PacketTileUpdate() {
+
 		super(PacketTypeHandler.TILE, true);
 	}
 
 	public PacketTileUpdate(int x, int y, int z, ForgeDirection orientation, byte state, String customName) {
+
 		super(PacketTypeHandler.TILE, true);
 		this.x = x;
 		this.y = y;
@@ -34,6 +36,7 @@ public class PacketTileUpdate extends PacketARC {
 	}
 
 	public void writeData(DataOutputStream data) throws IOException {
+
 		data.writeInt(x);
 		data.writeInt(y);
 		data.writeInt(z);
@@ -43,6 +46,7 @@ public class PacketTileUpdate extends PacketARC {
 	}
 
 	public void readData(DataInputStream data) throws IOException {
+
 		x = data.readInt();
 		y = data.readInt();
 		z = data.readInt();
@@ -52,6 +56,7 @@ public class PacketTileUpdate extends PacketARC {
 	}
 
 	public void execute(INetworkManager manager, Player player) {
+
 		ArchaniCommutatio.proxy.handleTileEntityPacket(x, y, z, ForgeDirection.getOrientation(orientation), state, customName);
 	}
 

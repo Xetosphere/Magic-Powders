@@ -22,7 +22,6 @@ public class ClientProxy extends CommonProxy {
 		RenderIDs.alchemistTableRender = RenderingRegistry.getNextAvailableRenderId();
 
 		MinecraftForgeClient.registerItemRenderer(BlockIDs.ALCHEMISTTABLE, new ItemAlchemistTableRenderer());
-
 	}
 
 	public void registerTileEntities() {
@@ -30,7 +29,6 @@ public class ClientProxy extends CommonProxy {
 		super.registerTileEntities();
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileAlchemistTable.class, new TileEntityAlchemistTableRenderer());
-
 	}
 
 	public void handleTileEntityPacket(int x, int y, int z, ForgeDirection orientation, byte state, String customName) {
@@ -44,10 +42,10 @@ public class ClientProxy extends CommonProxy {
 				((TileARC) tileEntity).setCustomName(customName);
 			}
 		}
-
 	}
 
 	public void handleTileWithItemPacket(int x, int y, int z, ForgeDirection orientation, byte state, String customName, int itemID, int metaData, int stackSize, int color) {
+
 		this.handleTileEntityPacket(x, y, z, orientation, state, customName);
 	}
 

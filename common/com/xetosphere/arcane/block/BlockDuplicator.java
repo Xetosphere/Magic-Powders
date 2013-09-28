@@ -33,6 +33,7 @@ public class BlockDuplicator extends BlockContainer {
 	private Random random = new Random();
 
 	public BlockDuplicator(int id) {
+
 		super(id, Material.ground);
 		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.DUPLICATOR_NAME);
 		this.setCreativeTab(ArchaniCommutatio.tabARC);
@@ -42,11 +43,13 @@ public class BlockDuplicator extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int side, int meta) {
+
 		return side == 1 ? this.iconTop : side == 0 ? this.iconBottom : blockIcon;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
+
 		this.blockIcon = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.DUPLICATOR_NAME + "_side");
 		this.iconTop = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.DUPLICATOR_NAME + "_top");
 		this.iconBottom = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.DUPLICATOR_NAME + "_bottom");
@@ -61,14 +64,15 @@ public class BlockDuplicator extends BlockContainer {
 		unlocalizedName.append(Strings.DUPLICATOR_NAME);
 
 		return unlocalizedName.toString();
-
 	}
 
 	public TileEntity createNewTileEntity(World world) {
+
 		return new TileDuplicator();
 	}
 
 	public void breakBlock(World world, int x, int y, int z, int id, int meta) {
+
 		dropInventory(world, x, y, z);
 		super.breakBlock(world, x, y, z, id, meta);
 	}
@@ -122,11 +126,8 @@ public class BlockDuplicator extends BlockContainer {
 				entityItem.motionZ = random.nextGaussian() * factor;
 				world.spawnEntityInWorld(entityItem);
 				itemStack.stackSize = 0;
-
 			}
-
 		}
-
 	}
 
 }

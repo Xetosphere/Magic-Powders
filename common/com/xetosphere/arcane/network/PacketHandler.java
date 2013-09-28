@@ -15,7 +15,6 @@ public class PacketHandler implements IPacketHandler {
 		PacketARC packetAEX = PacketTypeHandler.buildPacket(packet.data);
 
 		packetAEX.execute(manager, player);
-
 	}
 
 }

@@ -12,6 +12,7 @@ import com.xetosphere.arcane.lib.Strings;
 public class ItemArcaneGem extends ItemARC {
 
 	public ItemArcaneGem(int id) {
+
 		super(id);
 		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ARCANE_GEM_NAME);
 		setCreativeTab(ArchaniCommutatio.tabARC);
@@ -19,11 +20,13 @@ public class ItemArcaneGem extends ItemARC {
 	}
 
 	public String getItemDisplayName(ItemStack itemStack) {
+
 		return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par5Boolean) {
+
 		list.add("Uses: " + (this.getMaxDamage() - itemStack.getItemDamage()));
 	}
 
@@ -35,6 +38,7 @@ public class ItemArcaneGem extends ItemARC {
 	}
 
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack) {
+
 		return false;
 	}
 

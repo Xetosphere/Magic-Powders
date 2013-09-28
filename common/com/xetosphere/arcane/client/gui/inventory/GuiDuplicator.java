@@ -16,6 +16,7 @@ public class GuiDuplicator extends GuiContainer {
 	private TileDuplicator tileDuplicator;
 
 	public GuiDuplicator(InventoryPlayer player, TileDuplicator tileDuplicator) {
+
 		super(new ContainerDuplicator(player, tileDuplicator));
 		this.tileDuplicator = tileDuplicator;
 	}
@@ -25,7 +26,6 @@ public class GuiDuplicator extends GuiContainer {
 		String containerName = tileDuplicator.isInvNameLocalized() ? tileDuplicator.getInvName() : StatCollector.translateToLocal(tileDuplicator.getInvName());
 		fontRenderer.drawString(containerName, xSize / 2 - fontRenderer.getStringWidth(containerName) / 2, 6, 4210752);
 		fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_INVENTORY), 8, ySize - 96 + 2, 4210752);
-
 	}
 
 	protected void drawGuiContainerBackgroundLayer(float opacity, int x, int y) {
@@ -49,7 +49,6 @@ public class GuiDuplicator extends GuiContainer {
 
 		i1 = this.tileDuplicator.getCookProgressTimeScaled(24);
 		this.drawTexturedModalRect(xStart + 79, yStart + 34, 176, 14, i1 + 1, 16);
-
 	}
 
 }

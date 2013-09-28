@@ -19,6 +19,7 @@ public class DuplicatorRecipes {
 	private HashMap<List<Integer>, ItemStack> metaDuplingList = new HashMap<List<Integer>, ItemStack>();
 
 	public static final DuplicatorRecipes dupling() {
+
 		return duplingBase;
 	}
 
@@ -43,25 +44,28 @@ public class DuplicatorRecipes {
 		addDupling(ModItems.magicIngot.itemID, 0, new ItemStack(ModItems.magicIngot, 2, 0));
 		addDupling(ModItems.magicIngot.itemID, 1, new ItemStack(ModItems.magicIngot, 2, 1));
 		addDupling(ModItems.magicIngot.itemID, 2, new ItemStack(ModItems.magicIngot, 2, 2));
-
 	}
 
 	@SuppressWarnings("unchecked")
 	public void addDupling(int par1, ItemStack par2ItemStack) {
+
 		this.duplingList.put(Integer.valueOf(par1), par2ItemStack);
 	}
 
 	@Deprecated
 	public ItemStack getDuplingResult(int par1) {
+
 		return (ItemStack) this.duplingList.get(Integer.valueOf(par1));
 	}
 
 	@SuppressWarnings("rawtypes")
 	public Map getDuplingList() {
+
 		return this.duplingList;
 	}
 
 	public void addDupling(int itemID, int metadata, ItemStack itemstack) {
+
 		metaDuplingList.put(Arrays.asList(itemID, metadata), itemstack);
 	}
 
@@ -81,6 +85,7 @@ public class DuplicatorRecipes {
 	}
 
 	public Map<List<Integer>, ItemStack> getMetaSmeltingList() {
+
 		return metaDuplingList;
 	}
 

@@ -27,6 +27,7 @@ public class CommonProxy implements IGuiHandler {
 	}
 
 	public void registerTileEntities() {
+
 		GameRegistry.registerTileEntity(TileArcaneFuser.class, Strings.ARCANE_FUSER_NAME);
 		GameRegistry.registerTileEntity(TileDuplicator.class, Strings.DUPLICATOR_NAME);
 		GameRegistry.registerTileEntity(TileAlchemistTable.class, Strings.ALCHEMISTTABLE_NAME);

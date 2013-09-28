@@ -15,14 +15,17 @@ public class ModelAlchemistTable extends ModelBase {
 	private IModelCustom modelAlcTab;
 
 	public ModelAlchemistTable() {
+
 		modelAlcTab = AdvancedModelLoader.loadModel(Models.ALCHEMISTTABLE);
 	}
 
 	public void render() {
+
 		modelAlcTab.renderAll();
 	}
 
 	public void renderPart(String partName) {
+
 		modelAlcTab.renderPart(partName);
 	}
 

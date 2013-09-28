@@ -82,7 +82,6 @@ public class ConfigurationHandler {
 		} finally {
 			config.save();
 		}
-
 	}
 
 	public static void set(String categoryName, String propertyName, String newValue) {
@@ -94,7 +93,6 @@ public class ConfigurationHandler {
 			}
 		}
 		config.save();
-
 	}
 
 }

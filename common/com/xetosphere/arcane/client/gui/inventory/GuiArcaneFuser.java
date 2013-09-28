@@ -16,6 +16,7 @@ public class GuiArcaneFuser extends GuiContainer {
 	private TileArcaneFuser tileArcaneFuser;
 
 	public GuiArcaneFuser(InventoryPlayer player, TileArcaneFuser tileArcaneFuser) {
+
 		super(new ContainerArcaneFuser(player, tileArcaneFuser));
 		this.tileArcaneFuser = tileArcaneFuser;
 	}
@@ -25,7 +26,6 @@ public class GuiArcaneFuser extends GuiContainer {
 		String containerName = tileArcaneFuser.isInvNameLocalized() ? tileArcaneFuser.getInvName() : StatCollector.translateToLocal(tileArcaneFuser.getInvName());
 		fontRenderer.drawString(containerName, xSize / 2 - fontRenderer.getStringWidth(containerName) / 2, 6, 4210752);
 		fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_INVENTORY), 8, ySize - 96 + 2, 4210752);
-
 	}
 
 	protected void drawGuiContainerBackgroundLayer(float opacity, int x, int y) {
@@ -49,7 +49,6 @@ public class GuiArcaneFuser extends GuiContainer {
 
 		i1 = this.tileArcaneFuser.getCookProgressTimeScaled(24);
 		this.drawTexturedModalRect(xStart + 79, yStart + 34, 176, 14, i1 + 1, 16);
-
 	}
 
 }

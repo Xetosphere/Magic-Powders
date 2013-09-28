@@ -32,6 +32,7 @@ public class BlockArcaneFuser extends BlockARC {
 	private Random random = new Random();
 
 	public BlockArcaneFuser(int id) {
+
 		super(id, Material.ground);
 		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME);
 		this.setCreativeTab(ArchaniCommutatio.tabARC);
@@ -41,11 +42,13 @@ public class BlockArcaneFuser extends BlockARC {
 
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int side, int meta) {
+
 		return side == 1 ? this.iconTop : side == 0 ? this.iconBottom : blockIcon;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
+
 		this.blockIcon = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME + "_side");
 		this.iconTop = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME + "_top");
 		this.iconBottom = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME + "_bottom");
@@ -60,14 +63,15 @@ public class BlockArcaneFuser extends BlockARC {
 		unlocalizedName.append(Strings.ARCANE_FUSER_NAME);
 
 		return unlocalizedName.toString();
-
 	}
 
 	public TileEntity createNewTileEntity(World world) {
+
 		return new TileArcaneFuser();
 	}
 
 	public void breakBlock(World world, int x, int y, int z, int id, int meta) {
+
 		dropInventory(world, x, y, z);
 		super.breakBlock(world, x, y, z, id, meta);
 	}
@@ -121,11 +125,8 @@ public class BlockArcaneFuser extends BlockARC {
 				entityItem.motionZ = random.nextGaussian() * factor;
 				world.spawnEntityInWorld(entityItem);
 				itemStack.stackSize = 0;
-
 			}
-
 		}
-
 	}
 
 }

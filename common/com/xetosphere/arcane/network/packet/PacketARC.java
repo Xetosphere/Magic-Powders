@@ -17,6 +17,7 @@ public class PacketARC {
 	public boolean isChunkDataPacket;
 
 	public PacketARC(PacketTypeHandler packetType, boolean isChunkDataPacket) {
+
 		this.packetType = packetType;
 		this.isChunkDataPacket = isChunkDataPacket;
 	}
@@ -34,7 +35,6 @@ public class PacketARC {
 		}
 
 		return bos.toByteArray();
-
 	}
 
 	public void readPopulate(DataInputStream data) {
@@ -44,7 +44,6 @@ public class PacketARC {
 		} catch (IOException e) {
 			e.printStackTrace(System.err);
 		}
-
 	}
 
 	public void readData(DataInputStream data) throws IOException {

@@ -37,11 +37,6 @@
 			<locationURI>WORKSPACE_LOC/Archani-Commutatio/environment.properties</locationURI>
 		</link>
 		<link>
-			<name>environment.properties_sample</name>
-			<type>1</type>
-			<locationURI>WORKSPACE_LOC/Archani-Commutatio/environment.properties_sample</locationURI>
-		</link>
-		<link>
 			<name>private.properties</name>
 			<type>1</type>
 			<locationURI>WORKSPACE_LOC/Archani-Commutatio/private.properties</locationURI>
