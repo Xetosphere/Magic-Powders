@@ -32,7 +32,6 @@ public class GuiDuplicator extends GuiContainer {
 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
-		// this.mc.getTextureManager().bindTexture(...)
 		this.mc.getTextureManager().bindTexture(Textures.GUI_DUPLICATOR);
 
 		int xStart = (width - xSize) / 2;
