@@ -16,12 +16,12 @@ import net.minecraft.world.World;
 import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.tileentity.TileArcaneInfuser;
+import com.xetosphere.arcane.tileentity.TileAuraCrusher;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockArcaneInfuser extends BlockARC {
+public class BlockAuraCrusher extends BlockARC {
 
 	@SideOnly(Side.CLIENT)
 	private Icon iconTop;
@@ -31,10 +31,10 @@ public class BlockArcaneInfuser extends BlockARC {
 
 	private Random random = new Random();
 
-	public BlockArcaneInfuser(int id) {
+	public BlockAuraCrusher(int id) {
 
 		super(id, Material.ground);
-		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.ARCANE_INFUSER_NAME);
+		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.AURA_CRUSHER_NAME);
 		this.setCreativeTab(ArchaniCommutatio.tabARC);
 		this.setHardness(1F);
 		this.setResistance(12F);
@@ -49,9 +49,9 @@ public class BlockArcaneInfuser extends BlockARC {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 
-		this.blockIcon = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_INFUSER_NAME + "_side");
-		this.iconTop = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_INFUSER_NAME + "_top");
-		this.iconBottom = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_INFUSER_NAME + "_bottom");
+		this.blockIcon = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.AURA_CRUSHER_NAME + "_side");
+		this.iconTop = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.AURA_CRUSHER_NAME + "_top");
+		this.iconBottom = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.AURA_CRUSHER_NAME + "_bottom");
 	}
 
 	public String getUnlocalizedName() {
@@ -60,14 +60,14 @@ public class BlockArcaneInfuser extends BlockARC {
 
 		unlocalizedName.append("tile.");
 		unlocalizedName.append(Strings.RESOURCE_PREFIX);
-		unlocalizedName.append(Strings.ARCANE_INFUSER_NAME);
+		unlocalizedName.append(Strings.AURA_CRUSHER_NAME);
 
 		return unlocalizedName.toString();
 	}
 
 	public TileEntity createNewTileEntity(World world) {
 
-		return new TileArcaneInfuser();
+		return new TileAuraCrusher();
 	}
 
 	public void breakBlock(World world, int x, int y, int z, int id, int meta) {
@@ -83,10 +83,10 @@ public class BlockArcaneInfuser extends BlockARC {
 		} else {
 			if (!world.isRemote) {
 
-				TileArcaneInfuser tileFuser = (TileArcaneInfuser) world.getBlockTileEntity(x, y, z);
+				TileAuraCrusher tileFuser = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
 
 				if (tileFuser != null) {
-					player.openGui(ArchaniCommutatio.instance, GuiIDs.ARCANE_INFUSER, world, x, y, z);
+					player.openGui(ArchaniCommutatio.instance, GuiIDs.AURA_CRUSHER, world, x, y, z);
 				}
 			}
 			return true;

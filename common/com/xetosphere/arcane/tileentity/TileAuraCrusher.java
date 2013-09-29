@@ -7,28 +7,27 @@ import net.minecraft.nbt.NBTTagList;
 
 import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.recipe.ArcaneInfuserRecipes;
+import com.xetosphere.arcane.recipe.AuraCrusherRecipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileArcaneInfuser extends TileARC implements IInventory {
+public class TileAuraCrusher extends TileARC implements IInventory {
 
 	private ItemStack[] inventory;
 
-	public static final int INVENTORY_SIZE = 4;
+	public static final int INVENTORY_SIZE = 3;
 
 	public static final int INPUT_INVENTORY_INDEX = 0;
-	public static final int FUEL_INVENTORY_INDEX = 1;
-	public static final int DUST_INVENTORY_INDEX = 2;
-	public static final int OUTPUT_INVENTORY_INDEX = 3;
+	public static final int DUST_INVENTORY_INDEX = 1;
+	public static final int OUTPUT_INVENTORY_INDEX = 2;
 
-	public int infuserFuseTime;
-	public int currentItemFuseTime;
-	public int infuserFusedTime2;
+	public int crusherCrushTime;
+	public int currentItemCrushTime;
+	public int crusherCrushedTime2;
 
-	public TileArcaneInfuser() {
+	public TileAuraCrusher() {
 
 		inventory = new ItemStack[INVENTORY_SIZE];
 	}
@@ -80,7 +79,7 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 
 	public String getInvName() {
 
-		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_ARCANE_INFUSER_NAME;
+		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_AURA_CRUSHER_NAME;
 	}
 
 	public int getInventoryStackLimit() {
@@ -109,8 +108,8 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 				inventory[slot] = ItemStack.loadItemStackFromNBT(tagCompound);
 			}
 
-			this.infuserFuseTime = nbtTagCompound.getShort("FuseTime");
-			this.infuserFusedTime2 = nbtTagCompound.getShort("TimeSpent");
+			this.crusherCrushTime = nbtTagCompound.getShort("CrushTime");
+			this.crusherCrushedTime2 = nbtTagCompound.getShort("TimeSpent");
 		}
 	}
 
@@ -118,8 +117,8 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 
 		super.writeToNBT(nbtTagCompound);
 
-		nbtTagCompound.setShort("FuseTime", (short) this.infuserFuseTime);
-		nbtTagCompound.setShort("TimeSpent", (short) this.infuserFusedTime2);
+		nbtTagCompound.setShort("CrushTime", (short) this.crusherCrushTime);
+		nbtTagCompound.setShort("TimeSpent", (short) this.crusherCrushedTime2);
 
 		NBTTagList tagList = new NBTTagList();
 		for (int currentIndex = 0; currentIndex < inventory.length; ++currentIndex) {
@@ -150,7 +149,7 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 
 		stringBuilder.append(super.toString());
 
-		stringBuilder.append("Tileinfuser Data - ");
+		stringBuilder.append("TileAuraCrusher Data - ");
 		for (int i = 0; i < inventory.length; i++) {
 			if (i != 0) {
 				stringBuilder.append(", ");
@@ -171,63 +170,63 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 	@SideOnly(Side.CLIENT)
 	public int getCookProgressTimeScaled(int par1) {
 
-		return this.infuserFusedTime2 * par1 / 400;
+		return this.crusherCrushedTime2 * par1 / 600;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public int getBurnTimeRemainingScaled(int par1) {
 
-		if (this.currentItemFuseTime == 0) {
-			this.currentItemFuseTime = 400;
+		if (this.currentItemCrushTime == 0) {
+			this.currentItemCrushTime = 600;
 		}
 
-		return this.infuserFuseTime * par1 / this.currentItemFuseTime;
+		return this.crusherCrushTime * par1 / this.currentItemCrushTime;
 	}
 
 	public boolean isBurning() {
 
-		return this.infuserFuseTime > 0;
+		return this.crusherCrushTime > 0;
 	}
 
 	public void updateEntity() {
 
-		boolean flag = this.infuserFuseTime > 0;
+		boolean flag = this.crusherCrushTime > 0;
 		boolean flag1 = false;
 
-		if (this.infuserFuseTime > 0) {
-			--this.infuserFuseTime;
+		if (this.crusherCrushTime > 0) {
+			--this.crusherCrushTime;
 		}
 
 		if (!this.worldObj.isRemote) {
-			if (this.infuserFuseTime == 0 && this.canSmelt()) {
-				this.currentItemFuseTime = this.infuserFuseTime = getItemBurnTime(this.inventory[FUEL_INVENTORY_INDEX]);
-				if (this.infuserFuseTime > 0) {
+			if (this.crusherCrushTime == 0 && this.canSmelt()) {
+				this.currentItemCrushTime = this.crusherCrushTime = getItemBurnTime(this.inventory[DUST_INVENTORY_INDEX]);
+				if (this.crusherCrushTime > 0) {
 					flag1 = true;
-					if (this.inventory[FUEL_INVENTORY_INDEX] != null) {
-						--this.inventory[FUEL_INVENTORY_INDEX].stackSize;
-						if (this.inventory[FUEL_INVENTORY_INDEX].stackSize == 0) {
-							this.inventory[FUEL_INVENTORY_INDEX] = this.inventory[FUEL_INVENTORY_INDEX].getItem().getContainerItemStack(inventory[FUEL_INVENTORY_INDEX]);
+					if (this.inventory[DUST_INVENTORY_INDEX] != null) {
+						--this.inventory[DUST_INVENTORY_INDEX].stackSize;
+						if (this.inventory[DUST_INVENTORY_INDEX].stackSize == 0) {
+							this.inventory[DUST_INVENTORY_INDEX] = this.inventory[DUST_INVENTORY_INDEX].getItem().getContainerItemStack(inventory[DUST_INVENTORY_INDEX]);
 						}
 					}
 				}
 			}
 
 			if (this.isBurning() && this.canSmelt()) {
-				++this.infuserFusedTime2;
+				++this.crusherCrushedTime2;
 
-				if (this.infuserFusedTime2 == 400) {
-					this.infuserFusedTime2 = 0;
+				if (this.crusherCrushedTime2 == 600) {
+					this.crusherCrushedTime2 = 0;
 					this.smeltItem();
 					flag1 = true;
 				}
 
 			} else {
 
-				this.infuserFusedTime2 = 0;
+				this.crusherCrushedTime2 = 0;
 
 			}
 
-			if (flag != this.infuserFuseTime > 0) {
+			if (flag != this.crusherCrushTime > 0) {
 				flag1 = true;
 			}
 
@@ -246,7 +245,7 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 
 		} else {
 
-			ItemStack itemstack = ArcaneInfuserRecipes.infusing().getInfusingResult(this.inventory[INPUT_INVENTORY_INDEX]);
+			ItemStack itemstack = AuraCrusherRecipes.crushing().getCrushingResult(this.inventory[INPUT_INVENTORY_INDEX]);
 
 			if (itemstack == null) return false;
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) return true;
@@ -261,7 +260,7 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 
 		if (this.canSmelt()) {
 
-			ItemStack itemstack = ArcaneInfuserRecipes.infusing().getInfusingResult(this.inventory[INPUT_INVENTORY_INDEX]);
+			ItemStack itemstack = AuraCrusherRecipes.crushing().getCrushingResult(this.inventory[INPUT_INVENTORY_INDEX]);
 
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) {
 
@@ -290,7 +289,7 @@ public class TileArcaneInfuser extends TileARC implements IInventory {
 		int i = itemStack.getItem().itemID;
 		int meta = itemStack.getItemDamage();
 
-		if (i == ModItems.magicDust.itemID && meta == 1) return 400;
+		if (i == ModItems.magicDust.itemID && meta == 2) return 600;
 
 		return GameRegistry.getFuelValue(itemStack);
 	}
