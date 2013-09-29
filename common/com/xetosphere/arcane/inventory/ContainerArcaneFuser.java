@@ -101,7 +101,7 @@ public class ContainerArcaneFuser extends Container {
 
 	public boolean canInteractWith(EntityPlayer player) {
 
-		return fuser.isUseableByPlayer(player);
+		return true;
 	}
 
 	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int slotIndex) {
