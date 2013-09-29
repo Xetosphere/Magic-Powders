@@ -7,17 +7,17 @@ import net.minecraftforge.common.ForgeDirection;
 import com.xetosphere.arcane.block.ModBlocks;
 import com.xetosphere.arcane.client.gui.inventory.GuiAlchemistTable;
 import com.xetosphere.arcane.client.gui.inventory.GuiArcaneFuser;
-import com.xetosphere.arcane.client.gui.inventory.GuiArcaneInfuser;
+import com.xetosphere.arcane.client.gui.inventory.GuiAuraCrusher;
 import com.xetosphere.arcane.client.gui.inventory.GuiDuplicator;
 import com.xetosphere.arcane.inventory.ContainerAlchemistTable;
 import com.xetosphere.arcane.inventory.ContainerArcaneFuser;
-import com.xetosphere.arcane.inventory.ContainerArcaneInfuser;
+import com.xetosphere.arcane.inventory.ContainerAuraCrusher;
 import com.xetosphere.arcane.inventory.ContainerDuplicator;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Strings;
 import com.xetosphere.arcane.tileentity.TileAlchemistTable;
 import com.xetosphere.arcane.tileentity.TileArcaneFuser;
-import com.xetosphere.arcane.tileentity.TileArcaneInfuser;
+import com.xetosphere.arcane.tileentity.TileAuraCrusher;
 import com.xetosphere.arcane.tileentity.TileDuplicator;
 
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -34,7 +34,7 @@ public class CommonProxy implements IGuiHandler {
 		GameRegistry.registerTileEntity(TileArcaneFuser.class, Strings.ARCANE_FUSER_NAME);
 		GameRegistry.registerTileEntity(TileDuplicator.class, Strings.DUPLICATOR_NAME);
 		GameRegistry.registerTileEntity(TileAlchemistTable.class, Strings.ALCHEMISTTABLE_NAME);
-		GameRegistry.registerTileEntity(TileArcaneInfuser.class, Strings.ARCANE_INFUSER_NAME);
+		GameRegistry.registerTileEntity(TileAuraCrusher.class, Strings.AURA_CRUSHER_NAME);
 	}
 
 	public void sendRequestEventPacket(byte eventType, int originX, int originY, int originZ, byte sideHit, byte rangeX, byte rangeY, byte rangeZ, String data) {
@@ -69,10 +69,10 @@ public class CommonProxy implements IGuiHandler {
 			return ID == GuiIDs.ALCHEMISTTABLE && world.getBlockId(x, y, z) == ModBlocks.alchemistTable.blockID ? new ContainerAlchemistTable(player.inventory, world, x, y, z) : null;
 		}
 		
-		else if (ID == GuiIDs.ARCANE_INFUSER) {
+		else if (ID == GuiIDs.AURA_CRUSHER) {
 			
-			TileArcaneInfuser tileInfuser = (TileArcaneInfuser) world.getBlockTileEntity(x, y, z);
-			return new ContainerArcaneInfuser(player.inventory, tileInfuser);
+			TileAuraCrusher tileInfuser = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
+			return new ContainerAuraCrusher(player.inventory, tileInfuser);
 		}
 
 		return null;
@@ -98,10 +98,10 @@ public class CommonProxy implements IGuiHandler {
 			return ID == GuiIDs.ALCHEMISTTABLE && world.getBlockId(x, y, z) == ModBlocks.alchemistTable.blockID ? new GuiAlchemistTable(player.inventory, world, x, y, z) : null;
 		}
 		
-		else if (ID == GuiIDs.ARCANE_INFUSER) {
+		else if (ID == GuiIDs.AURA_CRUSHER) {
 			
-			TileArcaneInfuser tileInfuser = (TileArcaneInfuser) world.getBlockTileEntity(x, y, z);
-			return new GuiArcaneInfuser(player.inventory, tileInfuser);
+			TileAuraCrusher tileInfuser = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
+			return new GuiAuraCrusher(player.inventory, tileInfuser);
 		}
 
 		return null;
