@@ -22,18 +22,12 @@ public class GuiAlchemistTable extends GuiContainer {
 		super(new ContainerAlchemistTable(par1InventoryPlayer, par2World, par3, par4, par5));
 	}
 
-	/**
-	 * Draw the foreground layer for the GuiContainer (everything in front of the items)
-	 */
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 
 		this.fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_ALCHEMISTTABLE_NAME), 28, 6, 4210752);
 		this.fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_INVENTORY), 8, this.ySize - 96 + 2, 4210752);
 	}
 
-	/**
-	 * Draw the background layer for the GuiContainer (everything behind the items)
-	 */
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);

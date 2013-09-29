@@ -21,6 +21,7 @@ public class ModBlocks {
 	public static Block fuser;
 	public static Block duplicator;
 	public static Block alchemistTable;
+	public static Block infuser;
 
 	/**
 	 * Initializes the blocks that the mod contains. As well as block recipes and registering the blocks.
@@ -32,10 +33,12 @@ public class ModBlocks {
 		fuser = new BlockArcaneFuser(BlockIDs.ARCANE_FUSER);
 		duplicator = new BlockDuplicator(BlockIDs.DUPLICATOR);
 		alchemistTable = new BlockAlchemistTable(BlockIDs.ALCHEMISTTABLE);
+		infuser = new BlockArcaneInfuser(BlockIDs.ARCANE_INFUSER);
 
 		GameRegistry.registerBlock(fuser, Strings.ARCANE_FUSER_NAME);
 		GameRegistry.registerBlock(duplicator, Strings.DUPLICATOR_NAME);
 		GameRegistry.registerBlock(alchemistTable, Strings.ALCHEMISTTABLE_NAME);
+		GameRegistry.registerBlock(infuser, Strings.ARCANE_INFUSER_NAME);
 
 		GameRegistry.registerBlock(magicPowderOres, ItemBlockMagicPowderOres.class, Strings.POWDERORES_NAME);
 		GameRegistry.registerBlock(storageBlocks, ItemBlockStorageBlocks.class, Strings.STORAGEBLOCKS_NAME);
