@@ -46,12 +46,12 @@ tile.arc:ingotBlocksKoroninBlock.name=Koronin Block
 tile.arc:arcaneFuser.name=Arcane Fuser
 tile.arc:duplicator.name=Duplicator
 tile.arc:alchemistTable.name=Alchemist Table
-tile.arc:arcaneInfuser.name=Arcane Infuser
+tile.arc:auraCrusher.name=Aura Crusher
 
 container.arcaneFuser=Arcane Fuser
 container.duplicator=Duplicator
 container.alchemistTable=Alchemist Table
-container.arcaneInfuser=Arcane Infuser
+container.auraCrusher=Aura Crusher
 
 itemGroup.ARC=Archani Commutatio
 

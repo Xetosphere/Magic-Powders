@@ -8,7 +8,7 @@ public class BlockIDs {
 	public static int ARCANE_FUSER_DEFAULT = 1402;
 	public static int DUPLICATOR_DEFAULT = 1403;
 	public static int ALCHEMISTTABLE_DEFAULT = 1404;
-	public static int ARCANE_INFUSER_DEFAULT = 1405;
+	public static int AURA_CRUSHER_DEFAULT = 1405;
 
 	/* Current block ids */
 	public static int MAGIC_ORES;
@@ -16,5 +16,5 @@ public class BlockIDs {
 	public static int ARCANE_FUSER;
 	public static int DUPLICATOR;
 	public static int ALCHEMISTTABLE;
-	public static int ARCANE_INFUSER;
+	public static int AURA_CRUSHER;
 }
