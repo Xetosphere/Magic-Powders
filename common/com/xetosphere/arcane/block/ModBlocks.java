@@ -64,6 +64,10 @@ public class ModBlocks {
 		OreDictionary.registerOre("oreSoronite", new ItemStack(magicPowderOres, 1, 0));
 		OreDictionary.registerOre("oreTardite", new ItemStack(magicPowderOres, 1, 1));
 		OreDictionary.registerOre("oreKoronin", new ItemStack(magicPowderOres, 1, 2));
+
+		OreDictionary.registerOre("dustCoal", new ItemStack(ModItems.metalDusts, 1, 0));
+		OreDictionary.registerOre("dustIron", new ItemStack(ModItems.metalDusts, 1, 1));
+		OreDictionary.registerOre("dustGold", new ItemStack(ModItems.metalDusts, 1, 2));
 	}
 
 	private static void addRecipe() {
