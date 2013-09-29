@@ -25,22 +25,32 @@ public class DuplicatorRecipes {
 
 	private DuplicatorRecipes() {
 
+		// 400
 		addDupling(Item.coal.itemID, 0, new ItemStack(Item.coal, 2, 0));
 		addDupling(Item.coal.itemID, 1, new ItemStack(Item.coal, 2, 1));
-		addDupling(Item.ingotIron.itemID, new ItemStack(Item.ingotIron, 2, 0));
-		addDupling(Item.ingotGold.itemID, new ItemStack(Item.ingotGold, 2, 0));
-		addDupling(Item.diamond.itemID, new ItemStack(Item.diamond, 2, 0));
 		addDupling(Item.appleRed.itemID, new ItemStack(Item.appleRed, 2));
-		addDupling(Item.appleGold.itemID, 0, new ItemStack(Item.appleGold, 2, 0));
-		addDupling(Item.appleGold.itemID, 1, new ItemStack(Item.appleGold, 2, 1));
 		addDupling(Item.clay.itemID, new ItemStack(Item.clay, 2));
 		addDupling(Item.arrow.itemID, new ItemStack(Item.arrow, 2));
-		addDupling(Item.blazePowder.itemID, new ItemStack(Item.blazePowder, 2));
 		addDupling(Item.wheat.itemID, new ItemStack(Item.wheat, 2));
-		addDupling(Item.brick.itemID, new ItemStack(Item.brick, 2));
 		addDupling(Item.bone.itemID, new ItemStack(Item.bone, 2));
 		addDupling(Item.stick.itemID, new ItemStack(Item.stick, 2));
+		addDupling(ModItems.metalDusts.itemID, 0, new ItemStack(ModItems.metalDusts, 2, 0));
+		addDupling(ModItems.metalDusts.itemID, 1, new ItemStack(ModItems.metalDusts, 2, 1));
+		addDupling(ModItems.metalDusts.itemID, 2, new ItemStack(ModItems.metalDusts, 2, 2));
+
+		// 600
+		addDupling(Item.ingotIron.itemID, new ItemStack(Item.ingotIron, 2, 0));
+		addDupling(Item.ingotGold.itemID, new ItemStack(Item.ingotGold, 2, 0));
+		addDupling(Item.appleGold.itemID, 0, new ItemStack(Item.appleGold, 2, 0));
+		addDupling(Item.blazePowder.itemID, new ItemStack(Item.blazePowder, 2));
+		addDupling(Item.brick.itemID, new ItemStack(Item.brick, 2));
+
+		// 800
+		addDupling(Item.appleGold.itemID, 1, new ItemStack(Item.appleGold, 2, 1));
+		addDupling(Item.diamond.itemID, new ItemStack(Item.diamond, 2, 0));
 		addDupling(Item.emerald.itemID, new ItemStack(Item.emerald, 2));
+
+		// 1000
 		addDupling(ModItems.magicIngot.itemID, 0, new ItemStack(ModItems.magicIngot, 2, 0));
 		addDupling(ModItems.magicIngot.itemID, 1, new ItemStack(ModItems.magicIngot, 2, 1));
 		addDupling(ModItems.magicIngot.itemID, 2, new ItemStack(ModItems.magicIngot, 2, 2));

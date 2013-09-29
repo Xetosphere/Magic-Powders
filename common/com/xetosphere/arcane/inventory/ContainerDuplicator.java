@@ -99,7 +99,7 @@ public class ContainerDuplicator extends Container {
 
 	public boolean canInteractWith(EntityPlayer player) {
 
-		return duplicator.isUseableByPlayer(player);
+		return true;
 	}
 
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {

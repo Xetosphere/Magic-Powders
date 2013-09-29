@@ -4,11 +4,13 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.xetosphere.arcane.lib.ItemIDs;
 import com.xetosphere.arcane.lib.Strings;
+import com.xetosphere.arcane.recipe.ModCraftingRecipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -115,45 +117,20 @@ public class ModItems {
 	 */
 	public static void registerRecipes() {
 
-		GameRegistry.addRecipe(new ItemStack(arcaneGem), new Object[] { "XYX", "YZY", "XYX", Character.valueOf('X'), new ItemStack(magicDust, 1, 0), Character.valueOf('Y'), Item.diamond, Character.valueOf('Z'), Item.emerald });
+		// Crafting recipes
+		ModCraftingRecipes.addCraftingRecipes();
 
-		GameRegistry.addRecipe(new ItemStack(soroniteHelmet), new Object[] { "SSS", "S S", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(soroniteChest), new Object[] { "S S", "SSS", "SSS", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(soroniteLegs), new Object[] { "SSS", "S S", "S S", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(soroniteBoots), new Object[] { "S S", "S S", Character.valueOf('S'), new ItemStack(magicIngot, 1, 0) });
+		// Furnace recipes
+		addFurnaceRecipes();
 
-		GameRegistry.addRecipe(new ItemStack(tarditeHelmet), new Object[] { "TTT", "T T", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(tarditeChest), new Object[] { "T T", "TTT", "TTT", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(tarditeLegs), new Object[] { "TTT", "T T", "T T", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(tarditeBoots), new Object[] { "T T", "T T", Character.valueOf('T'), new ItemStack(magicIngot, 1, 1) });
-
-		GameRegistry.addRecipe(new ItemStack(koroninHelmet), new Object[] { "KKK", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(koroninChest), new Object[] { "K K", "KKK", "KKK", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(koroninLegs), new Object[] { "KKK", "K K", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(koroninBoots), new Object[] { "K K", "K K", Character.valueOf('K'), new ItemStack(magicIngot, 1, 2) });
-
-		GameRegistry.addRecipe(new ItemStack(soroniteSword), new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(soronitePick), new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(soroniteAxe), new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(soroniteShovel), new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(soroniteHoe), new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 0), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(soronitePaxel), new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.soroniteSword, Character.valueOf('A'), ModItems.soroniteAxe, Character.valueOf('P'), ModItems.soronitePick, Character.valueOf('G'), ModItems.soroniteShovel, Character.valueOf('H'), ModItems.soroniteHoe });
-
-		GameRegistry.addRecipe(new ItemStack(tarditeSword), new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(tarditePick), new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(tarditeAxe), new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(tarditeShovel), new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(tarditeHoe), new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 1), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(tarditePaxel), new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.tarditeSword, Character.valueOf('A'), ModItems.tarditeAxe, Character.valueOf('P'), ModItems.tarditePick, Character.valueOf('G'), ModItems.tarditeShovel, Character.valueOf('H'), ModItems.tarditeHoe });
-
-		GameRegistry.addRecipe(new ItemStack(koroninSword), new Object[] { "X", "X", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(koroninPick), new Object[] { "XXX", " S ", " S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(koroninAxe), new Object[] { "XX", "SX", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(koroninShovel), new Object[] { "X", "S", "S", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(koroninHoe), new Object[] { "XX", "S ", "S ", Character.valueOf('X'), new ItemStack(magicIngot, 1, 2), Character.valueOf('S'), Item.stick });
-		GameRegistry.addRecipe(new ItemStack(koroninPaxel), new Object[] { " S ", "APG", " H ", Character.valueOf('S'), ModItems.koroninSword, Character.valueOf('A'), ModItems.koroninAxe, Character.valueOf('P'), ModItems.koroninPick, Character.valueOf('G'), ModItems.koroninShovel, Character.valueOf('H'), ModItems.koroninHoe });
-
+		// Arcane gem duplicating recipes
 		duplicateItems();
+	}
+
+	private static void addFurnaceRecipes() {
+
+		FurnaceRecipes.smelting().addSmelting(metalDusts.itemID, 1, new ItemStack(Item.ingotIron), 0.2F);
+		FurnaceRecipes.smelting().addSmelting(metalDusts.itemID, 2, new ItemStack(Item.ingotGold), 0.3F);
 	}
 
 	public static void duplicateItems() {
