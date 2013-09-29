@@ -42,11 +42,14 @@ public class ItemIDs {
 	public static int KORONINAXE_DEFAULT = 9030;
 	public static int KORONINSHOVEL_DEFAULT = 9031;
 	public static int KORONINHOE_DEFAULT = 9032;
+	
+	public static int METAL_DUST_DEFAULT = 9033;
 
 	/* Current item ids */
 	public static int MAGICDUSTS;
 	public static int MAGICINGOTS;
 	public static int ARCANE_GEM;
+	public static int METAL_DUSTS;
 
 	public static int SORONITEHELMET;
 	public static int SORONITECHEST;

@@ -36,6 +36,9 @@ item.arc:pickaxeKoronin.name=Koronin Pickaxe
 item.arc:axeKoronin.name=Koronin Axe
 item.arc:shovelKoronin.name=Koronin Shovel
 item.arc:hoeKoronin.name=Koronin Hoe
+item.arc:dustCoal.name=Coal Dust
+item.arc:dustIron.name=Iron Dust
+item.arc:dustGold.name=Gold Dust
 
 tile.arc:powderOresSoroniteOre.name=Soronite Ore
 tile.arc:powderOresTarditeOre.name=Tardite Ore

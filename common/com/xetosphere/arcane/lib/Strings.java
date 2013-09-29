@@ -22,6 +22,7 @@ public class Strings {
 	public static final String MAGICDUST_NAME = "magicDust";
 	public static final String MAGICINGOT_NAME = "magicIngot";
 	public static final String ARCANE_GEM_NAME = "arcaneGem";
+	public static final String METAL_DUST_NAME = "dust";
 
 	/* Tool name constants */
 	public static final String SORONITEPAXEL_NAME = "paxelSoronite";

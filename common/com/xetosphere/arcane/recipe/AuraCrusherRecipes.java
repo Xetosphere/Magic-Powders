@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.xetosphere.arcane.item.ModItems;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,11 +26,13 @@ public class AuraCrusherRecipes {
 
 	private AuraCrusherRecipes() {
 
-		addCrushing(Block.oreCoal.blockID, 0, new ItemStack(Item.coal, 2, 0));
-		addCrushing(Block.oreIron.blockID, 0, new ItemStack(Item.ingotIron, 2, 0));
-		addCrushing(Block.oreGold.blockID, 0, new ItemStack(Item.ingotGold, 2, 0));
-		addCrushing(Block.oreDiamond.blockID, 0, new ItemStack(Item.diamond, 2, 0));
-		addCrushing(Block.oreEmerald.blockID, 0, new ItemStack(Item.emerald, 2, 0));
+		addCrushing(Item.coal.itemID, 0, new ItemStack(ModItems.metalDusts, 1, 0));
+		addCrushing(Item.coal.itemID, 1, new ItemStack(ModItems.metalDusts, 1, 0));
+		addCrushing(Item.ingotIron.itemID, 0, new ItemStack(ModItems.metalDusts, 1, 1));
+		addCrushing(Item.ingotGold.itemID, 0, new ItemStack(ModItems.metalDusts, 1, 2));
+		addCrushing(Block.oreCoal.blockID, 0, new ItemStack(ModItems.metalDusts, 2, 0));
+		addCrushing(Block.oreIron.blockID, 0, new ItemStack(ModItems.metalDusts, 2, 1));
+		addCrushing(Block.oreGold.blockID, 0, new ItemStack(ModItems.metalDusts, 2, 2));
 		addCrushing(Block.oreLapis.blockID, 0, new ItemStack(Item.dyePowder, 8, 4));
 		addCrushing(Block.oreRedstone.blockID, 0, new ItemStack(Item.redstone, 8, 0));
 		
