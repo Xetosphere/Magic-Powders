@@ -1,6 +1,7 @@
 package com.xetosphere.arcane.tileentity;
 
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -170,14 +171,14 @@ public class TileDuplicator extends TileARC implements IInventory {
 	@SideOnly(Side.CLIENT)
 	public int getCookProgressTimeScaled(int par1) {
 
-		return this.duplicatorDupledTime2 * par1 / 400;
+		return this.duplicatorDupledTime2 * par1 / getTimeRequired(inventory[INPUT_INVENTORY_INDEX]);
 	}
 
 	@SideOnly(Side.CLIENT)
 	public int getBurnTimeRemainingScaled(int par1) {
 
 		if (this.currentItemDupleTime == 0) {
-			this.currentItemDupleTime = 400;
+			this.currentItemDupleTime = getTimeRequired(inventory[INPUT_INVENTORY_INDEX]);
 		}
 
 		return this.duplicatorDupleTime * par1 / this.currentItemDupleTime;
@@ -214,7 +215,7 @@ public class TileDuplicator extends TileARC implements IInventory {
 			if (this.isBurning() && this.canSmelt()) {
 				++this.duplicatorDupledTime2;
 
-				if (this.duplicatorDupledTime2 == 400) {
+				if (this.duplicatorDupledTime2 == getTimeRequired(inventory[INPUT_INVENTORY_INDEX])) {
 					this.duplicatorDupledTime2 = 0;
 					this.smeltItem();
 					flag1 = true;
@@ -297,6 +298,25 @@ public class TileDuplicator extends TileARC implements IInventory {
 	public static boolean isItemFuel(ItemStack itemStack) {
 
 		return getItemBurnTime(itemStack) > 0;
+	}
+
+	public static int getTimeRequired(ItemStack stack) {
+
+		if (stack != null) {
+			if (stack.itemID == ModItems.magicIngot.itemID) {
+				return 1000;
+			}
+
+			if (stack.itemID == Item.diamond.itemID || stack.itemID == Item.emerald.itemID || (stack.itemID == Item.appleGold.itemID && stack.getItemDamage() == 1)) {
+				return 800;
+			}
+
+			else if (stack.itemID == Item.ingotIron.itemID || stack.itemID == Item.ingotGold.itemID || (stack.itemID == Item.appleGold.itemID && stack.getItemDamage() == 0) || stack.itemID == Item.brick.itemID || stack.itemID == Item.blazePowder.itemID) {
+				return 600;
+			}
+		}
+
+		return 400;
 	}
 
 }
