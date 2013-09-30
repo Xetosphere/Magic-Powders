@@ -44,12 +44,14 @@ public class ItemIDs {
 	public static int KORONINHOE_DEFAULT = 9032;
 	
 	public static int METAL_DUST_DEFAULT = 9033;
+	public static int RECIPE_PAPER_DEFAULT = 9034;
 
 	/* Current item ids */
 	public static int MAGICDUSTS;
 	public static int MAGICINGOTS;
 	public static int ARCANE_GEM;
 	public static int METAL_DUSTS;
+	public static int RECIPE_PAPER;
 
 	public static int SORONITEHELMET;
 	public static int SORONITECHEST;
