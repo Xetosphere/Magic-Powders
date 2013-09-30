@@ -105,6 +105,7 @@ public class AlchemyCraftingManager {
 
 		addRecipe(new ItemStack(ModBlocks.duplicator), new Object[] { "GPG", "BDB", "BFB", Character.valueOf('G'), Item.ingotGold, Character.valueOf('P'), new ItemStack(Block.cloth, 1, 10), Character.valueOf('B'), Block.netherBrick, Character.valueOf('D'), new ItemStack(ModItems.arcaneGem, 1, 0), Character.valueOf('F'), Block.furnaceIdle });
 		addRecipe(new ItemStack(ModBlocks.fuser), new Object[] { "IGI", "BDB", "BFB", Character.valueOf('I'), Item.ingotGold, Character.valueOf('G'), new ItemStack(Block.cloth, 1, 5), Character.valueOf('B'), Block.brick, Character.valueOf('D'), new ItemStack(Item.diamond), Character.valueOf('F'), Block.furnaceIdle });
+		addRecipe(new ItemStack(ModBlocks.crusher), new Object[] { "KOK", "ODO", "KFK", Character.valueOf('K'), new ItemStack(ModItems.magicIngot, 1, 2), Character.valueOf('O'), Block.obsidian, Character.valueOf('D'), Item.diamond, Character.valueOf('F'), Block.furnaceIdle });
 		addRecipe(soroniteHelmet, new Object[] { "SSS", "S S", Character.valueOf('S'), new ItemStack(ModItems.magicIngot, 1, 0) });
 		addRecipe(soroniteArmour, new Object[] { "S S", "SSS", "SSS", Character.valueOf('S'), new ItemStack(ModItems.magicIngot, 1, 0) });
 		addRecipe(soroniteLeggings, new Object[] { "SSS", "S S", "S S", Character.valueOf('S'), new ItemStack(ModItems.magicIngot, 1, 0) });

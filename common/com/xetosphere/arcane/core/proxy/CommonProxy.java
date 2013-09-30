@@ -105,7 +105,7 @@ public class CommonProxy implements IGuiHandler {
 			return new GuiAuraCrusher(player.inventory, tileInfuser);
 		}
 		
-		else if (ID == GuiIDs.RECIPE_PAPER) {
+		else if (ID == GuiIDs.RECIPE_SCROLL) {
 			
 			return new GuiRecipePaper(player);
 		}

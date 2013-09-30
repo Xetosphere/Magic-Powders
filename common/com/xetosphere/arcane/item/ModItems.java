@@ -74,7 +74,7 @@ public class ModItems {
 		magicIngot = new ItemMagicIngot(ItemIDs.MAGICINGOTS);
 		arcaneGem = new ItemArcaneGem(ItemIDs.ARCANE_GEM);
 		metalDusts = new ItemMetalDusts(ItemIDs.METAL_DUSTS);
-		recipePaper = new ItemRecipePapers(ItemIDs.RECIPE_PAPER);
+		recipePaper = new ItemRecipeScrolls(ItemIDs.RECIPE_SCROLL);
 
 		soroniteHelmet = new ItemSoroniteArmour(ItemIDs.SORONITEHELMET, armourSoronite, 0, 0).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITEHELMET_NAME);
 		soroniteChest = new ItemSoroniteArmour(ItemIDs.SORONITECHEST, armourSoronite, 0, 1).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITECHEST_NAME);

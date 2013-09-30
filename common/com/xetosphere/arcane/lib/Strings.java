@@ -23,7 +23,7 @@ public class Strings {
 	public static final String MAGICINGOT_NAME = "magicIngot";
 	public static final String ARCANE_GEM_NAME = "arcaneGem";
 	public static final String METAL_DUST_NAME = "dust";
-	public static final String RECIPE_PAPER_NAME = "recipePaper";
+	public static final String RECIPE_SCROLL_NAME = "recipeScroll";
 
 	/* Tool name constants */
 	public static final String SORONITEPAXEL_NAME = "paxelSoronite";
@@ -82,7 +82,7 @@ public class Strings {
 	public static final String CONTAINER_AURA_CRUSHER_NAME = "container." + AURA_CRUSHER_NAME;
 	
 	/* Pure gui related constants */
-	public static final String GUI_RECIPE_PAPER_NAME = "gui." + RECIPE_PAPER_NAME;
+	public static final String GUI_RECIPE_PAPER_NAME = "gui." + RECIPE_SCROLL_NAME;
 	public static final String GUI_RECIPE_ALCTAB = "gui." + ALCHEMISTTABLE_NAME;
 	public static final String GUI_RECIPE_ARCFUS = "gui." + ARCANE_FUSER_NAME;
 	public static final String GUI_RECIPE_AURCRU = "gui." + AURA_CRUSHER_NAME;

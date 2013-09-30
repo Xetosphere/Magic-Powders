@@ -17,6 +17,12 @@ public class Textures {
 	public static final ResourceLocation GUI_ALCHEMISTTABLE = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "alchemistTable.png");
 	public static final ResourceLocation GUI_AURA_CRUSHER = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "auraCrusher.png");
 	public static final ResourceLocation GUI_RECIPE_PAPER = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "recipePaper.png");
+	
+	public static final ResourceLocation GUI_RECIPE_ALCHEMISTTABLE = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoAlchemistTable.png");
+	public static final ResourceLocation GUI_RECIPE_ARCANEGEM = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoArcaneGem.png");
+	public static final ResourceLocation GUI_RECIPE_DUPLICATOR = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoDuplicator.png");
+	public static final ResourceLocation GUI_RECIPE_ARCANEFUSER = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoArcaneFuser.png");
+	public static final ResourceLocation GUI_RECIPE_AURACRUSHER = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoAuraCrusher.png");
 
 	// Model textures
 	public static final ResourceLocation MODEL_ALCHEMISTTABLE = ResourceLocationHelper.getResourceLocation(MODEL_SHEET_LOCATION + "alchemistTable.png");

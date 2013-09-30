@@ -40,6 +40,12 @@ item.arc:dustCoal.name=Coal Dust
 item.arc:dustIron.name=Iron Dust
 item.arc:dustGold.name=Gold Dust
 
+item.arc:recipeScrollAlchemistTable.name=Ancient Scroll
+item.arc:recipeScrollArcaneGem.name=Ancient Scroll
+item.arc:recipeScrollDuplicator.name=Ancient Scroll
+item.arc:recipeScrollArcaneFuser.name=Ancient Scroll
+item.arc:recipeScrollAuraCrusher.name=Ancient Scroll
+
 tile.arc:powderOresSoroniteOre.name=Soronite Ore
 tile.arc:powderOresTarditeOre.name=Tardite Ore
 tile.arc:powderOresKoroninOre.name=Koronin Ore
