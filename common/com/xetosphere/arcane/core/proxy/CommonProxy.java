@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.xetosphere.arcane.block.ModBlocks;
+import com.xetosphere.arcane.client.gui.GuiRecipePaper;
 import com.xetosphere.arcane.client.gui.inventory.GuiAlchemistTable;
 import com.xetosphere.arcane.client.gui.inventory.GuiArcaneFuser;
 import com.xetosphere.arcane.client.gui.inventory.GuiAuraCrusher;
@@ -102,6 +103,11 @@ public class CommonProxy implements IGuiHandler {
 			
 			TileAuraCrusher tileInfuser = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
 			return new GuiAuraCrusher(player.inventory, tileInfuser);
+		}
+		
+		else if (ID == GuiIDs.RECIPE_PAPER) {
+			
+			return new GuiRecipePaper(player);
 		}
 
 		return null;

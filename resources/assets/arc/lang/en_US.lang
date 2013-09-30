@@ -56,6 +56,13 @@ container.duplicator=Duplicator
 container.alchemistTable=Alchemist Table
 container.auraCrusher=Aura Crusher
 
+gui.recipePaper=Recipe Paper
+gui.alchemistTable=Alchemist Table
+gui.duplicator=Duplicator
+gui.arcaneFuser=Arcane Fuser
+gui.auraCrusher=Aura Crusher
+gui.arcaneGem=Arcane Gem
+
 itemGroup.ARC=Archani Commutatio
 
 version.arc:init_log_message=Initializing remote version check against remote version authority, located at: %s

@@ -6,4 +6,5 @@ public class GuiIDs {
 	public static final int DUPLICATOR = 1;
 	public static final int ALCHEMISTTABLE = 2;
 	public static final int AURA_CRUSHER = 3;
+	public static final int RECIPE_PAPER = 4;
 }
