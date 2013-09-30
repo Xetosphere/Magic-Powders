@@ -56,6 +56,7 @@ item.arc:runeSymbolPurpleRune.name=Magic Rune
 item.arc:runeSymbolYellowRune.name=Energy Rune
 item.arc:runeSymbolOrangeRune.name=Sane Rune
 item.arc:runeSymbolWhiteRune.name=Light Rune
+item.arc:runeBase.name=Rune Base
 
 tile.arc:powderOresSoroniteOre.name=Soronite Ore
 tile.arc:powderOresTarditeOre.name=Tardite Ore

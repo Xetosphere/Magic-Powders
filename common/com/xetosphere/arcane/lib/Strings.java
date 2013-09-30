@@ -26,6 +26,7 @@ public class Strings {
 	public static final String RECIPE_SCROLL_NAME = "recipeScroll";
 	public static final String STUDDED_PAPER_NAME = "studdedPaper";
 	public static final String RUNE_SYMBOLS_NAME = "runeSymbol";
+	public static final String RUNE_BASE_NAME = "runeBase";
 
 	/* Tool name constants */
 	public static final String SORONITEPAXEL_NAME = "paxelSoronite";

@@ -43,6 +43,9 @@ public class AuraCrusherRecipes {
 		addCrushing(Block.blockIron.blockID, 0, new ItemStack(ModItems.metalDusts, 8, 1));
 		addCrushing(Block.blockGold.blockID, 0, new ItemStack(ModItems.metalDusts, 8, 2));
 		addCrushing(Block.brick.blockID, 0, new ItemStack(Item.clay, 4));
+		addCrushing(Block.cobblestone.blockID, 0, new ItemStack(ModItems.runeBase, 3));
+		addCrushing(Block.cobblestoneMossy.blockID, 0, new ItemStack(ModItems.runeBase, 4));
+		addCrushing(Block.stone.blockID, 0, new ItemStack(ModItems.runeBase, 5));
 	}
 
 	@SuppressWarnings("unchecked")

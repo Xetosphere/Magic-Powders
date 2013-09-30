@@ -112,6 +112,7 @@ public class AlchemyCraftingManager {
 		ItemStack lightRune = new ItemStack(ModItems.runeSymbols, 1, 8);
 
 		ItemStack studdedPaper = new ItemStack(ModItems.studdedPaper, 1);
+		ItemStack runeBase = new ItemStack(ModItems.runeBase);
 
 		recipes = new ArrayList();
 
@@ -127,15 +128,25 @@ public class AlchemyCraftingManager {
 		addShapelessRecipe(new ItemStack(ModItems.recipeScroll, 1, 3), studdedPaper, lightRune, fieryRune, manaRune);
 		addShapelessRecipe(new ItemStack(ModItems.recipeScroll, 1, 4), studdedPaper, earthRune, darkRune, energyRune);
 
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 0), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 0));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 1), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 1));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 2), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 2));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 3), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 3));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 4), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 4));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 5), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 5));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 6), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 11));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 7), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 14));
-		addShapelessRecipe(new ItemStack(ModItems.runeSymbols, 1, 8), Block.cobblestone, new ItemStack(Item.dyePowder, 1, 15));
+		addShapelessRecipe(darkRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 0));
+		addShapelessRecipe(fieryRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 1));
+		addShapelessRecipe(calmRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 2));
+		addShapelessRecipe(earthRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 3));
+		addShapelessRecipe(manaRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 4));
+		addShapelessRecipe(magicRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 5));
+		addShapelessRecipe(energyRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 11));
+		addShapelessRecipe(saneRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 14));
+		addShapelessRecipe(lightRune, Block.cobblestone, new ItemStack(Item.dyePowder, 1, 15));
+
+		addShapelessRecipe(darkRune, runeBase, new ItemStack(Item.dyePowder, 1, 0));
+		addShapelessRecipe(fieryRune, runeBase, new ItemStack(Item.dyePowder, 1, 1));
+		addShapelessRecipe(calmRune, runeBase, new ItemStack(Item.dyePowder, 1, 2));
+		addShapelessRecipe(earthRune, runeBase, new ItemStack(Item.dyePowder, 1, 3));
+		addShapelessRecipe(manaRune, runeBase, new ItemStack(Item.dyePowder, 1, 4));
+		addShapelessRecipe(magicRune, runeBase, new ItemStack(Item.dyePowder, 1, 5));
+		addShapelessRecipe(energyRune, runeBase, new ItemStack(Item.dyePowder, 1, 11));
+		addShapelessRecipe(saneRune, runeBase, new ItemStack(Item.dyePowder, 1, 14));
+		addShapelessRecipe(lightRune, runeBase, new ItemStack(Item.dyePowder, 1, 15));
 
 		addRecipe(soroniteHelmet, new Object[] { "SSS", "S S", Character.valueOf('S'), new ItemStack(ModItems.magicIngot, 1, 0) });
 		addRecipe(soroniteArmour, new Object[] { "S S", "SSS", "SSS", Character.valueOf('S'), new ItemStack(ModItems.magicIngot, 1, 0) });

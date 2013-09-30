@@ -10,6 +10,7 @@ public class ItemIDs {
 	public static int RECIPE_SCROLL_DEFAULT = 9004;
 	public static int STUDDED_PAPER_DEFAULT = 9005;
 	public static int RUNE_SYMBOLS_DEFAULT = 9006;
+	public static int RUNE_BASE_DEFAULT = 9007;
 
 	public static int SORONITEHELMET_DEFAULT = 10000;
 	public static int SORONITECHEST_DEFAULT = 10001;
@@ -55,6 +56,7 @@ public class ItemIDs {
 	public static int RECIPE_SCROLL;
 	public static int STUDDED_PAPER;
 	public static int RUNE_SYMBOLS;
+	public static int RUNE_BASE;
 
 	public static int SORONITEHELMET;
 	public static int SORONITECHEST;
