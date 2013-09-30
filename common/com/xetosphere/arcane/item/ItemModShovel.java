@@ -3,6 +3,7 @@ package com.xetosphere.arcane.item;
 import java.util.List;
 
 import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.lib.Reference;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,7 +16,7 @@ public class ItemModShovel extends ItemSpade {
 
 	public ItemModShovel(int id, EnumToolMaterial toolMaterial) {
 
-		super(id, toolMaterial);
+		super(id - Reference.SHIFTED_ID_RANGE_CORRECTION, toolMaterial);
 		setCreativeTab(ArchaniCommutatio.tabARC);
 	}
 
