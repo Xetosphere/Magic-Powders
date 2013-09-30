@@ -35,21 +35,21 @@ public class OreGeneration implements IWorldGenerator {
 	private void genereateSurface(World world, Random random, int x, int z) {
 
 		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.forest) {
-			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 10, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 14, 0, 60);
 		} else if (world.getBiomeGenForCoords(x, z) != BiomeGenBase.forest) {
-			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 6, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 0, Block.stone, world, random, x, z, 16, 16, 2 + random.nextInt(2), 6, 0, 60);
 		}
 
 		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.desert) {
-			addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 15, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 14, 0, 60);
 		} else if (world.getBiomeGenForCoords(x, z) != BiomeGenBase.desert) {
-			addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 6, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 1, Block.stone, world, random, x, z, 16, 16, 2 + random.nextInt(2), 6, 0, 60);
 		}
 
 		if (world.getBiomeGenForCoords(x, z) == BiomeGenBase.swampland) {
-			addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 15, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 14, 0, 60);
 		} else if (world.getBiomeGenForCoords(x, z) != BiomeGenBase.swampland) {
-			addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 6, 0, 60);
+			addOreSpawn(ModBlocks.magicPowderOres, 2, Block.stone, world, random, x, z, 16, 16, 2 + random.nextInt(2), 6, 0, 60);
 		}
 	}
 

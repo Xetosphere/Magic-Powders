@@ -69,9 +69,9 @@ public class CommonProxy implements IGuiHandler {
 		else if (ID == GuiIDs.ALCHEMISTTABLE) {
 			return ID == GuiIDs.ALCHEMISTTABLE && world.getBlockId(x, y, z) == ModBlocks.alchemistTable.blockID ? new ContainerAlchemistTable(player.inventory, world, x, y, z) : null;
 		}
-		
+
 		else if (ID == GuiIDs.AURA_CRUSHER) {
-			
+
 			TileAuraCrusher tileInfuser = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
 			return new ContainerAuraCrusher(player.inventory, tileInfuser);
 		}
@@ -98,15 +98,15 @@ public class CommonProxy implements IGuiHandler {
 		else if (ID == GuiIDs.ALCHEMISTTABLE) {
 			return ID == GuiIDs.ALCHEMISTTABLE && world.getBlockId(x, y, z) == ModBlocks.alchemistTable.blockID ? new GuiAlchemistTable(player.inventory, world, x, y, z) : null;
 		}
-		
+
 		else if (ID == GuiIDs.AURA_CRUSHER) {
-			
+
 			TileAuraCrusher tileInfuser = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
 			return new GuiAuraCrusher(player.inventory, tileInfuser);
 		}
-		
+
 		else if (ID == GuiIDs.RECIPE_SCROLL) {
-			
+
 			return new GuiRecipePaper(player);
 		}
 

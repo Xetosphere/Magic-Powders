@@ -55,7 +55,9 @@ public class ModItems {
 	public static Item koroninPaxel;
 
 	public static Item metalDusts;
-	public static Item recipePaper;
+	public static Item recipeScroll;
+	public static Item studdedPaper;
+	public static Item runeSymbols;
 
 	public static EnumToolMaterial toolSoronite = EnumHelper.addToolMaterial("SORONITE", 2, 1800, 7.0F, 2.0F, 17);
 	public static EnumToolMaterial toolTardite = EnumHelper.addToolMaterial("TARDITE", 2, 1800, 7.0F, 2.0F, 17);
@@ -74,7 +76,9 @@ public class ModItems {
 		magicIngot = new ItemMagicIngot(ItemIDs.MAGICINGOTS);
 		arcaneGem = new ItemArcaneGem(ItemIDs.ARCANE_GEM);
 		metalDusts = new ItemMetalDusts(ItemIDs.METAL_DUSTS);
-		recipePaper = new ItemRecipeScrolls(ItemIDs.RECIPE_SCROLL);
+		recipeScroll = new ItemRecipeScrolls(ItemIDs.RECIPE_SCROLL);
+		studdedPaper = new ItemStuddedPaper(ItemIDs.STUDDED_PAPER);
+		runeSymbols = new ItemRuneSymbols(ItemIDs.RUNE_SYMBOLS);
 
 		soroniteHelmet = new ItemSoroniteArmour(ItemIDs.SORONITEHELMET, armourSoronite, 0, 0).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITEHELMET_NAME);
 		soroniteChest = new ItemSoroniteArmour(ItemIDs.SORONITECHEST, armourSoronite, 0, 1).setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.SORONITECHEST_NAME);

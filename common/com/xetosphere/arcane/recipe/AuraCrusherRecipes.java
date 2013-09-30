@@ -30,12 +30,19 @@ public class AuraCrusherRecipes {
 		addCrushing(Item.coal.itemID, 1, new ItemStack(ModItems.metalDusts, 1, 0));
 		addCrushing(Item.ingotIron.itemID, 0, new ItemStack(ModItems.metalDusts, 1, 1));
 		addCrushing(Item.ingotGold.itemID, 0, new ItemStack(ModItems.metalDusts, 1, 2));
+		addCrushing(Item.bone.itemID, 0, new ItemStack(Item.dyePowder, 10, 15));
+		addCrushing(Item.blazeRod.itemID, 0, new ItemStack(Item.blazePowder, 5));
+
 		addCrushing(Block.oreCoal.blockID, 0, new ItemStack(ModItems.metalDusts, 2, 0));
 		addCrushing(Block.oreIron.blockID, 0, new ItemStack(ModItems.metalDusts, 2, 1));
 		addCrushing(Block.oreGold.blockID, 0, new ItemStack(ModItems.metalDusts, 2, 2));
 		addCrushing(Block.oreLapis.blockID, 0, new ItemStack(Item.dyePowder, 8, 4));
 		addCrushing(Block.oreRedstone.blockID, 0, new ItemStack(Item.redstone, 8, 0));
-		
+		addCrushing(Block.gravel.blockID, 0, new ItemStack(Item.flint, 4, 0));
+		addCrushing(Block.coalBlock.blockID, 0, new ItemStack(ModItems.metalDusts, 8, 0));
+		addCrushing(Block.blockIron.blockID, 0, new ItemStack(ModItems.metalDusts, 8, 1));
+		addCrushing(Block.blockGold.blockID, 0, new ItemStack(ModItems.metalDusts, 8, 2));
+		addCrushing(Block.brick.blockID, 0, new ItemStack(Item.clay, 4));
 	}
 
 	@SuppressWarnings("unchecked")
