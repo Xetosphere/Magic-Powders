@@ -10,7 +10,6 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.xetosphere.arcane.lib.ItemIDs;
 import com.xetosphere.arcane.lib.Strings;
-import com.xetosphere.arcane.recipe.ModCraftingRecipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -116,9 +115,6 @@ public class ModItems {
 	 * Adds the recipes for the craftable items.
 	 */
 	public static void registerRecipes() {
-
-		// Crafting recipes
-		ModCraftingRecipes.addCraftingRecipes();
 
 		// Furnace recipes
 		addFurnaceRecipes();
