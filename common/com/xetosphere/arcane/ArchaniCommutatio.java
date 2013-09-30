@@ -13,6 +13,7 @@ import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.network.PacketHandler;
 import com.xetosphere.arcane.recipe.ModCraftingRecipes;
+import com.xetosphere.arcane.world.gen.DungeonLoot;
 import com.xetosphere.arcane.world.gen.WorldGen;
 
 import cpw.mods.fml.common.Mod;
@@ -25,7 +26,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION_NUMBER)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION_NUMBER, dependencies = Reference.DEPENDENCIES)
 @NetworkMod(channels = { Reference.CHANNEL_NAME }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
 public class ArchaniCommutatio {
 
@@ -41,7 +42,7 @@ public class ArchaniCommutatio {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
 
-		// Initialize the log helper
+		// Initialize the log helper.
 		LogHelper.init();
 
 		// Adds the config, that can change block and item ids as well as making the mob spawn in an already existing world.
@@ -52,7 +53,7 @@ public class ArchaniCommutatio {
 
 		// Adds the blocks that the mod contains. As well as block recipes and registering the blocks.
 		ModBlocks.init();
-		
+
 		// Adds the crafting recipes within this mod.
 		ModCraftingRecipes.addCraftingRecipes();
 
@@ -63,14 +64,17 @@ public class ArchaniCommutatio {
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
 
-		// Register the GUI Handler
+		// Register the GUI Handler.
 		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
 
-		// Initialize mod tile entities
+		// Initialize mod tile entities.
 		proxy.registerTileEntities();
 
-		// Initialize custom rendering and pre-load textures (Client only)
+		// Initialize custom rendering and pre-load textures (Client only).
 		proxy.initRenderingAndTextures();
+
+		// Adds the loot from this mod to dungeons.
+		DungeonLoot.addLoot();
 	}
 
 	@EventHandler
