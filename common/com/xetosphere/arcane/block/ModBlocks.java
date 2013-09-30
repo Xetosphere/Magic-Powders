@@ -5,7 +5,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
-import com.xetosphere.arcane.configuration.ConfigurationSettings;
 import com.xetosphere.arcane.item.ItemBlockMagicPowderOres;
 import com.xetosphere.arcane.item.ItemBlockStorageBlocks;
 import com.xetosphere.arcane.item.ModItems;
@@ -45,7 +44,6 @@ public class ModBlocks {
 
 		addOreLevels();
 		initToOreDictionary();
-		addRecipe();
 	}
 
 	public static void addOreLevels() {
@@ -68,25 +66,6 @@ public class ModBlocks {
 		OreDictionary.registerOre("dustCoal", new ItemStack(ModItems.metalDusts, 1, 0));
 		OreDictionary.registerOre("dustIron", new ItemStack(ModItems.metalDusts, 1, 1));
 		OreDictionary.registerOre("dustGold", new ItemStack(ModItems.metalDusts, 1, 2));
-	}
-
-	private static void addRecipe() {
-
-		ItemStack soroniteBlock = new ItemStack(storageBlocks, 1, 0);
-		ItemStack tarditeBlock = new ItemStack(storageBlocks, 1, 1);
-		ItemStack koroninBlock = new ItemStack(storageBlocks, 1, 2);
-
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.magicIngot, 9, 0), soroniteBlock);
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.magicIngot, 9, 1), tarditeBlock);
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.magicIngot, 9, 2), koroninBlock);
-
-		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 0), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 1), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(storageBlocks, 1, 2), new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), new ItemStack(ModItems.magicIngot, 1, 2) });
-
-		if (ConfigurationSettings.enableRecipeAlcTab) {
-			GameRegistry.addRecipe(new ItemStack(alchemistTable), new Object[] { "STS", "---", "F F", Character.valueOf('S'), new ItemStack(ModItems.magicDust, 1, 0), Character.valueOf('T'), new ItemStack(ModItems.magicDust, 1, 1), Character.valueOf('-'), Block.woodSingleSlab, Character.valueOf('F'), Block.fence });
-		}
 	}
 
 }

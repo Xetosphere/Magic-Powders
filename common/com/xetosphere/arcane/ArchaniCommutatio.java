@@ -12,6 +12,7 @@ import com.xetosphere.arcane.creativetab.TabARC;
 import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.network.PacketHandler;
+import com.xetosphere.arcane.recipe.ModCraftingRecipes;
 import com.xetosphere.arcane.world.gen.WorldGen;
 
 import cpw.mods.fml.common.Mod;
@@ -51,6 +52,9 @@ public class ArchaniCommutatio {
 
 		// Adds the blocks that the mod contains. As well as block recipes and registering the blocks.
 		ModBlocks.init();
+		
+		// Adds the crafting recipes within this mod.
+		ModCraftingRecipes.addCraftingRecipes();
 
 		// Adds everything that has to do with generation.
 		WorldGen.init();

@@ -2,15 +2,15 @@ package com.xetosphere.arcane.item;
 
 import java.util.List;
 
-import com.xetosphere.arcane.ArchaniCommutatio;
-import com.xetosphere.arcane.lib.Reference;
-import com.xetosphere.arcane.lib.Strings;
-
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
+
+import com.xetosphere.arcane.lib.Reference;
+import com.xetosphere.arcane.lib.Strings;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -24,7 +24,7 @@ public class ItemMetalDusts extends ItemARC {
 	public ItemMetalDusts(int id) {
 
 		super(id);
-		setCreativeTab(ArchaniCommutatio.tabARC);
+		setCreativeTab(CreativeTabs.tabMaterials);
 		setHasSubtypes(true);
 		maxStackSize = 64;
 	}
