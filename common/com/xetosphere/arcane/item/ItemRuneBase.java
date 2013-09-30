@@ -1,6 +1,7 @@
 package com.xetosphere.arcane.item;
 
 import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.lib.Strings;
 
 public class ItemRuneBase extends ItemARC {
 
@@ -8,6 +9,7 @@ public class ItemRuneBase extends ItemARC {
 
 		super(id);
 		setCreativeTab(ArchaniCommutatio.tabARC);
+		setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.RUNE_BASE_NAME);
 		setMaxStackSize(64);
 	}
 
