@@ -1,4 +1,30 @@
 
+achievement.alchemistTable=First Step
+achievement.arcaneGem=Knowing Gems
+achievement.duplicator=One in two out
+achievement.arcaneFuser=Two in one out
+achievement.auraCrusher=Crushed to pieces
+achievement.runes=Runes!
+
+achievement.alchemistTable.desc=Knowing the basics.
+achievement.arcaneGem.desc=First step to get rich.
+achievement.duplicator.desc=Copying stuff is fun!
+achievement.arcaneFuser.desc=Ingots for sure.
+achievement.auraCrusher.desc=I have got things to smash.
+achievement.runes.desc=Freakin' runes!
+
+container.arcaneFuser=Arcane Fuser
+container.duplicator=Duplicator
+container.alchemistTable=Alchemist Table
+container.auraCrusher=Aura Crusher
+
+gui.recipePaper=Recipe Paper
+gui.alchemistTable=Alchemist Table
+gui.duplicator=Duplicator
+gui.arcaneFuser=Arcane Fuser
+gui.auraCrusher=Aura Crusher
+gui.arcaneGem=Arcane Gem
+
 item.arc:magicDustSoronite.name=Soronite Dust
 item.arc:magicDustTardite.name=Tardite Dust
 item.arc:magicDustKoronin.name=Koronin Dust
@@ -46,6 +72,7 @@ item.arc:recipeScrollArcaneGem.name=Ancient Scroll
 item.arc:recipeScrollDuplicator.name=Ancient Scroll
 item.arc:recipeScrollArcaneFuser.name=Ancient Scroll
 item.arc:recipeScrollAuraCrusher.name=Ancient Scroll
+item.arc:recipeScrollRunes.name=Ancient Scroll
 
 item.arc:runeSymbolBlackRune.name=Dark Rune
 item.arc:runeSymbolRedRune.name=Fiery Rune
@@ -58,6 +85,8 @@ item.arc:runeSymbolOrangeRune.name=Sane Rune
 item.arc:runeSymbolWhiteRune.name=Light Rune
 item.arc:runeBase.name=Rune Base
 
+itemGroup.ARC=Archani Commutatio
+
 tile.arc:powderOresSoroniteOre.name=Soronite Ore
 tile.arc:powderOresTarditeOre.name=Tardite Ore
 tile.arc:powderOresKoroninOre.name=Koronin Ore
@@ -68,20 +97,6 @@ tile.arc:arcaneFuser.name=Arcane Fuser
 tile.arc:duplicator.name=Duplicator
 tile.arc:alchemistTable.name=Alchemist Table
 tile.arc:auraCrusher.name=Aura Crusher
-
-container.arcaneFuser=Arcane Fuser
-container.duplicator=Duplicator
-container.alchemistTable=Alchemist Table
-container.auraCrusher=Aura Crusher
-
-gui.recipePaper=Recipe Paper
-gui.alchemistTable=Alchemist Table
-gui.duplicator=Duplicator
-gui.arcaneFuser=Arcane Fuser
-gui.auraCrusher=Aura Crusher
-gui.arcaneGem=Arcane Gem
-
-itemGroup.ARC=Archani Commutatio
 
 version.arc:init_log_message=Initializing remote version check against remote version authority, located at: %s
 version.arc:uninitialized=Remote version check failed to initialize properly
