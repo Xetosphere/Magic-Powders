@@ -13,6 +13,7 @@ import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.network.PacketHandler;
 import com.xetosphere.arcane.recipe.ModCraftingRecipes;
+import com.xetosphere.arcane.stats.ModAchievements;
 import com.xetosphere.arcane.world.gen.DungeonLoot;
 import com.xetosphere.arcane.world.gen.WorldGen;
 
@@ -59,6 +60,9 @@ public class ArchaniCommutatio {
 
 		// Adds everything that has to do with generation.
 		WorldGen.init();
+
+		// Adds the mods achievements and achievement page.
+		ModAchievements.init();
 	}
 
 	@EventHandler
