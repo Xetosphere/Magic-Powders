@@ -15,13 +15,14 @@ import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.GuiIDs;
 import com.xetosphere.arcane.lib.Reference;
 import com.xetosphere.arcane.lib.Strings;
+import com.xetosphere.arcane.stats.ModAchievements;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemRecipeScrolls extends ItemARC {
 
-	private static final String[] SCROLL_NAMES = new String[] { "AlchemistTable", "ArcaneGem", "Duplicator", "ArcaneFuser", "AuraCrusher" };
+	private static final String[] SCROLL_NAMES = new String[] { "AlchemistTable", "ArcaneGem", "Duplicator", "ArcaneFuser", "AuraCrusher", "Runes", "" };
 
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
@@ -94,11 +95,39 @@ public class ItemRecipeScrolls extends ItemARC {
 		else if (itemStack.getItemDamage() == 4) {
 			list.add("Contains: Aura Crusher");
 		}
+
+		else if (itemStack.getItemDamage() == 5) {
+			list.add("Contains: Runes");
+		}
 	}
 
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 
 		player.openGui(ArchaniCommutatio.instance, GuiIDs.RECIPE_SCROLL, world, 0, 0, 0);
+
+		if (stack.getItemDamage() == 0) {
+			player.addStat(ModAchievements.alchemistTable, 1);
+		}
+
+		else if (stack.getItemDamage() == 1) {
+			player.addStat(ModAchievements.arcaneGem, 1);
+		}
+
+		else if (stack.getItemDamage() == 2) {
+			player.addStat(ModAchievements.duplicator, 1);
+		}
+
+		else if (stack.getItemDamage() == 3) {
+			player.addStat(ModAchievements.arcaneFuser, 1);
+		}
+
+		else if (stack.getItemDamage() == 4) {
+			player.addStat(ModAchievements.auraCrusher, 1);
+		}
+
+		else if (stack.getItemDamage() == 5) {
+			player.addStat(ModAchievements.runes, 1);
+		}
 
 		return stack;
 	}
