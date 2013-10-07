@@ -1,8 +1,9 @@
-package com.xetosphere.arcane.item;
+package com.xetosphere.arcane.item.tools;
 
 import java.util.List;
 
 import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Reference;
 
 import net.minecraft.client.renderer.texture.IconRegister;

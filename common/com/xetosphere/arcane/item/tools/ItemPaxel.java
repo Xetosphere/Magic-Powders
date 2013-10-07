@@ -1,4 +1,4 @@
-package com.xetosphere.arcane.item;
+package com.xetosphere.arcane.item.tools;
 
 import java.util.List;
 
@@ -17,6 +17,7 @@ import net.minecraftforge.event.Event.Result;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
 
 import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Reference;
 
 public class ItemPaxel extends ItemTool {

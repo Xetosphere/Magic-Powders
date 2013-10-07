@@ -23,6 +23,7 @@ public class Textures {
 	public static final ResourceLocation GUI_RECIPE_DUPLICATOR = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoDuplicator.png");
 	public static final ResourceLocation GUI_RECIPE_ARCANEFUSER = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoArcaneFuser.png");
 	public static final ResourceLocation GUI_RECIPE_AURACRUSHER = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoAuraCrusher.png");
+	public static final ResourceLocation GUI_RECIPE_RUNES = ResourceLocationHelper.getResourceLocation(GUI_SHEET_LOCATION + "infoRunes.png");
 
 	// Model textures
 	public static final ResourceLocation MODEL_ALCHEMISTTABLE = ResourceLocationHelper.getResourceLocation(MODEL_SHEET_LOCATION + "alchemistTable.png");

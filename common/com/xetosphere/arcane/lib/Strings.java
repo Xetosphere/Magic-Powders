@@ -26,7 +26,7 @@ public class Strings {
 	public static final String RECIPE_SCROLL_NAME = "recipeScroll";
 	public static final String STUDDED_PAPER_NAME = "studdedPaper";
 	public static final String RUNE_SYMBOLS_NAME = "runeSymbol";
-	public static final String RUNE_BASE_NAME = "runeBase";
+	public static final String RUNE_BASE_NAME = "rune";
 
 	/* Tool name constants */
 	public static final String SORONITEPAXEL_NAME = "paxelSoronite";
@@ -91,6 +91,7 @@ public class Strings {
 	public static final String GUI_RECIPE_AURCRU = "gui." + AURA_CRUSHER_NAME;
 	public static final String GUI_RECIPE_DUP = "gui." + DUPLICATOR_NAME;
 	public static final String GUI_RECIPE_GEM = "gui." + ARCANE_GEM_NAME;
+	public static final String GUI_RUNES = "gui." + RUNE_BASE_NAME;
 
 	/* Miscellaneous */
 	public static final String ENABLE_CUSTOM_GEN = "Enable custom structures";
