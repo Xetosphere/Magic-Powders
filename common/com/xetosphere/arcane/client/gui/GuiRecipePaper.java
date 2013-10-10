@@ -107,6 +107,34 @@ public class GuiRecipePaper extends GuiScreen {
 			drawTexturedModalRect(posX + 30, posY + 120, 0, 0, 191, 96);
 		}
 
+		if (ItemRecipeScrolls.getGuiText() == 5) {
+			int i = this.fontRenderer.getStringWidth(Strings.GUI_RUNES) + 15;
+			this.fontRenderer.drawString(StatCollector.translateToLocal(Strings.GUI_RUNES), posX + i, posY + 15, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("The aura crusher, crushes what ever"), posX + 30, posY + 35, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("comes underneath its koronin pistons"), posX + 30, posY + 45, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("to the state where it can't get any"), posX + 30, posY + 55, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("smaller."), posX + 30, posY + 65, 16777215);
+
+			this.fontRenderer.drawString(StatCollector.translateToLocal("Alchemist Table"), posX + 35, posY + 105, 16777215);
+
+			this.mc.renderEngine.bindTexture(Textures.GUI_RECIPE_RUNES);
+			drawTexturedModalRect(posX + 30, posY + 120, 0, 0, 191, 96);
+		}
+
+		if (ItemRecipeScrolls.getGuiText() == 6) {
+			int i = this.fontRenderer.getStringWidth(Strings.GUI_RUNES) + 15;
+			this.fontRenderer.drawString(StatCollector.translateToLocal(Strings.GUI_RUNES), posX + i, posY + 15, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("The aura crusher, crushes what ever"), posX + 30, posY + 35, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("comes underneath its koronin pistons"), posX + 30, posY + 45, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("to the state where it can't get any"), posX + 30, posY + 55, 16777215);
+			this.fontRenderer.drawString(StatCollector.translateToLocal("smaller."), posX + 30, posY + 65, 16777215);
+
+			this.fontRenderer.drawString(StatCollector.translateToLocal("Alchemist Table"), posX + 35, posY + 105, 16777215);
+
+			this.mc.renderEngine.bindTexture(Textures.GUI_RECIPE_RUNES);
+			drawTexturedModalRect(posX + 30, posY + 120, 0, 0, 191, 96);
+		}
+
 		super.drawScreen(x, y, f);
 	}
 

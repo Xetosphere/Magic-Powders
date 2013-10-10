@@ -22,7 +22,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemRecipeScrolls extends ItemARC {
 
-	private static final String[] SCROLL_NAMES = new String[] { "AlchemistTable", "ArcaneGem", "Duplicator", "ArcaneFuser", "AuraCrusher", "Runes", "" };
+	private static final String[] SCROLL_NAMES = new String[] { "AlchemistTable", "ArcaneGem", "Duplicator", "ArcaneFuser", "AuraCrusher", "Runes", "Paxel" };
 
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
@@ -99,6 +99,10 @@ public class ItemRecipeScrolls extends ItemARC {
 		else if (itemStack.getItemDamage() == 5) {
 			list.add("Contains: Runes");
 		}
+		
+		else if (itemStack.getItemDamage() == 6) {
+			list.add("Contains: Paxel");
+		}
 	}
 
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
@@ -129,6 +133,10 @@ public class ItemRecipeScrolls extends ItemARC {
 			player.addStat(ModAchievements.runes, 1);
 		}
 
+		else if (stack.getItemDamage() == 6) {
+			player.addStat(ModAchievements.paxel, 1);
+		}
+
 		return stack;
 	}
 
@@ -152,6 +160,14 @@ public class ItemRecipeScrolls extends ItemARC {
 
 			if (stack.getItem() instanceof ItemRecipeScrolls && stack.getItemDamage() == 4) {
 				return 4;
+			}
+
+			if (stack.getItem() instanceof ItemRecipeScrolls && stack.getItemDamage() == 5) {
+				return 5;
+			}
+
+			if (stack.getItem() instanceof ItemRecipeScrolls && stack.getItemDamage() == 6) {
+				return 6;
 			}
 
 		}

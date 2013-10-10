@@ -18,6 +18,7 @@ public class ModAchievements {
 	public static Achievement arcaneFuser;
 	public static Achievement auraCrusher;
 	public static Achievement runes;
+	public static Achievement paxel;
 
 	public static void init() {
 
@@ -27,8 +28,9 @@ public class ModAchievements {
 		arcaneFuser = new Achievement(AchievementList.achievementList.size() + 1, "arcaneFuser", 2, -2, ModBlocks.fuser, alchemistTable).registerAchievement();
 		auraCrusher = new Achievement(AchievementList.achievementList.size() + 1, "auraCrusher", -2, -2, ModBlocks.crusher, alchemistTable).registerAchievement();
 		runes = new Achievement(AchievementList.achievementList.size() + 1, "runes", -3, 3, ModItems.runeSymbols, null).registerAchievement();
+		paxel = new Achievement(AchievementList.achievementList.size() + 1, "paxel", -2, 3, ModItems.soronitePaxel, null).registerAchievement();
 
-		achievementPage = new AchievementPage(Reference.MOD_NAME, alchemistTable, arcaneGem, duplicator, arcaneFuser, auraCrusher, runes);
+		achievementPage = new AchievementPage(Reference.MOD_NAME, alchemistTable, arcaneGem, duplicator, arcaneFuser, auraCrusher, runes, paxel);
 		AchievementPage.registerAchievementPage(achievementPage);
 	}
 

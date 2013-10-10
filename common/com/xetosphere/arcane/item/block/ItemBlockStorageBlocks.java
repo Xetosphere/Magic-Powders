@@ -1,4 +1,4 @@
-package com.xetosphere.arcane.item;
+package com.xetosphere.arcane.item.block;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
