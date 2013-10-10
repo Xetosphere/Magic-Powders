@@ -1,20 +1,21 @@
-package com.xetosphere.arcane.item;
+package com.xetosphere.arcane.item.tools;
 
 import java.util.List;
 
 import com.xetosphere.arcane.ArchaniCommutatio;
+import com.xetosphere.arcane.item.ModItems;
 import com.xetosphere.arcane.lib.Reference;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 import net.minecraft.util.EnumChatFormatting;
 
-public class ItemModSword extends ItemSword {
+public class ItemModPick extends ItemPickaxe {
 
-	public ItemModSword(int id, EnumToolMaterial toolMaterial) {
+	public ItemModPick(int id, EnumToolMaterial toolMaterial) {
 
 		super(id - Reference.SHIFTED_ID_RANGE_CORRECTION, toolMaterial);
 		setCreativeTab(ArchaniCommutatio.tabARC);
@@ -33,13 +34,13 @@ public class ItemModSword extends ItemSword {
 
 	public String getItemDisplayName(ItemStack itemStack) {
 
-		if (itemStack.getItem() == ModItems.soroniteSword) {
+		if (itemStack.getItem() == ModItems.soronitePick) {
 			return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
 		}
-		if (itemStack.getItem() == ModItems.tarditeSword) {
+		if (itemStack.getItem() == ModItems.tarditePick) {
 			return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
 		}
-		if (itemStack.getItem() == ModItems.koroninSword) {
+		if (itemStack.getItem() == ModItems.koroninPick) {
 			return EnumChatFormatting.AQUA + super.getItemDisplayName(itemStack);
 		}
 

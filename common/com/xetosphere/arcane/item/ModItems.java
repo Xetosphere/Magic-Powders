@@ -8,6 +8,15 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.xetosphere.arcane.item.armour.ItemKoroninArmour;
+import com.xetosphere.arcane.item.armour.ItemSoroniteArmour;
+import com.xetosphere.arcane.item.armour.ItemTarditeArmour;
+import com.xetosphere.arcane.item.tools.ItemModAxe;
+import com.xetosphere.arcane.item.tools.ItemModHoe;
+import com.xetosphere.arcane.item.tools.ItemModPick;
+import com.xetosphere.arcane.item.tools.ItemModShovel;
+import com.xetosphere.arcane.item.tools.ItemModSword;
+import com.xetosphere.arcane.item.tools.ItemPaxel;
 import com.xetosphere.arcane.lib.ItemIDs;
 import com.xetosphere.arcane.lib.Strings;
 

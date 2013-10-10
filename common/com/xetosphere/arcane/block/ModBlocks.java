@@ -5,9 +5,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
-import com.xetosphere.arcane.item.ItemBlockMagicPowderOres;
-import com.xetosphere.arcane.item.ItemBlockStorageBlocks;
 import com.xetosphere.arcane.item.ModItems;
+import com.xetosphere.arcane.item.block.ItemBlockMagicPowderOres;
+import com.xetosphere.arcane.item.block.ItemBlockStorageBlocks;
 import com.xetosphere.arcane.lib.BlockIDs;
 import com.xetosphere.arcane.lib.Strings;
 

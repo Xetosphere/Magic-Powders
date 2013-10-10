@@ -1,4 +1,4 @@
-package com.xetosphere.arcane.item;
+package com.xetosphere.arcane.item.armour;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import com.xetosphere.arcane.ArchaniCommutatio;
 import com.xetosphere.arcane.lib.Strings;
 import com.xetosphere.arcane.lib.Textures;
 
-public class ItemKoroninArmour extends ItemArmor {
+public class ItemTarditeArmour extends ItemArmor {
 
-	public ItemKoroninArmour(int id, EnumArmorMaterial armourMaterial, int renderIndex, int armourPart) {
+	public ItemTarditeArmour(int id, EnumArmorMaterial armourMaterial, int renderIndex, int armourPart) {
 
 		super(id, armourMaterial, renderIndex, armourPart);
 		setCreativeTab(ArchaniCommutatio.tabARC);
@@ -25,9 +25,9 @@ public class ItemKoroninArmour extends ItemArmor {
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
 
 		if (slot == 0 || slot == 1 || slot == 3) {
-			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.KORONINARMOUR_NAME + "_1.png";
+			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.TARDITEARMOUR_NAME + "_1.png";
 		} else if (slot == 2) {
-			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.KORONINARMOUR_NAME + "_2.png";
+			return Strings.RESOURCE_PREFIX + Textures.ARMOR_SHEET_LOCATION + Strings.TARDITEARMOUR_NAME + "_2.png";
 		}
 
 		return null;
@@ -46,7 +46,7 @@ public class ItemKoroninArmour extends ItemArmor {
 
 	public String getItemDisplayName(ItemStack itemStack) {
 
-		return EnumChatFormatting.AQUA + super.getItemDisplayName(itemStack);
+		return EnumChatFormatting.YELLOW + super.getItemDisplayName(itemStack);
 	}
 
 }
