@@ -77,6 +77,9 @@ public class ArchaniCommutatio {
 		// Initialize custom rendering and pre-load textures (Client only).
 		proxy.initRenderingAndTextures();
 
+		// Adds the sound files to the game.
+		proxy.addSounds();
+
 		// Adds the loot from this mod to dungeons.
 		DungeonLoot.addLoot();
 	}
