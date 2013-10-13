@@ -3,7 +3,9 @@ package com.xetosphere.arcane.core.proxy;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.MinecraftForge;
 
+import com.xetosphere.arcane.client.audio.ARCSoundEvents;
 import com.xetosphere.arcane.client.renderer.item.ItemAlchemistTableRenderer;
 import com.xetosphere.arcane.client.renderer.tileentity.TileEntityAlchemistTableRenderer;
 import com.xetosphere.arcane.lib.BlockIDs;
@@ -22,6 +24,11 @@ public class ClientProxy extends CommonProxy {
 		RenderIDs.alchemistTableRender = RenderingRegistry.getNextAvailableRenderId();
 
 		MinecraftForgeClient.registerItemRenderer(BlockIDs.ALCHEMISTTABLE, new ItemAlchemistTableRenderer());
+	}
+	
+	public void addSounds() {
+		
+		MinecraftForge.EVENT_BUS.register(new ARCSoundEvents());
 	}
 
 	public void registerTileEntities() {

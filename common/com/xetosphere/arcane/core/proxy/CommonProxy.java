@@ -30,6 +30,10 @@ public class CommonProxy implements IGuiHandler {
 
 	}
 
+	public void addSounds() {
+
+	}
+
 	public void registerTileEntities() {
 
 		GameRegistry.registerTileEntity(TileArcaneFuser.class, Strings.ARCANE_FUSER_NAME);

@@ -107,8 +107,9 @@ public class ItemRecipeScrolls extends ItemARC {
 
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 
+		world.playSoundAtEntity(player, Strings.RESOURCE_PREFIX + "scroll", 1.0F, 1.0F);
 		player.openGui(ArchaniCommutatio.instance, GuiIDs.RECIPE_SCROLL, world, 0, 0, 0);
-
+		
 		if (stack.getItemDamage() == 0) {
 			player.addStat(ModAchievements.alchemistTable, 1);
 		}
